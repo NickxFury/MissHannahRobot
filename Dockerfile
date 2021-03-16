@@ -65,7 +65,7 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/HannahRobot
-RUN git clone -b shiken https://github.com/AnimeKaizoku/HannahRobot /root/HannahRobot
+RUN git clone -b shiken https://github.com/Mr-Dark-Prince/HannahRobot /root/HannahRobot
 WORKDIR /root/HannahRobot
 
 #Copy config file to /root/HannahRobot/HannahRobot

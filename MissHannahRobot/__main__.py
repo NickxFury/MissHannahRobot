@@ -247,7 +247,7 @@ def start(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(
                                 text="🗄 Source code",
-                                url="https://github.com/AnimeKaizoku/HannahRobot",
+                                url="https://github.com/Mr-Dark-Prince/HannahRobot",
                             )
                         ],
                     ]
