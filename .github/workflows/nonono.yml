@@ -13,7 +13,7 @@ jobs:
       - name: Pull All Updates
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: '🍀🙇‍🔥ഇറങ്ങിവരു മകളെ'
+          commit_message: '🍀🙇🔥MissHannah is here'
           commit_options: '--no-verify'
           repository: .
           commit_user_name: Mr-Dark-Prince
