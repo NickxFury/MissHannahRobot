@@ -5,8 +5,8 @@ import time
 import MissHannahRobot.plugins.fun_strings as fun_strings
 from MissHannahRobot import dispatcher
 from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
-from MissHannahRobot.plugins.helper_funcs.chat_status import is_user_admin
-from MissHannahRobot.plugins.helper_funcs.extraction import extract_user
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import is_user_admin
+from MissHannahRobot.plugins.sahaya_samagri.extraction import extract_user
 from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async

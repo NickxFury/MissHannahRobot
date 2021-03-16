@@ -8,8 +8,8 @@ from coffeehouse.api import API
 from coffeehouse.exception import CoffeeHouseError as CFError
 from coffeehouse.lydia import LydiaAI
 from MissHannahRobot import AI_API_KEY, OWNER_ID, SUPPORT_CHAT, dispatcher
-from MissHannahRobot.plugins.helper_funcs.chat_status import user_admin
-from MissHannahRobot.plugins.helper_funcs.filters import CustomFilters
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import user_admin
+from MissHannahRobot.plugins.sahaya_samagri.filters import CustomFilters
 from MissHannahRobot.plugins.log_channel import gloggable
 from telegram import Update
 from telegram.error import BadRequest, RetryAfter, Unauthorized

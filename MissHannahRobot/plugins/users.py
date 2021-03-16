@@ -13,7 +13,7 @@ from telegram.ext import (
 
 import MissHannahRobot.plugins.sql.users_sql as sql
 from MissHannahRobot import DEV_USERS, LOGGER, OWNER_ID, dispatcher
-from MissHannahRobot.plugins.helper_funcs.chat_status import dev_plus, sudo_plus
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import dev_plus, sudo_plus
 from MissHannahRobot.plugins.sql.users_sql import get_all_users
 
 USERS_GROUP = 4

@@ -9,15 +9,15 @@ from telegram.utils.helpers import mention_html
 import MissHannahRobot.plugins.sql.blacklist_sql as sql
 from MissHannahRobot import dispatcher, LOGGER
 from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
-from MissHannahRobot.plugins.helper_funcs.chat_status import user_admin, user_not_admin
-from MissHannahRobot.plugins.helper_funcs.extraction import extract_text
-from MissHannahRobot.plugins.helper_funcs.misc import split_message
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import user_admin, user_not_admin
+from MissHannahRobot.plugins.sahaya_samagri.extraction import extract_text
+from MissHannahRobot.plugins.sahaya_samagri.misc import split_message
 from MissHannahRobot.plugins.log_channel import loggable
 from MissHannahRobot.plugins.warns import warn
-from MissHannahRobot.plugins.helper_funcs.string_handling import extract_time
+from MissHannahRobot.plugins.sahaya_samagri.string_handling import extract_time
 from MissHannahRobot.plugins.connection import connected
 from MissHannahRobot.plugins.sql.approve_sql import is_approved
-from MissHannahRobot.plugins.helper_funcs.alternate import send_message, typing_action
+from MissHannahRobot.plugins.sahaya_samagri.alternate import send_message, typing_action
 
 BLACKLIST_GROUP = 11
 

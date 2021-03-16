@@ -6,11 +6,11 @@ from typing import Optional
 import MissHannahRobot.plugins.sql.notes_sql as sql
 from MissHannahRobot import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
 from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
-from MissHannahRobot.plugins.helper_funcs.handlers import MessageHandlerChecker
-from MissHannahRobot.plugins.helper_funcs.chat_status import user_admin, connection_status
-from MissHannahRobot.plugins.helper_funcs.misc import build_keyboard, revert_buttons
-from MissHannahRobot.plugins.helper_funcs.msg_types import get_note_type
-from MissHannahRobot.plugins.helper_funcs.string_handling import (
+from MissHannahRobot.plugins.sahaya_samagri.handlers import MessageHandlerChecker
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import user_admin, connection_status
+from MissHannahRobot.plugins.sahaya_samagri.misc import build_keyboard, revert_buttons
+from MissHannahRobot.plugins.sahaya_samagri.msg_types import get_note_type
+from MissHannahRobot.plugins.sahaya_samagri.string_handling import (
     escape_invalid_curly_brackets,
 )
 from telegram import (

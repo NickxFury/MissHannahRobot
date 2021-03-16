@@ -2,7 +2,7 @@ import html
 
 from MissHannahRobot import ALLOW_EXCL, CustomCommandHandler, dispatcher
 from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
-from MissHannahRobot.plugins.helper_funcs.chat_status import (
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import (
     bot_can_delete,
     connection_status,
     dev_plus,

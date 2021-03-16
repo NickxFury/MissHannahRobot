@@ -7,8 +7,8 @@ from telegram.ext import CommandHandler, CallbackQueryHandler, run_async
 
 import MissHannahRobot.plugins.sql.connection_sql as sql
 from MissHannahRobot import dispatcher, DRAGONS, DEV_USERS
-from MissHannahRobot.plugins.helper_funcs import chat_status
-from MissHannahRobot.plugins.helper_funcs.alternate import send_message, typing_action
+from MissHannahRobot.plugins.sahaya_samagri import chat_status
+from MissHannahRobot.plugins.sahaya_samagri.alternate import send_message, typing_action
 
 user_admin = chat_status.user_admin
 

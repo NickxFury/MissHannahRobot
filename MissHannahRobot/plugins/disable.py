@@ -3,8 +3,8 @@ from typing import Union
 
 from future.utils import string_types
 from MissHannahRobot import dispatcher
-from MissHannahRobot.plugins.helper_funcs.handlers import CMD_STARTERS, SpamChecker
-from MissHannahRobot.plugins.helper_funcs.misc import is_module_loaded
+from MissHannahRobot.plugins.sahaya_samagri.handlers import CMD_STARTERS, SpamChecker
+from MissHannahRobot.plugins.sahaya_samagri.misc import is_module_loaded
 from telegram import ParseMode, Update
 from telegram.ext import (
     CallbackContext,
@@ -20,7 +20,7 @@ FILENAME = __name__.rsplit(".", 1)[-1]
 # If module is due to be loaded, then setup all the magical handlers
 if is_module_loaded(FILENAME):
 
-    from MissHannahRobot.plugins.helper_funcs.chat_status import (
+    from MissHannahRobot.plugins.sahaya_samagri.chat_status import (
         connection_status,
         is_user_admin,
         user_admin,

@@ -1,4 +1,4 @@
-from MissHannahRobot.plugins.helper_funcs.chat_status import user_admin
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import user_admin
 from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
 from MissHannahRobot import dispatcher
 

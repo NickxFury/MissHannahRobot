@@ -5,7 +5,7 @@ import re
 from telegram import Message, Chat, Update, User, ChatPermissions
 
 from MissHannahRobot import TIGERS, WOLVES, dispatcher
-from MissHannahRobot.plugins.helper_funcs.chat_status import (
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import (
     bot_admin,
     is_user_admin,
     user_admin,
@@ -23,9 +23,9 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html, escape_markdown
-from MissHannahRobot.plugins.helper_funcs.string_handling import extract_time
+from MissHannahRobot.plugins.sahaya_samagri.string_handling import extract_time
 from MissHannahRobot.plugins.connection import connected
-from MissHannahRobot.plugins.helper_funcs.alternate import send_message
+from MissHannahRobot.plugins.sahaya_samagri.alternate import send_message
 from MissHannahRobot.plugins.sql.approve_sql import is_approved
 
 FLOOD_GROUP = 3

@@ -7,7 +7,7 @@ from telegram.utils.helpers import mention_html
 
 from MissHannahRobot import DRAGONS, dispatcher
 from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
-from MissHannahRobot.plugins.helper_funcs.chat_status import (
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import (
     bot_admin,
     can_pin,
     can_promote,
@@ -16,12 +16,12 @@ from MissHannahRobot.plugins.helper_funcs.chat_status import (
     ADMIN_CACHE,
 )
 
-from MissHannahRobot.plugins.helper_funcs.extraction import (
+from MissHannahRobot.plugins.sahaya_samagri.extraction import (
     extract_user,
     extract_user_and_text,
 )
 from MissHannahRobot.plugins.log_channel import loggable
-from MissHannahRobot.plugins.helper_funcs.alternate import send_message
+from MissHannahRobot.plugins.sahaya_samagri.alternate import send_message
 
 
 @run_async

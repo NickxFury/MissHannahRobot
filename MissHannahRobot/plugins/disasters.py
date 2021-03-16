@@ -13,12 +13,12 @@ from MissHannahRobot import (
     WOLVES,
     dispatcher,
 )
-from MissHannahRobot.plugins.helper_funcs.chat_status import (
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import (
     dev_plus,
     sudo_plus,
     whitelist_plus,
 )
-from MissHannahRobot.plugins.helper_funcs.extraction import extract_user
+from MissHannahRobot.plugins.sahaya_samagri.extraction import extract_user
 from MissHannahRobot.plugins.log_channel import gloggable
 from telegram import ParseMode, TelegramError, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async

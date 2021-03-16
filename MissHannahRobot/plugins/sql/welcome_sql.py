@@ -2,7 +2,7 @@ import random
 import threading
 from typing import Union
 
-from MissHannahRobot.plugins.helper_funcs.msg_types import Types
+from MissHannahRobot.plugins.sahaya_samagri.msg_types import Types
 from MissHannahRobot.plugins.sql import BASE, SESSION
 from sqlalchemy import BigInteger, Boolean, Column, Integer, String, UnicodeText
 

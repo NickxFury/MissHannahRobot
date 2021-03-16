@@ -2,18 +2,18 @@ import html
 from typing import Optional
 
 from MissHannahRobot import LOGGER, TIGERS, dispatcher
-from MissHannahRobot.plugins.helper_funcs.chat_status import (
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import (
     bot_admin,
     can_restrict,
     connection_status,
     is_user_admin,
     user_admin,
 )
-from MissHannahRobot.plugins.helper_funcs.extraction import (
+from MissHannahRobot.plugins.sahaya_samagri.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from MissHannahRobot.plugins.helper_funcs.string_handling import extract_time
+from MissHannahRobot.plugins.sahaya_samagri.string_handling import extract_time
 from MissHannahRobot.plugins.log_channel import loggable
 from telegram import Bot, Chat, ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest

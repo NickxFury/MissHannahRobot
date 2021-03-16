@@ -10,8 +10,8 @@ from MissHannahRobot import (
     WOLVES,
     dispatcher,
 )
-from MissHannahRobot.plugins.helper_funcs.chat_status import dev_plus
-from MissHannahRobot.plugins.helper_funcs.extraction import (
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import dev_plus
+from MissHannahRobot.plugins.sahaya_samagri.extraction import (
     extract_user,
     extract_user_and_text,
 )

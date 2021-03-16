@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, String, UnicodeText, Boolean, Integer, distinct, func
 
-from MissHannahRobot.plugins.helper_funcs.msg_types import Types
+from MissHannahRobot.plugins.sahaya_samagri.msg_types import Types
 from MissHannahRobot.plugins.sql import BASE, SESSION
 
 

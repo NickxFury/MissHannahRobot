@@ -30,16 +30,16 @@ from MissHannahRobot import (
     sw,
     dispatcher,
 )
-from MissHannahRobot.plugins.helper_funcs.chat_status import (
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import (
     is_user_admin,
     support_plus,
     user_admin,
 )
-from MissHannahRobot.plugins.helper_funcs.extraction import (
+from MissHannahRobot.plugins.sahaya_samagri.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from MissHannahRobot.plugins.helper_funcs.misc import send_to_list
+from MissHannahRobot.plugins.sahaya_samagri.misc import send_to_list
 
 GBAN_ENFORCE_GROUP = 6
 

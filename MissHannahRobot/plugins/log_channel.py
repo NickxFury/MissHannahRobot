@@ -3,7 +3,7 @@ from functools import wraps
 
 from telegram.ext import CallbackContext
 
-from MissHannahRobot.plugins.helper_funcs.misc import is_module_loaded
+from MissHannahRobot.plugins.sahaya_samagri.misc import is_module_loaded
 
 FILENAME = __name__.rsplit(".", 1)[-1]
 
@@ -14,7 +14,7 @@ if is_module_loaded(FILENAME):
     from telegram.utils.helpers import escape_markdown
 
     from MissHannahRobot import EVENT_LOGS, LOGGER, dispatcher
-    from MissHannahRobot.plugins.helper_funcs.chat_status import user_admin
+    from MissHannahRobot.plugins.sahaya_samagri.chat_status import user_admin
     from MissHannahRobot.plugins.sql import log_channel_sql as sql
 
     def loggable(func):

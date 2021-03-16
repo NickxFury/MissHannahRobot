@@ -25,8 +25,8 @@ from MissHannahRobot import (
 # needed to dynamically load plugins
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from MissHannahRobot.plugins import ALL_MODULES
-from MissHannahRobot.plugins.helper_funcs.chat_status import is_user_admin
-from MissHannahRobot.plugins.helper_funcs.misc import paginate_plugins
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import is_user_admin
+from MissHannahRobot.plugins.sahaya_samagri.misc import paginate_plugins
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,

@@ -7,7 +7,7 @@ import traceback
 from contextlib import redirect_stdout
 
 from MissHannahRobot import LOGGER, dispatcher
-from MissHannahRobot.plugins.helper_funcs.chat_status import dev_plus
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import dev_plus
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 
@@ -76,7 +76,7 @@ def do(func, bot, update):
 
     os.chdir(os.getcwd())
     with open(
-        os.path.join(os.getcwd(), "MissHannahRobot/plugins/helper_funcs/temp.txt"), "w"
+        os.path.join(os.getcwd(), "MissHannahRobot/plugins/sahaya_samagri/temp.txt"), "w"
     ) as temp:
         temp.write(body)
 

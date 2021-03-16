@@ -30,8 +30,8 @@ from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
 from MissHannahRobot.plugins.sql.global_bans_sql import is_user_gbanned
 from MissHannahRobot.plugins.sql.afk_sql import is_afk, check_afk_status
 from MissHannahRobot.plugins.sql.users_sql import get_user_num_chats
-from MissHannahRobot.plugins.helper_funcs.chat_status import sudo_plus
-from MissHannahRobot.plugins.helper_funcs.extraction import extract_user
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import sudo_plus
+from MissHannahRobot.plugins.sahaya_samagri.extraction import extract_user
 from MissHannahRobot import telethn as SaitamaTelethonClient, TIGERS, DRAGONS, DEMONS
 
 

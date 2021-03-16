@@ -16,7 +16,7 @@ from MissHannahRobot import (
     dispatcher,
 )
 from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
-from MissHannahRobot.plugins.helper_funcs.chat_status import (
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import (
     bot_admin,
     can_restrict,
     connection_status,
@@ -27,8 +27,8 @@ from MissHannahRobot.plugins.helper_funcs.chat_status import (
     user_can_ban,
     can_delete,
 )
-from MissHannahRobot.plugins.helper_funcs.extraction import extract_user_and_text
-from MissHannahRobot.plugins.helper_funcs.string_handling import extract_time
+from MissHannahRobot.plugins.sahaya_samagri.extraction import extract_user_and_text
+from MissHannahRobot.plugins.sahaya_samagri.string_handling import extract_time
 from MissHannahRobot.plugins.log_channel import gloggable, loggable
 
 

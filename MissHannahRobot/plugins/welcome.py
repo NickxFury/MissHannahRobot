@@ -19,13 +19,13 @@ from MissHannahRobot import (
     dispatcher,
     JOIN_LOGGER
 )
-from MissHannahRobot.plugins.helper_funcs.chat_status import (
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from MissHannahRobot.plugins.helper_funcs.misc import build_keyboard, revert_buttons
-from MissHannahRobot.plugins.helper_funcs.msg_types import get_welcome_type
-from MissHannahRobot.plugins.helper_funcs.string_handling import (
+from MissHannahRobot.plugins.sahaya_samagri.misc import build_keyboard, revert_buttons
+from MissHannahRobot.plugins.sahaya_samagri.msg_types import get_welcome_type
+from MissHannahRobot.plugins.sahaya_samagri.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )

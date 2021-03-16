@@ -3,7 +3,7 @@ from time import sleep
 import MissHannahRobot.plugins.sql.global_bans_sql as gban_sql
 import MissHannahRobot.plugins.sql.users_sql as user_sql
 from MissHannahRobot import DEV_USERS, OWNER_ID, dispatcher
-from MissHannahRobot.plugins.helper_funcs.chat_status import dev_plus
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import dev_plus
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (

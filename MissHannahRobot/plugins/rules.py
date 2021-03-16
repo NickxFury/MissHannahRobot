@@ -2,8 +2,8 @@ from typing import Optional
 
 import MissHannahRobot.plugins.sql.rules_sql as sql
 from MissHannahRobot import dispatcher
-from MissHannahRobot.plugins.helper_funcs.chat_status import user_admin
-from MissHannahRobot.plugins.helper_funcs.string_handling import markdown_parser
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import user_admin
+from MissHannahRobot.plugins.sahaya_samagri.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,

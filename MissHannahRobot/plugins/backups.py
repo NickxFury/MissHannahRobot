@@ -8,8 +8,8 @@ from telegram.ext import CommandHandler, run_async
 import MissHannahRobot.plugins.sql.notes_sql as sql
 from MissHannahRobot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
 from MissHannahRobot.__main__ import DATA_IMPORT
-from MissHannahRobot.plugins.helper_funcs.chat_status import user_admin
-from MissHannahRobot.plugins.helper_funcs.alternate import typing_action
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import user_admin
+from MissHannahRobot.plugins.sahaya_samagri.alternate import typing_action
 
 # from MissHannahRobot.plugins.rules import get_rules
 import MissHannahRobot.plugins.sql.rules_sql as rulessql

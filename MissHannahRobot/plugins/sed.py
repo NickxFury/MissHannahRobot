@@ -4,7 +4,7 @@ import regex
 import telegram
 from MissHannahRobot import LOGGER, dispatcher
 from MissHannahRobot.plugins.disable import DisableAbleMessageHandler
-from MissHannahRobot.plugins.helper_funcs.regex_helper import infinite_loop_check
+from MissHannahRobot.plugins.sahaya_samagri.regex_helper import infinite_loop_check
 from telegram import Update
 from telegram.ext import CallbackContext, Filters, run_async
 

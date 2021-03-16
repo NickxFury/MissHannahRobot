@@ -12,7 +12,7 @@ from alphabet_detector import AlphabetDetector
 import MissHannahRobot.plugins.sql.locks_sql as sql
 from MissHannahRobot import dispatcher, DRAGONS, LOGGER
 from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
-from MissHannahRobot.plugins.helper_funcs.chat_status import (
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import (
     can_delete,
     is_user_admin,
     user_not_admin,
@@ -22,7 +22,7 @@ from MissHannahRobot.plugins.helper_funcs.chat_status import (
 from MissHannahRobot.plugins.log_channel import loggable
 from MissHannahRobot.plugins.connection import connected
 from MissHannahRobot.plugins.sql.approve_sql import is_approved
-from MissHannahRobot.plugins.helper_funcs.alternate import send_message, typing_action
+from MissHannahRobot.plugins.sahaya_samagri.alternate import send_message, typing_action
 
 ad = AlphabetDetector()
 

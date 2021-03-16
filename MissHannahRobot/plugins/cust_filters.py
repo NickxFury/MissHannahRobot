@@ -17,13 +17,13 @@ from telegram.utils.helpers import mention_html, escape_markdown
 
 from MissHannahRobot import dispatcher, LOGGER, DRAGONS
 from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
-from MissHannahRobot.plugins.helper_funcs.handlers import MessageHandlerChecker
-from MissHannahRobot.plugins.helper_funcs.chat_status import user_admin
-from MissHannahRobot.plugins.helper_funcs.extraction import extract_text
-from MissHannahRobot.plugins.helper_funcs.filters import CustomFilters
-from MissHannahRobot.plugins.helper_funcs.misc import build_keyboard_parser
-from MissHannahRobot.plugins.helper_funcs.msg_types import get_filter_type
-from MissHannahRobot.plugins.helper_funcs.string_handling import (
+from MissHannahRobot.plugins.sahaya_samagri.handlers import MessageHandlerChecker
+from MissHannahRobot.plugins.sahaya_samagri.chat_status import user_admin
+from MissHannahRobot.plugins.sahaya_samagri.extraction import extract_text
+from MissHannahRobot.plugins.sahaya_samagri.filters import CustomFilters
+from MissHannahRobot.plugins.sahaya_samagri.misc import build_keyboard_parser
+from MissHannahRobot.plugins.sahaya_samagri.msg_types import get_filter_type
+from MissHannahRobot.plugins.sahaya_samagri.string_handling import (
     split_quotes,
     button_markdown_parser,
     escape_invalid_curly_brackets,
@@ -33,7 +33,7 @@ from MissHannahRobot.plugins.sql import cust_filters_sql as sql
 
 from MissHannahRobot.plugins.connection import connected
 
-from MissHannahRobot.plugins.helper_funcs.alternate import send_message, typing_action
+from MissHannahRobot.plugins.sahaya_samagri.alternate import send_message, typing_action
 
 HANDLER_GROUP = 10
 
