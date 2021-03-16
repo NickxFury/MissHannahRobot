@@ -22,11 +22,11 @@ from MissHannahRobot import (
     updater,
 )
 
-# needed to dynamically load modules
+# needed to dynamically load plugins
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from MissHannahRobot.modules import ALL_MODULES
-from MissHannahRobot.modules.helper_funcs.chat_status import is_user_admin
-from MissHannahRobot.modules.helper_funcs.misc import paginate_modules
+from MissHannahRobot.plugins import ALL_MODULES
+from MissHannahRobot.plugins.helper_funcs.chat_status import is_user_admin
+from MissHannahRobot.plugins.helper_funcs.misc import paginate_plugins
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -89,7 +89,7 @@ the things I can help you with.
  • /help <module name>: PM's you info about that module.
  • /donate: information on how to donate!
  • /settings:
-   • in PM: will send you your settings for all supported modules.
+   • in PM: will send you your settings for all supported plugins.
    • in a group: will redirect you to pm, with all that chat's settings.
 
 
@@ -118,14 +118,14 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("MissHannahRobot.modules." + module_name)
+    imported_module = importlib.import_module("MissHannahRobot.plugins." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
     if imported_module.__mod_name__.lower() not in IMPORTED:
         IMPORTED[imported_module.__mod_name__.lower()] = imported_module
     else:
-        raise Exception("Can't have two modules with the same name! Please change one")
+        raise Exception("Can't have two plugins with the same name! Please change one")
 
     if hasattr(imported_module, "__help__") and imported_module.__help__:
         HELPABLE[imported_module.__mod_name__.lower()] = imported_module
@@ -156,7 +156,7 @@ for module_name in ALL_MODULES:
 # do not async
 def send_help(chat_id, text, keyboard=None):
     if not keyboard:
-        keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
+        keyboard = InlineKeyboardMarkup(paginate_plugins(0, HELPABLE, "help"))
     dispatcher.bot.send_message(
         chat_id=chat_id,
         text=text,
@@ -326,7 +326,7 @@ def help_button(update, context):
                 text=HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(curr_page - 1, HELPABLE, "help")
+                    paginate_plugins(curr_page - 1, HELPABLE, "help")
                 ),
             )
 
@@ -336,7 +336,7 @@ def help_button(update, context):
                 text=HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(next_page + 1, HELPABLE, "help")
+                    paginate_plugins(next_page + 1, HELPABLE, "help")
                 ),
             )
 
@@ -345,7 +345,7 @@ def help_button(update, context):
                 text=HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(0, HELPABLE, "help")
+                    paginate_plugins(0, HELPABLE, "help")
                 ),
             )
 
@@ -446,7 +446,7 @@ def send_settings(chat_id, user_id, user=False):
                     chat_name
                 ),
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
+                    paginate_plugins(0, CHAT_SETTINGS, "stngs", chat=chat_id)
                 ),
             )
         else:
@@ -498,7 +498,7 @@ def settings_button(update: Update, context: CallbackContext):
                 "Hi there! There are quite a few settings for {} - go ahead and pick what "
                 "you're interested in.".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(
+                    paginate_plugins(
                         curr_page - 1, CHAT_SETTINGS, "stngs", chat=chat_id
                     )
                 ),
@@ -512,7 +512,7 @@ def settings_button(update: Update, context: CallbackContext):
                 "Hi there! There are quite a few settings for {} - go ahead and pick what "
                 "you're interested in.".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(
+                    paginate_plugins(
                         next_page + 1, CHAT_SETTINGS, "stngs", chat=chat_id
                     )
                 ),
@@ -526,7 +526,7 @@ def settings_button(update: Update, context: CallbackContext):
                 "you're interested in.".format(escape_markdown(chat.title)),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
+                    paginate_plugins(0, CHAT_SETTINGS, "stngs", chat=chat_id)
                 ),
             )
 
@@ -685,6 +685,6 @@ def main():
 
 
 if __name__ == "__main__":
-    LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
+    LOGGER.info("Successfully loaded plugins: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     main()
