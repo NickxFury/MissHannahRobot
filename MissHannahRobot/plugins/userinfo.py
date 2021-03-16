@@ -32,7 +32,7 @@ from MissHannahRobot.plugins.sql.afk_sql import is_afk, check_afk_status
 from MissHannahRobot.plugins.sql.users_sql import get_user_num_chats
 from MissHannahRobot.plugins.sahaya_samagri.chat_status import sudo_plus
 from MissHannahRobot.plugins.sahaya_samagri.extraction import extract_user
-from MissHannahRobot import telethn as SaitamaTelethonClient, TIGERS, DRAGONS, DEMONS
+from MissHannahRobot import telethn as HannahTelethonClient, TIGERS, DRAGONS, DEMONS
 
 
 def no_by_per(totalhp, percentage):
@@ -160,7 +160,7 @@ def get_id(update: Update, context: CallbackContext):
             )
 
 
-@SaitamaTelethonClient.on(
+@HannahTelethonClient.on(
     events.NewMessage(
         pattern="/ginfo ", from_users=(TIGERS or []) + (DRAGONS or []) + (DEMONS or [])
     )
