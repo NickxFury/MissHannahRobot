@@ -5,9 +5,9 @@ import time
 from functools import partial
 from contextlib import suppress
 
-import SaitamaRobot.plugins.sql.welcome_sql as sql
-import SaitamaRobot
-from SaitamaRobot import (
+import HannahRobot.plugins.sql.welcome_sql as sql
+import HannahRobot
+from HannahRobot import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
@@ -19,18 +19,18 @@ from SaitamaRobot import (
     dispatcher,
     JOIN_LOGGER
 )
-from SaitamaRobot.plugins.helper_funcs.chat_status import (
+from HannahRobot.plugins.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from SaitamaRobot.plugins.helper_funcs.misc import build_keyboard, revert_buttons
-from SaitamaRobot.plugins.helper_funcs.msg_types import get_welcome_type
-from SaitamaRobot.plugins.helper_funcs.string_handling import (
+from HannahRobot.plugins.helper_funcs.misc import build_keyboard, revert_buttons
+from HannahRobot.plugins.helper_funcs.msg_types import get_welcome_type
+from HannahRobot.plugins.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from SaitamaRobot.plugins.log_channel import loggable
-from SaitamaRobot.plugins.sql.global_bans_sql import is_user_gbanned
+from HannahRobot.plugins.log_channel import loggable
+from HannahRobot.plugins.sql.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,
@@ -265,7 +265,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome yourself
             elif new_mem.id == bot.id:
                 creator = None
-                if not SaitamaRobot.ALLOW_CHATS:
+                if not HannahRobot.ALLOW_CHATS:
                     with suppress(BadRequest):
                          update.effective_message.reply_text(f"Groups are disabled for {bot.first_name}, I'm outta here.")
                     bot.leave_chat(update.effective_chat.id)

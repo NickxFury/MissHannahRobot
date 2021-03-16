@@ -1,9 +1,9 @@
 import html
 
-from SaitamaRobot import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
-from SaitamaRobot.plugins.helper_funcs.chat_status import user_admin, user_not_admin
-from SaitamaRobot.plugins.log_channel import loggable
-from SaitamaRobot.plugins.sql import reporting_sql as sql
+from HannahRobot import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
+from HannahRobot.plugins.helper_funcs.chat_status import user_admin, user_not_admin
+from HannahRobot.plugins.log_channel import loggable
+from HannahRobot.plugins.sql import reporting_sql as sql
 from telegram import Chat, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (

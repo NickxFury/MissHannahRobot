@@ -1,14 +1,14 @@
 import html
 
-from SaitamaRobot import ALLOW_EXCL, CustomCommandHandler, dispatcher
-from SaitamaRobot.plugins.disable import DisableAbleCommandHandler
-from SaitamaRobot.plugins.helper_funcs.chat_status import (
+from HannahRobot import ALLOW_EXCL, CustomCommandHandler, dispatcher
+from HannahRobot.plugins.disable import DisableAbleCommandHandler
+from HannahRobot.plugins.helper_funcs.chat_status import (
     bot_can_delete,
     connection_status,
     dev_plus,
     user_admin,
 )
-from SaitamaRobot.plugins.sql import cleaner_sql as sql
+from HannahRobot.plugins.sql import cleaner_sql as sql
 from telegram import ParseMode, Update
 from telegram.ext import (
     CallbackContext,
@@ -228,7 +228,7 @@ Blue text cleaner removed any made up commands that people send in your chat.
  • `/listblue`*:* list currently whitelisted commands
  
  *Following are Disasters only commands, admins cannot use these:*
- • `/gignoreblue <word>`*:* globally ignorea bluetext cleaning of saved word across Saitama.
+ • `/gignoreblue <word>`*:* globally ignorea bluetext cleaning of saved word across Hannah.
  • `/ungignoreblue <word>`*:* remove said command from global cleaning list
 """
 

@@ -1,17 +1,17 @@
 import html
 from typing import Optional
 
-import SaitamaRobot.plugins.sql.blsticker_sql as sql
-from SaitamaRobot import LOGGER, dispatcher
-from SaitamaRobot.plugins.connection import connected
-from SaitamaRobot.plugins.disable import DisableAbleCommandHandler
-from SaitamaRobot.plugins.helper_funcs.alternate import send_message
-from SaitamaRobot.plugins.helper_funcs.chat_status import user_admin, user_not_admin
-from SaitamaRobot.plugins.helper_funcs.misc import split_message
-from SaitamaRobot.plugins.helper_funcs.string_handling import extract_time
+import HannahRobot.plugins.sql.blsticker_sql as sql
+from HannahRobot import LOGGER, dispatcher
+from HannahRobot.plugins.connection import connected
+from HannahRobot.plugins.disable import DisableAbleCommandHandler
+from HannahRobot.plugins.helper_funcs.alternate import send_message
+from HannahRobot.plugins.helper_funcs.chat_status import user_admin, user_not_admin
+from HannahRobot.plugins.helper_funcs.misc import split_message
+from HannahRobot.plugins.helper_funcs.string_handling import extract_time
 
-from SaitamaRobot.plugins.log_channel import loggable
-from SaitamaRobot.plugins.warns import warn
+from HannahRobot.plugins.log_channel import loggable
+from HannahRobot.plugins.warns import warn
 from telegram import Chat, Message, ParseMode, Update, User, ChatPermissions
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, MessageHandler

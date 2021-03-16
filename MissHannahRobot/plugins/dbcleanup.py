@@ -1,9 +1,9 @@
 from time import sleep
 
-import SaitamaRobot.plugins.sql.global_bans_sql as gban_sql
-import SaitamaRobot.plugins.sql.users_sql as user_sql
-from SaitamaRobot import DEV_USERS, OWNER_ID, dispatcher
-from SaitamaRobot.plugins.helper_funcs.chat_status import dev_plus
+import HannahRobot.plugins.sql.global_bans_sql as gban_sql
+import HannahRobot.plugins.sql.users_sql as user_sql
+from HannahRobot import DEV_USERS, OWNER_ID, dispatcher
+from HannahRobot.plugins.helper_funcs.chat_status import dev_plus
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (

@@ -3,14 +3,14 @@ import html
 # AI module using Intellivoid's Coffeehouse API by @TheRealPhoenix
 from time import sleep, time
 
-import SaitamaRobot.plugins.sql.chatbot_sql as sql
+import HannahRobot.plugins.sql.chatbot_sql as sql
 from coffeehouse.api import API
 from coffeehouse.exception import CoffeeHouseError as CFError
 from coffeehouse.lydia import LydiaAI
-from SaitamaRobot import AI_API_KEY, OWNER_ID, SUPPORT_CHAT, dispatcher
-from SaitamaRobot.plugins.helper_funcs.chat_status import user_admin
-from SaitamaRobot.plugins.helper_funcs.filters import CustomFilters
-from SaitamaRobot.plugins.log_channel import gloggable
+from HannahRobot import AI_API_KEY, OWNER_ID, SUPPORT_CHAT, dispatcher
+from HannahRobot.plugins.helper_funcs.chat_status import user_admin
+from HannahRobot.plugins.helper_funcs.filters import CustomFilters
+from HannahRobot.plugins.log_channel import gloggable
 from telegram import Update
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import (
@@ -142,7 +142,7 @@ def list_chatbot_chats(update: Update, context: CallbackContext):
 
 
 __help__ = f"""
-Chatbot utilizes the CoffeeHouse API and allows Saitama to talk and provides a more interactive group chat experience.
+Chatbot utilizes the CoffeeHouse API and allows Hannah to talk and provides a more interactive group chat experience.
 
 *Commands:* 
 *Admins only:*

@@ -1,12 +1,12 @@
 import random, html
 
-from SaitamaRobot import dispatcher
-from SaitamaRobot.plugins.disable import (
+from HannahRobot import dispatcher
+from HannahRobot.plugins.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
-from SaitamaRobot.plugins.sql import afk_sql as sql
-from SaitamaRobot.plugins.users import get_user_id
+from HannahRobot.plugins.sql import afk_sql as sql
+from HannahRobot.plugins.users import get_user_id
 from telegram import MessageEntity, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, Filters, MessageHandler, run_async

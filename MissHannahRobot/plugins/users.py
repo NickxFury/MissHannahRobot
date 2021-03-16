@@ -11,10 +11,10 @@ from telegram.ext import (
     run_async,
 )
 
-import SaitamaRobot.plugins.sql.users_sql as sql
-from SaitamaRobot import DEV_USERS, LOGGER, OWNER_ID, dispatcher
-from SaitamaRobot.plugins.helper_funcs.chat_status import dev_plus, sudo_plus
-from SaitamaRobot.plugins.sql.users_sql import get_all_users
+import HannahRobot.plugins.sql.users_sql as sql
+from HannahRobot import DEV_USERS, LOGGER, OWNER_ID, dispatcher
+from HannahRobot.plugins.helper_funcs.chat_status import dev_plus, sudo_plus
+from HannahRobot.plugins.sql.users_sql import get_all_users
 
 USERS_GROUP = 4
 CHAT_GROUP = 5

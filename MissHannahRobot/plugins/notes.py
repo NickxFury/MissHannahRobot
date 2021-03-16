@@ -3,14 +3,14 @@ from io import BytesIO
 import random
 from typing import Optional
 
-import SaitamaRobot.plugins.sql.notes_sql as sql
-from SaitamaRobot import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
-from SaitamaRobot.plugins.disable import DisableAbleCommandHandler
-from SaitamaRobot.plugins.helper_funcs.handlers import MessageHandlerChecker
-from SaitamaRobot.plugins.helper_funcs.chat_status import user_admin, connection_status
-from SaitamaRobot.plugins.helper_funcs.misc import build_keyboard, revert_buttons
-from SaitamaRobot.plugins.helper_funcs.msg_types import get_note_type
-from SaitamaRobot.plugins.helper_funcs.string_handling import (
+import HannahRobot.plugins.sql.notes_sql as sql
+from HannahRobot import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
+from HannahRobot.plugins.disable import DisableAbleCommandHandler
+from HannahRobot.plugins.helper_funcs.handlers import MessageHandlerChecker
+from HannahRobot.plugins.helper_funcs.chat_status import user_admin, connection_status
+from HannahRobot.plugins.helper_funcs.misc import build_keyboard, revert_buttons
+from HannahRobot.plugins.helper_funcs.msg_types import get_note_type
+from HannahRobot.plugins.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
 )
 from telegram import (

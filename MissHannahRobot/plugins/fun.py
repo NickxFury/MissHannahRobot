@@ -2,11 +2,11 @@ import html
 import random
 import time
 
-import SaitamaRobot.plugins.fun_strings as fun_strings
-from SaitamaRobot import dispatcher
-from SaitamaRobot.plugins.disable import DisableAbleCommandHandler
-from SaitamaRobot.plugins.helper_funcs.chat_status import is_user_admin
-from SaitamaRobot.plugins.helper_funcs.extraction import extract_user
+import HannahRobot.plugins.fun_strings as fun_strings
+from HannahRobot import dispatcher
+from HannahRobot.plugins.disable import DisableAbleCommandHandler
+from HannahRobot.plugins.helper_funcs.chat_status import is_user_admin
+from HannahRobot.plugins.helper_funcs.extraction import extract_user
 from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async

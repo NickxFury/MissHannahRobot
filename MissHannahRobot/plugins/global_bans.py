@@ -14,9 +14,9 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import SaitamaRobot.plugins.sql.global_bans_sql as sql
-from SaitamaRobot.plugins.sql.users_sql import get_user_com_chats
-from SaitamaRobot import (
+import HannahRobot.plugins.sql.global_bans_sql as sql
+from HannahRobot.plugins.sql.users_sql import get_user_com_chats
+from HannahRobot import (
     DEV_USERS,
     EVENT_LOGS,
     OWNER_ID,
@@ -30,16 +30,16 @@ from SaitamaRobot import (
     sw,
     dispatcher,
 )
-from SaitamaRobot.plugins.helper_funcs.chat_status import (
+from HannahRobot.plugins.helper_funcs.chat_status import (
     is_user_admin,
     support_plus,
     user_admin,
 )
-from SaitamaRobot.plugins.helper_funcs.extraction import (
+from HannahRobot.plugins.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from SaitamaRobot.plugins.helper_funcs.misc import send_to_list
+from HannahRobot.plugins.helper_funcs.misc import send_to_list
 
 GBAN_ENFORCE_GROUP = 6
 

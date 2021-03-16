@@ -1,11 +1,11 @@
 import html
-from SaitamaRobot.plugins.disable import DisableAbleCommandHandler
-from SaitamaRobot import dispatcher, DRAGONS
-from SaitamaRobot.plugins.helper_funcs.extraction import extract_user
+from HannahRobot.plugins.disable import DisableAbleCommandHandler
+from HannahRobot import dispatcher, DRAGONS
+from HannahRobot.plugins.helper_funcs.extraction import extract_user
 from telegram.ext import CallbackContext, run_async, CallbackQueryHandler
-import SaitamaRobot.plugins.sql.approve_sql as sql
-from SaitamaRobot.plugins.helper_funcs.chat_status import user_admin
-from SaitamaRobot.plugins.log_channel import loggable
+import HannahRobot.plugins.sql.approve_sql as sql
+from HannahRobot.plugins.helper_funcs.chat_status import user_admin
+from HannahRobot.plugins.log_channel import loggable
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, Update
 from telegram.utils.helpers import mention_html
 from telegram.error import BadRequest

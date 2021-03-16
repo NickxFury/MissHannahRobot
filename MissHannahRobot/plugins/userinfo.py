@@ -13,7 +13,7 @@ from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
 
-from SaitamaRobot import (
+from HannahRobot import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -24,15 +24,15 @@ from SaitamaRobot import (
     dispatcher,
     sw,
 )
-from SaitamaRobot.__main__ import STATS, TOKEN, USER_INFO
-import SaitamaRobot.plugins.sql.userinfo_sql as sql
-from SaitamaRobot.plugins.disable import DisableAbleCommandHandler
-from SaitamaRobot.plugins.sql.global_bans_sql import is_user_gbanned
-from SaitamaRobot.plugins.sql.afk_sql import is_afk, check_afk_status
-from SaitamaRobot.plugins.sql.users_sql import get_user_num_chats
-from SaitamaRobot.plugins.helper_funcs.chat_status import sudo_plus
-from SaitamaRobot.plugins.helper_funcs.extraction import extract_user
-from SaitamaRobot import telethn as SaitamaTelethonClient, TIGERS, DRAGONS, DEMONS
+from HannahRobot.__main__ import STATS, TOKEN, USER_INFO
+import HannahRobot.plugins.sql.userinfo_sql as sql
+from HannahRobot.plugins.disable import DisableAbleCommandHandler
+from HannahRobot.plugins.sql.global_bans_sql import is_user_gbanned
+from HannahRobot.plugins.sql.afk_sql import is_afk, check_afk_status
+from HannahRobot.plugins.sql.users_sql import get_user_num_chats
+from HannahRobot.plugins.helper_funcs.chat_status import sudo_plus
+from HannahRobot.plugins.helper_funcs.extraction import extract_user
+from HannahRobot import telethn as HannahTelethonClient, TIGERS, DRAGONS, DEMONS
 
 
 def no_by_per(totalhp, percentage):
@@ -160,7 +160,7 @@ def get_id(update: Update, context: CallbackContext):
             )
 
 
-@SaitamaTelethonClient.on(
+@HannahTelethonClient.on(
     events.NewMessage(
         pattern="/ginfo ", from_users=(TIGERS or []) + (DRAGONS or []) + (DEMONS or [])
     )

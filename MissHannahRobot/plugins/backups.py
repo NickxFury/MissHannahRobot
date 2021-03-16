@@ -5,23 +5,23 @@ from telegram import ParseMode, Message
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
-import SaitamaRobot.plugins.sql.notes_sql as sql
-from SaitamaRobot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
-from SaitamaRobot.__main__ import DATA_IMPORT
-from SaitamaRobot.plugins.helper_funcs.chat_status import user_admin
-from SaitamaRobot.plugins.helper_funcs.alternate import typing_action
+import HannahRobot.plugins.sql.notes_sql as sql
+from HannahRobot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
+from HannahRobot.__main__ import DATA_IMPORT
+from HannahRobot.plugins.helper_funcs.chat_status import user_admin
+from HannahRobot.plugins.helper_funcs.alternate import typing_action
 
-# from SaitamaRobot.plugins.rules import get_rules
-import SaitamaRobot.plugins.sql.rules_sql as rulessql
+# from HannahRobot.plugins.rules import get_rules
+import HannahRobot.plugins.sql.rules_sql as rulessql
 
-# from SaitamaRobot.plugins.sql import warns_sql as warnssql
-import SaitamaRobot.plugins.sql.blacklist_sql as blacklistsql
-from SaitamaRobot.plugins.sql import disable_sql as disabledsql
+# from HannahRobot.plugins.sql import warns_sql as warnssql
+import HannahRobot.plugins.sql.blacklist_sql as blacklistsql
+from HannahRobot.plugins.sql import disable_sql as disabledsql
 
-# from SaitamaRobot.plugins.sql import cust_filters_sql as filtersql
-# import SaitamaRobot.plugins.sql.welcome_sql as welcsql
-import SaitamaRobot.plugins.sql.locks_sql as locksql
-from SaitamaRobot.plugins.connection import connected
+# from HannahRobot.plugins.sql import cust_filters_sql as filtersql
+# import HannahRobot.plugins.sql.welcome_sql as welcsql
+import HannahRobot.plugins.sql.locks_sql as locksql
+from HannahRobot.plugins.connection import connected
 
 
 @run_async
@@ -325,7 +325,7 @@ def export_data(update, context):
         },
     }
     baccinfo = json.dumps(backup, indent=4)
-    with open("SaitamaRobot{}.backup".format(chat_id), "w") as f:
+    with open("HannahRobot{}.backup".format(chat_id), "w") as f:
         f.write(str(baccinfo))
     context.bot.sendChatAction(current_chat_id, "upload_document")
     tgl = time.strftime("%H:%M:%S - %d/%m/%Y", time.localtime(time.time()))
@@ -341,15 +341,15 @@ def export_data(update, context):
         pass
     context.bot.sendDocument(
         current_chat_id,
-        document=open("SaitamaRobot{}.backup".format(chat_id), "rb"),
-        caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `SaitamaRobot-Backup` was specially made for notes.".format(
+        document=open("HannahRobot{}.backup".format(chat_id), "rb"),
+        caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `HannahRobot-Backup` was specially made for notes.".format(
             chat.title, chat_id, tgl
         ),
         timeout=360,
         reply_to_message_id=msg.message_id,
         parse_mode=ParseMode.MARKDOWN,
     )
-    os.remove("SaitamaRobot{}.backup".format(chat_id))  # Cleaning file
+    os.remove("HannahRobot{}.backup".format(chat_id))  # Cleaning file
 
 
 # Temporary data

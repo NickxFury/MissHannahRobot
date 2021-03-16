@@ -1,7 +1,7 @@
 import speedtest
-from SaitamaRobot import DEV_USERS, dispatcher
-from SaitamaRobot.plugins.disable import DisableAbleCommandHandler
-from SaitamaRobot.plugins.helper_funcs.chat_status import dev_plus
+from HannahRobot import DEV_USERS, dispatcher
+from HannahRobot.plugins.disable import DisableAbleCommandHandler
+from HannahRobot.plugins.helper_funcs.chat_status import dev_plus
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.ext import CallbackContext, CallbackQueryHandler, run_async
 
