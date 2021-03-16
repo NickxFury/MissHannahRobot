@@ -1,7 +1,7 @@
 import threading
 from typing import Union
 
-from SaitamaRobot.plugins.sql import BASE, SESSION
+from MissHannahRobot.plugins.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, Integer, String
 
 
