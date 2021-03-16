@@ -13,8 +13,8 @@ Contributions are very welcome! Here are some guidelines on how the project is d
 ### Structure
 
 There are a few self-imposed rules on the project structure, to keep the project as tidy as possible.
-- All modules should go into the `modules/` directory.
-- Any database accesses should be done in `modules/sql/` - no instances of SESSION should be imported anywhere else.
+- All plugins should go into the `plugins/` directory.
+- Any database accesses should be done in `plugins/sql/` - no instances of SESSION should be imported anywhere else.
 - Make sure your database sessions are properly scoped! Always close them properly.
 - When creating a new module, there should be as few changes to other files as possible required to incorporate it.
 Removing the module file should result in a bot which is still in perfect working condition.
