@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: git mv plugins modules
+      - run: git mv 
       - uses: EndBug/add-and-commit@v5.1.0
 
