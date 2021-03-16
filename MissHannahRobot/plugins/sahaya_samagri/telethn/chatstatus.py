@@ -1,5 +1,5 @@
-from SaitamaRobot.modules.sahaya_samagri.telethn import IMMUNE_USERS, telethn
-from SaitamaRobot import DRAGONS
+from MissHannahRobot.modules.sahaya_samagri.telethn import IMMUNE_USERS, telethn
+from MissHannahRobot import DRAGONS
 from telethon.tl.types import ChannelParticipantsAdmins
 
 
