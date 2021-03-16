@@ -1,8 +1,8 @@
 import math
 
 import pynewtonmath as newton
-from SaitamaRobot import dispatcher
-from SaitamaRobot.modules.disable import DisableAbleCommandHandler
+from HannahRobot import dispatcher
+from HannahRobot.modules.disable import DisableAbleCommandHandler
 from telegram import Update
 from telegram.ext import CallbackContext, run_async
 

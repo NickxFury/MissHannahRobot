@@ -1,5 +1,5 @@
-from SaitamaRobot.modules.helper_funcs.telethn import IMMUNE_USERS, telethn
-from SaitamaRobot import DRAGONS
+from HannahRobot.modules.helper_funcs.telethn import IMMUNE_USERS, telethn
+from HannahRobot import DRAGONS
 from telethon.tl.types import ChannelParticipantsAdmins
 
 
