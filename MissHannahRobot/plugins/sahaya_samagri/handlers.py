@@ -1,4 +1,4 @@
-import SaitamaRobot.modules.sql.blacklistusers_sql as sql
+import SaitamaRobot.plugins.sql.blacklistusers_sql as sql
 from SaitamaRobot import ALLOW_EXCL
 from SaitamaRobot import DEV_USERS, DRAGONS, DEMONS, TIGERS, WOLVES
 

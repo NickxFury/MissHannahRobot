@@ -36,9 +36,9 @@ def split_message(msg: str) -> List[str]:
     return result
 
 
-def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
+def paginate_plugins(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
     if not chat:
-        modules = sorted(
+        plugins = sorted(
             [
                 EqInlineKeyboardButton(
                     x.__mod_name__,
@@ -50,7 +50,7 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
             ]
         )
     else:
-        modules = sorted(
+        plugins = sorted(
             [
                 EqInlineKeyboardButton(
                     x.__mod_name__,
@@ -62,12 +62,12 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
             ]
         )
 
-    pairs = [modules[i * 3 : (i + 1) * 3] for i in range((len(modules) + 3 - 1) // 3)]
+    pairs = [plugins[i * 3 : (i + 1) * 3] for i in range((len(plugins) + 3 - 1) // 3)]
 
-    round_num = len(modules) / 3
-    calc = len(modules) - round(round_num)
+    round_num = len(plugins) / 3
+    calc = len(plugins) - round(round_num)
     if calc in [1, 2]:
-        pairs.append((modules[-1],))
+        pairs.append((plugins[-1],))
     return pairs
 
 
