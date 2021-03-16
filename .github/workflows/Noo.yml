@@ -8,12 +8,12 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: ""
-          replace: ""
+          find: "plugins"
+          replace: "modules"
       - name: Pull All Updates
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: '😹Welcome to MissHannahRobot'
+          commit_message: 'plugins to modules🙄'
           commit_options: '--no-verify'
           repository: .
           commit_user_name: Mr-Dark-Prince
