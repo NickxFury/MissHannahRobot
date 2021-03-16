@@ -4,8 +4,8 @@ from typing import Optional
 
 import telegram
 from MissHannahRobot import TIGERS, WOLVES, dispatcher
-from MissHannahRobot.modules.disable import DisableAbleCommandHandler
-from MissHannahRobot.modules.helper_funcs.chat_status import (
+from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
+from MissHannahRobot.plugins.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
@@ -13,16 +13,16 @@ from MissHannahRobot.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
     can_delete,
 )
-from MissHannahRobot.modules.helper_funcs.extraction import (
+from MissHannahRobot.plugins.helper_funcs.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from MissHannahRobot.modules.helper_funcs.filters import CustomFilters
-from MissHannahRobot.modules.helper_funcs.misc import split_message
-from MissHannahRobot.modules.helper_funcs.string_handling import split_quotes
-from MissHannahRobot.modules.log_channel import loggable
-from MissHannahRobot.modules.sql import warns_sql as sql
+from MissHannahRobot.plugins.helper_funcs.filters import CustomFilters
+from MissHannahRobot.plugins.helper_funcs.misc import split_message
+from MissHannahRobot.plugins.helper_funcs.string_handling import split_quotes
+from MissHannahRobot.plugins.log_channel import loggable
+from MissHannahRobot.plugins.sql import warns_sql as sql
 from telegram import (
     CallbackQuery,
     Chat,
@@ -44,7 +44,7 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html
-from MissHannahRobot.modules.sql.approve_sql import is_approved
+from MissHannahRobot.plugins.sql.approve_sql import is_approved
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"

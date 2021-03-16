@@ -1,11 +1,11 @@
 import html
-from MissHannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
 from MissHannahRobot import dispatcher, DRAGONS
-from MissHannahRobot.modules.helper_funcs.extraction import extract_user
+from MissHannahRobot.plugins.helper_funcs.extraction import extract_user
 from telegram.ext import CallbackContext, run_async, CallbackQueryHandler
-import MissHannahRobot.modules.sql.approve_sql as sql
-from MissHannahRobot.modules.helper_funcs.chat_status import user_admin
-from MissHannahRobot.modules.log_channel import loggable
+import MissHannahRobot.plugins.sql.approve_sql as sql
+from MissHannahRobot.plugins.helper_funcs.chat_status import user_admin
+from MissHannahRobot.plugins.log_channel import loggable
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, Update
 from telegram.utils.helpers import mention_html
 from telegram.error import BadRequest

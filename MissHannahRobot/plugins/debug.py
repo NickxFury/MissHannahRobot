@@ -6,7 +6,7 @@ from telegram import Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 
 from MissHannahRobot import telethn, dispatcher
-from MissHannahRobot.modules.helper_funcs.chat_status import dev_plus
+from MissHannahRobot.plugins.helper_funcs.chat_status import dev_plus
 
 DEBUG_MODE = False
 

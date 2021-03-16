@@ -8,7 +8,7 @@ from time import sleep
 import MissHannahRobot
 
 from MissHannahRobot import dispatcher
-from MissHannahRobot.modules.helper_funcs.chat_status import dev_plus
+from MissHannahRobot.plugins.helper_funcs.chat_status import dev_plus
 from telegram import TelegramError, Update
 from telegram.error import Unauthorized
 from telegram.ext import CallbackContext, CommandHandler, run_async

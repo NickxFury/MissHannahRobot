@@ -5,7 +5,7 @@ import time
 from functools import partial
 from contextlib import suppress
 
-import MissHannahRobot.modules.sql.welcome_sql as sql
+import MissHannahRobot.plugins.sql.welcome_sql as sql
 import MissHannahRobot
 from MissHannahRobot import (
     DEV_USERS,
@@ -19,18 +19,18 @@ from MissHannahRobot import (
     dispatcher,
     JOIN_LOGGER
 )
-from MissHannahRobot.modules.helper_funcs.chat_status import (
+from MissHannahRobot.plugins.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from MissHannahRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from MissHannahRobot.modules.helper_funcs.msg_types import get_welcome_type
-from MissHannahRobot.modules.helper_funcs.string_handling import (
+from MissHannahRobot.plugins.helper_funcs.misc import build_keyboard, revert_buttons
+from MissHannahRobot.plugins.helper_funcs.msg_types import get_welcome_type
+from MissHannahRobot.plugins.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from MissHannahRobot.modules.log_channel import loggable
-from MissHannahRobot.modules.sql.global_bans_sql import is_user_gbanned
+from MissHannahRobot.plugins.log_channel import loggable
+from MissHannahRobot.plugins.sql.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,

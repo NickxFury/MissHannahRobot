@@ -2,7 +2,7 @@ from random import randint
 
 import requests as r
 from MissHannahRobot import SUPPORT_CHAT, WALL_API, dispatcher
-from MissHannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
 from telegram import Update
 from telegram.ext import CallbackContext, run_async
 

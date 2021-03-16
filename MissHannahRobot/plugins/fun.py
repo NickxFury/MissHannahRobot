@@ -2,11 +2,11 @@ import html
 import random
 import time
 
-import MissHannahRobot.modules.fun_strings as fun_strings
+import MissHannahRobot.plugins.fun_strings as fun_strings
 from MissHannahRobot import dispatcher
-from MissHannahRobot.modules.disable import DisableAbleCommandHandler
-from MissHannahRobot.modules.helper_funcs.chat_status import is_user_admin
-from MissHannahRobot.modules.helper_funcs.extraction import extract_user
+from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
+from MissHannahRobot.plugins.helper_funcs.chat_status import is_user_admin
+from MissHannahRobot.plugins.helper_funcs.extraction import extract_user
 from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async

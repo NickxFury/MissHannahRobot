@@ -2,7 +2,7 @@ import time
 from telethon import events
 
 from MissHannahRobot import telethn
-from MissHannahRobot.modules.helper_funcs.telethn.chatstatus import (
+from MissHannahRobot.plugins.helper_funcs.telethn.chatstatus import (
     can_delete_messages,
     user_is_admin,
 )

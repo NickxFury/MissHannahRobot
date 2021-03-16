@@ -6,7 +6,7 @@ import bs4
 import jikanpy
 import requests
 from MissHannahRobot import dispatcher
-from MissHannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 

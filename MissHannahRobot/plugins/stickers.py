@@ -12,7 +12,7 @@ from telegram.ext import run_async, CallbackContext
 from telegram.utils.helpers import mention_html
 
 from MissHannahRobot import dispatcher
-from MissHannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
 

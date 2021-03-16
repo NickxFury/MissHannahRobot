@@ -1,14 +1,14 @@
 import html
 
 from MissHannahRobot import ALLOW_EXCL, CustomCommandHandler, dispatcher
-from MissHannahRobot.modules.disable import DisableAbleCommandHandler
-from MissHannahRobot.modules.helper_funcs.chat_status import (
+from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
+from MissHannahRobot.plugins.helper_funcs.chat_status import (
     bot_can_delete,
     connection_status,
     dev_plus,
     user_admin,
 )
-from MissHannahRobot.modules.sql import cleaner_sql as sql
+from MissHannahRobot.plugins.sql import cleaner_sql as sql
 from telegram import ParseMode, Update
 from telegram.ext import (
     CallbackContext,

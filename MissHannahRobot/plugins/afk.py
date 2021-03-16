@@ -1,12 +1,12 @@
 import random, html
 
 from MissHannahRobot import dispatcher
-from MissHannahRobot.modules.disable import (
+from MissHannahRobot.plugins.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
-from MissHannahRobot.modules.sql import afk_sql as sql
-from MissHannahRobot.modules.users import get_user_id
+from MissHannahRobot.plugins.sql import afk_sql as sql
+from MissHannahRobot.plugins.users import get_user_id
 from telegram import MessageEntity, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, Filters, MessageHandler, run_async

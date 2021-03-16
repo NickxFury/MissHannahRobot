@@ -25,13 +25,13 @@ from MissHannahRobot import (
     sw,
 )
 from MissHannahRobot.__main__ import STATS, TOKEN, USER_INFO
-import MissHannahRobot.modules.sql.userinfo_sql as sql
-from MissHannahRobot.modules.disable import DisableAbleCommandHandler
-from MissHannahRobot.modules.sql.global_bans_sql import is_user_gbanned
-from MissHannahRobot.modules.sql.afk_sql import is_afk, check_afk_status
-from MissHannahRobot.modules.sql.users_sql import get_user_num_chats
-from MissHannahRobot.modules.helper_funcs.chat_status import sudo_plus
-from MissHannahRobot.modules.helper_funcs.extraction import extract_user
+import MissHannahRobot.plugins.sql.userinfo_sql as sql
+from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
+from MissHannahRobot.plugins.sql.global_bans_sql import is_user_gbanned
+from MissHannahRobot.plugins.sql.afk_sql import is_afk, check_afk_status
+from MissHannahRobot.plugins.sql.users_sql import get_user_num_chats
+from MissHannahRobot.plugins.helper_funcs.chat_status import sudo_plus
+from MissHannahRobot.plugins.helper_funcs.extraction import extract_user
 from MissHannahRobot import telethn as SaitamaTelethonClient, TIGERS, DRAGONS, DEMONS
 
 

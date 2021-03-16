@@ -6,7 +6,7 @@ import time
 import uuid
 from io import BytesIO
 
-import MissHannahRobot.modules.sql.feds_sql as sql
+import MissHannahRobot.plugins.sql.feds_sql as sql
 from MissHannahRobot import (
     EVENT_LOGS,
     LOGGER,
@@ -17,15 +17,15 @@ from MissHannahRobot import (
     WOLVES,
     dispatcher,
 )
-from MissHannahRobot.modules.disable import DisableAbleCommandHandler
-from MissHannahRobot.modules.helper_funcs.alternate import send_message
-from MissHannahRobot.modules.helper_funcs.chat_status import is_user_admin
-from MissHannahRobot.modules.helper_funcs.extraction import (
+from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
+from MissHannahRobot.plugins.helper_funcs.alternate import send_message
+from MissHannahRobot.plugins.helper_funcs.chat_status import is_user_admin
+from MissHannahRobot.plugins.helper_funcs.extraction import (
     extract_unt_fedban,
     extract_user,
     extract_user_fban,
 )
-from MissHannahRobot.modules.helper_funcs.string_handling import markdown_parser
+from MissHannahRobot.plugins.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,

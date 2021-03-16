@@ -5,23 +5,23 @@ from telegram import ParseMode, Message
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
-import MissHannahRobot.modules.sql.notes_sql as sql
+import MissHannahRobot.plugins.sql.notes_sql as sql
 from MissHannahRobot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
 from MissHannahRobot.__main__ import DATA_IMPORT
-from MissHannahRobot.modules.helper_funcs.chat_status import user_admin
-from MissHannahRobot.modules.helper_funcs.alternate import typing_action
+from MissHannahRobot.plugins.helper_funcs.chat_status import user_admin
+from MissHannahRobot.plugins.helper_funcs.alternate import typing_action
 
-# from MissHannahRobot.modules.rules import get_rules
-import MissHannahRobot.modules.sql.rules_sql as rulessql
+# from MissHannahRobot.plugins.rules import get_rules
+import MissHannahRobot.plugins.sql.rules_sql as rulessql
 
-# from MissHannahRobot.modules.sql import warns_sql as warnssql
-import MissHannahRobot.modules.sql.blacklist_sql as blacklistsql
-from MissHannahRobot.modules.sql import disable_sql as disabledsql
+# from MissHannahRobot.plugins.sql import warns_sql as warnssql
+import MissHannahRobot.plugins.sql.blacklist_sql as blacklistsql
+from MissHannahRobot.plugins.sql import disable_sql as disabledsql
 
-# from MissHannahRobot.modules.sql import cust_filters_sql as filtersql
-# import MissHannahRobot.modules.sql.welcome_sql as welcsql
-import MissHannahRobot.modules.sql.locks_sql as locksql
-from MissHannahRobot.modules.connection import connected
+# from MissHannahRobot.plugins.sql import cust_filters_sql as filtersql
+# import MissHannahRobot.plugins.sql.welcome_sql as welcsql
+import MissHannahRobot.plugins.sql.locks_sql as locksql
+from MissHannahRobot.plugins.connection import connected
 
 
 @run_async

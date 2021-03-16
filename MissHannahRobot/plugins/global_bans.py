@@ -14,8 +14,8 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import MissHannahRobot.modules.sql.global_bans_sql as sql
-from MissHannahRobot.modules.sql.users_sql import get_user_com_chats
+import MissHannahRobot.plugins.sql.global_bans_sql as sql
+from MissHannahRobot.plugins.sql.users_sql import get_user_com_chats
 from MissHannahRobot import (
     DEV_USERS,
     EVENT_LOGS,
@@ -30,16 +30,16 @@ from MissHannahRobot import (
     sw,
     dispatcher,
 )
-from MissHannahRobot.modules.helper_funcs.chat_status import (
+from MissHannahRobot.plugins.helper_funcs.chat_status import (
     is_user_admin,
     support_plus,
     user_admin,
 )
-from MissHannahRobot.modules.helper_funcs.extraction import (
+from MissHannahRobot.plugins.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from MissHannahRobot.modules.helper_funcs.misc import send_to_list
+from MissHannahRobot.plugins.helper_funcs.misc import send_to_list
 
 GBAN_ENFORCE_GROUP = 6
 

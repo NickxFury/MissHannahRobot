@@ -3,14 +3,14 @@ import html
 # AI module using Intellivoid's Coffeehouse API by @TheRealPhoenix
 from time import sleep, time
 
-import MissHannahRobot.modules.sql.chatbot_sql as sql
+import MissHannahRobot.plugins.sql.chatbot_sql as sql
 from coffeehouse.api import API
 from coffeehouse.exception import CoffeeHouseError as CFError
 from coffeehouse.lydia import LydiaAI
 from MissHannahRobot import AI_API_KEY, OWNER_ID, SUPPORT_CHAT, dispatcher
-from MissHannahRobot.modules.helper_funcs.chat_status import user_admin
-from MissHannahRobot.modules.helper_funcs.filters import CustomFilters
-from MissHannahRobot.modules.log_channel import gloggable
+from MissHannahRobot.plugins.helper_funcs.chat_status import user_admin
+from MissHannahRobot.plugins.helper_funcs.filters import CustomFilters
+from MissHannahRobot.plugins.log_channel import gloggable
 from telegram import Update
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import (

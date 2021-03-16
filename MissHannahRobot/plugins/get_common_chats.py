@@ -2,8 +2,8 @@ import os
 from time import sleep
 
 from MissHannahRobot import OWNER_ID, dispatcher
-from MissHannahRobot.modules.helper_funcs.extraction import extract_user
-from MissHannahRobot.modules.sql.users_sql import get_user_com_chats
+from MissHannahRobot.plugins.helper_funcs.extraction import extract_user
+from MissHannahRobot.plugins.sql.users_sql import get_user_com_chats
 from telegram import Update
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import CallbackContext, CommandHandler, Filters

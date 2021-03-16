@@ -6,18 +6,18 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-import MissHannahRobot.modules.sql.blacklist_sql as sql
+import MissHannahRobot.plugins.sql.blacklist_sql as sql
 from MissHannahRobot import dispatcher, LOGGER
-from MissHannahRobot.modules.disable import DisableAbleCommandHandler
-from MissHannahRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from MissHannahRobot.modules.helper_funcs.extraction import extract_text
-from MissHannahRobot.modules.helper_funcs.misc import split_message
-from MissHannahRobot.modules.log_channel import loggable
-from MissHannahRobot.modules.warns import warn
-from MissHannahRobot.modules.helper_funcs.string_handling import extract_time
-from MissHannahRobot.modules.connection import connected
-from MissHannahRobot.modules.sql.approve_sql import is_approved
-from MissHannahRobot.modules.helper_funcs.alternate import send_message, typing_action
+from MissHannahRobot.plugins.disable import DisableAbleCommandHandler
+from MissHannahRobot.plugins.helper_funcs.chat_status import user_admin, user_not_admin
+from MissHannahRobot.plugins.helper_funcs.extraction import extract_text
+from MissHannahRobot.plugins.helper_funcs.misc import split_message
+from MissHannahRobot.plugins.log_channel import loggable
+from MissHannahRobot.plugins.warns import warn
+from MissHannahRobot.plugins.helper_funcs.string_handling import extract_time
+from MissHannahRobot.plugins.connection import connected
+from MissHannahRobot.plugins.sql.approve_sql import is_approved
+from MissHannahRobot.plugins.helper_funcs.alternate import send_message, typing_action
 
 BLACKLIST_GROUP = 11
 
