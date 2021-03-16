@@ -180,7 +180,7 @@ DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
 
 # Load at end to ensure all prev variables have been set
-from MissHannahRobot.plugins.sahaya_samagri.handlers import (
+from MissHannahRobot.modules.sahaya_samagri.handlers import (
     CustomCommandHandler,
     CustomMessageHandler,
     CustomRegexHandler,
