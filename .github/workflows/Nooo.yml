@@ -8,8 +8,8 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: "SAITAMA"
-          replace: "HANNAH"
+          find: "SLAP_SAITAMA_TEMPLATES"
+          replace: "SLAP_HANNAH_TEMPLATES"
       - name: Pull All Updates
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
