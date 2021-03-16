@@ -1,4 +1,4 @@
-from MissHannahRobot.modules.sahaya_samagri.telethn import IMMUNE_USERS, telethn
+from MissHannahRobot.plugins.sahaya_samagri.telethn import IMMUNE_USERS, telethn
 from MissHannahRobot import DRAGONS
 from telethon.tl.types import ChannelParticipantsAdmins
 
