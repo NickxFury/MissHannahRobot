@@ -1,7 +1,7 @@
 from typing import List, Optional
 
-from SaitamaRobot import LOGGER
-from SaitamaRobot.plugins.users import get_user_id
+from MissHannahRobot import LOGGER
+from MissHannahRobot.plugins.users import get_user_id
 from telegram import Message, MessageEntity
 from telegram.error import BadRequest
 
