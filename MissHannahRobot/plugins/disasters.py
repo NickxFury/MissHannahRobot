@@ -13,13 +13,13 @@ from SaitamaRobot import (
     WOLVES,
     dispatcher,
 )
-from SaitamaRobot.modules.helper_funcs.chat_status import (
+from SaitamaRobot.plugins.helper_funcs.chat_status import (
     dev_plus,
     sudo_plus,
     whitelist_plus,
 )
-from SaitamaRobot.modules.helper_funcs.extraction import extract_user
-from SaitamaRobot.modules.log_channel import gloggable
+from SaitamaRobot.plugins.helper_funcs.extraction import extract_user
+from SaitamaRobot.plugins.log_channel import gloggable
 from telegram import ParseMode, TelegramError, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 from telegram.utils.helpers import mention_html
@@ -592,7 +592,7 @@ Group admins/group owners do not need these commands.
  ╚ `/ignoredlist`*:* Lists ignored users
 
  ╔ *Module loading:*
- ╠ `/listmodules`*:* Prints modules and their names
+ ╠ `/listplugins`*:* Prints plugins and their names
  ╠ `/unload <name>`*:* Unloads module dynamically
  ╚ `/load <name>`*:* Loads module
 
@@ -604,7 +604,7 @@ Group admins/group owners do not need these commands.
  ╚ `/ungban user reason`*:* Unbans the user from the global bans list
 
  ╔ *Module loading:*
- ╠ `/listmodules`*:* Lists names of all modules
+ ╠ `/listplugins`*:* Lists names of all plugins
  ╠ `/load modulename`*:* Loads the said module to 
  ╠   memory without restarting.
  ╠ `/unload modulename`*:* Loads the said module from

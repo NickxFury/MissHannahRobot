@@ -4,8 +4,8 @@ from typing import Optional
 
 import telegram
 from SaitamaRobot import TIGERS, WOLVES, dispatcher
-from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.helper_funcs.chat_status import (
+from SaitamaRobot.plugins.disable import DisableAbleCommandHandler
+from SaitamaRobot.plugins.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
@@ -13,16 +13,16 @@ from SaitamaRobot.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
     can_delete,
 )
-from SaitamaRobot.modules.helper_funcs.extraction import (
+from SaitamaRobot.plugins.helper_funcs.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from SaitamaRobot.modules.helper_funcs.filters import CustomFilters
-from SaitamaRobot.modules.helper_funcs.misc import split_message
-from SaitamaRobot.modules.helper_funcs.string_handling import split_quotes
-from SaitamaRobot.modules.log_channel import loggable
-from SaitamaRobot.modules.sql import warns_sql as sql
+from SaitamaRobot.plugins.helper_funcs.filters import CustomFilters
+from SaitamaRobot.plugins.helper_funcs.misc import split_message
+from SaitamaRobot.plugins.helper_funcs.string_handling import split_quotes
+from SaitamaRobot.plugins.log_channel import loggable
+from SaitamaRobot.plugins.sql import warns_sql as sql
 from telegram import (
     CallbackQuery,
     Chat,
@@ -44,7 +44,7 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html
-from SaitamaRobot.modules.sql.approve_sql import is_approved
+from SaitamaRobot.plugins.sql.approve_sql import is_approved
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"

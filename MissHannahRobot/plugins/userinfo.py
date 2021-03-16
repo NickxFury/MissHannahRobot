@@ -25,13 +25,13 @@ from SaitamaRobot import (
     sw,
 )
 from SaitamaRobot.__main__ import STATS, TOKEN, USER_INFO
-import SaitamaRobot.modules.sql.userinfo_sql as sql
-from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.sql.global_bans_sql import is_user_gbanned
-from SaitamaRobot.modules.sql.afk_sql import is_afk, check_afk_status
-from SaitamaRobot.modules.sql.users_sql import get_user_num_chats
-from SaitamaRobot.modules.helper_funcs.chat_status import sudo_plus
-from SaitamaRobot.modules.helper_funcs.extraction import extract_user
+import SaitamaRobot.plugins.sql.userinfo_sql as sql
+from SaitamaRobot.plugins.disable import DisableAbleCommandHandler
+from SaitamaRobot.plugins.sql.global_bans_sql import is_user_gbanned
+from SaitamaRobot.plugins.sql.afk_sql import is_afk, check_afk_status
+from SaitamaRobot.plugins.sql.users_sql import get_user_num_chats
+from SaitamaRobot.plugins.helper_funcs.chat_status import sudo_plus
+from SaitamaRobot.plugins.helper_funcs.extraction import extract_user
 from SaitamaRobot import telethn as SaitamaTelethonClient, TIGERS, DRAGONS, DEMONS
 
 
