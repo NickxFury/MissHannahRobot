@@ -3,14 +3,14 @@ from io import BytesIO
 import random
 from typing import Optional
 
-import HannahRobot.modules.sql.notes_sql as sql
-from HannahRobot import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
-from HannahRobot.modules.disable import DisableAbleCommandHandler
-from HannahRobot.modules.helper_funcs.handlers import MessageHandlerChecker
-from HannahRobot.modules.helper_funcs.chat_status import user_admin, connection_status
-from HannahRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from HannahRobot.modules.helper_funcs.msg_types import get_note_type
-from HannahRobot.modules.helper_funcs.string_handling import (
+import MissHannahRobot.modules.sql.notes_sql as sql
+from MissHannahRobot import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
+from MissHannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot.modules.helper_funcs.handlers import MessageHandlerChecker
+from MissHannahRobot.modules.helper_funcs.chat_status import user_admin, connection_status
+from MissHannahRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from MissHannahRobot.modules.helper_funcs.msg_types import get_note_type
+from MissHannahRobot.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
 )
 from telegram import (

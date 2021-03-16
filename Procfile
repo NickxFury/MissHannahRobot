@@ -1,3 +1,3 @@
-worker: python3 -m MissHannahRobot
-web: python3 -m MissHannahRobot
+worker: python3 -m MissMissHannahRobot
+web: python3 -m MissMissHannahRobot
 ps:scale worker=1

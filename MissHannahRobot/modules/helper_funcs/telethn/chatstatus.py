@@ -1,5 +1,5 @@
-from HannahRobot.modules.helper_funcs.telethn import IMMUNE_USERS, telethn
-from HannahRobot import DRAGONS
+from MissHannahRobot.modules.helper_funcs.telethn import IMMUNE_USERS, telethn
+from MissHannahRobot import DRAGONS
 from telethon.tl.types import ChannelParticipantsAdmins
 
 

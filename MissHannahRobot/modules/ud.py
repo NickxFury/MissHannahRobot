@@ -1,6 +1,6 @@
 import requests
-from HannahRobot import dispatcher
-from HannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot import dispatcher
+from MissHannahRobot.modules.disable import DisableAbleCommandHandler
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 

@@ -1,6 +1,6 @@
 import threading
 
-from HannahRobot.modules.sql import BASE, SESSION
+from MissHannahRobot.modules.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, UnicodeText
 
 

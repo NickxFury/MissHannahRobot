@@ -1,7 +1,7 @@
 import subprocess
 
-from HannahRobot import LOGGER, dispatcher
-from HannahRobot.modules.helper_funcs.chat_status import dev_plus
+from MissHannahRobot import LOGGER, dispatcher
+from MissHannahRobot.modules.helper_funcs.chat_status import dev_plus
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler
 from telegram.ext.dispatcher import run_async

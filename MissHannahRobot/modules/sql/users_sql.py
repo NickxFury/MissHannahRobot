@@ -1,7 +1,7 @@
 import threading
 
-from HannahRobot import dispatcher
-from HannahRobot.modules.sql import BASE, SESSION
+from MissHannahRobot import dispatcher
+from MissHannahRobot.modules.sql import BASE, SESSION
 from sqlalchemy import (
     Column,
     ForeignKey,

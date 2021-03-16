@@ -1,7 +1,7 @@
 from typing import List, Optional
 
-from HannahRobot import LOGGER
-from HannahRobot.modules.users import get_user_id
+from MissHannahRobot import LOGGER
+from MissHannahRobot.modules.users import get_user_id
 from telegram import Message, MessageEntity
 from telegram.error import BadRequest
 

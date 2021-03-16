@@ -5,9 +5,9 @@ import time
 from functools import partial
 from contextlib import suppress
 
-import HannahRobot.modules.sql.welcome_sql as sql
-import HannahRobot
-from HannahRobot import (
+import MissHannahRobot.modules.sql.welcome_sql as sql
+import MissHannahRobot
+from MissHannahRobot import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
@@ -19,18 +19,18 @@ from HannahRobot import (
     dispatcher,
     JOIN_LOGGER
 )
-from HannahRobot.modules.helper_funcs.chat_status import (
+from MissHannahRobot.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from HannahRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from HannahRobot.modules.helper_funcs.msg_types import get_welcome_type
-from HannahRobot.modules.helper_funcs.string_handling import (
+from MissHannahRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from MissHannahRobot.modules.helper_funcs.msg_types import get_welcome_type
+from MissHannahRobot.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from HannahRobot.modules.log_channel import loggable
-from HannahRobot.modules.sql.global_bans_sql import is_user_gbanned
+from MissHannahRobot.modules.log_channel import loggable
+from MissHannahRobot.modules.sql.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,
@@ -265,7 +265,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome yourself
             elif new_mem.id == bot.id:
                 creator = None
-                if not HannahRobot.ALLOW_CHATS:
+                if not MissHannahRobot.ALLOW_CHATS:
                     with suppress(BadRequest):
                          update.effective_message.reply_text(f"Groups are disabled for {bot.first_name}, I'm outta here.")
                     bot.leave_chat(update.effective_chat.id)

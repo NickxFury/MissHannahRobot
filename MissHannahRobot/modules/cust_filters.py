@@ -15,25 +15,25 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html, escape_markdown
 
-from HannahRobot import dispatcher, LOGGER, DRAGONS
-from HannahRobot.modules.disable import DisableAbleCommandHandler
-from HannahRobot.modules.helper_funcs.handlers import MessageHandlerChecker
-from HannahRobot.modules.helper_funcs.chat_status import user_admin
-from HannahRobot.modules.helper_funcs.extraction import extract_text
-from HannahRobot.modules.helper_funcs.filters import CustomFilters
-from HannahRobot.modules.helper_funcs.misc import build_keyboard_parser
-from HannahRobot.modules.helper_funcs.msg_types import get_filter_type
-from HannahRobot.modules.helper_funcs.string_handling import (
+from MissHannahRobot import dispatcher, LOGGER, DRAGONS
+from MissHannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot.modules.helper_funcs.handlers import MessageHandlerChecker
+from MissHannahRobot.modules.helper_funcs.chat_status import user_admin
+from MissHannahRobot.modules.helper_funcs.extraction import extract_text
+from MissHannahRobot.modules.helper_funcs.filters import CustomFilters
+from MissHannahRobot.modules.helper_funcs.misc import build_keyboard_parser
+from MissHannahRobot.modules.helper_funcs.msg_types import get_filter_type
+from MissHannahRobot.modules.helper_funcs.string_handling import (
     split_quotes,
     button_markdown_parser,
     escape_invalid_curly_brackets,
     markdown_to_html,
 )
-from HannahRobot.modules.sql import cust_filters_sql as sql
+from MissHannahRobot.modules.sql import cust_filters_sql as sql
 
-from HannahRobot.modules.connection import connected
+from MissHannahRobot.modules.connection import connected
 
-from HannahRobot.modules.helper_funcs.alternate import send_message, typing_action
+from MissHannahRobot.modules.helper_funcs.alternate import send_message, typing_action
 
 HANDLER_GROUP = 10
 

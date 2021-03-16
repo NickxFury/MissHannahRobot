@@ -4,7 +4,7 @@ from typing import Union
 
 from sqlalchemy import Column, String, Boolean, UnicodeText, Integer
 
-from HannahRobot.modules.sql import SESSION, BASE
+from MissHannahRobot.modules.sql import SESSION, BASE
 
 
 class ChatAccessConnectionSettings(BASE):

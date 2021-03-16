@@ -5,23 +5,23 @@ from telegram import ParseMode, Message
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
-import HannahRobot.modules.sql.notes_sql as sql
-from HannahRobot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
-from HannahRobot.__main__ import DATA_IMPORT
-from HannahRobot.modules.helper_funcs.chat_status import user_admin
-from HannahRobot.modules.helper_funcs.alternate import typing_action
+import MissHannahRobot.modules.sql.notes_sql as sql
+from MissHannahRobot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
+from MissHannahRobot.__main__ import DATA_IMPORT
+from MissHannahRobot.modules.helper_funcs.chat_status import user_admin
+from MissHannahRobot.modules.helper_funcs.alternate import typing_action
 
-# from HannahRobot.modules.rules import get_rules
-import HannahRobot.modules.sql.rules_sql as rulessql
+# from MissHannahRobot.modules.rules import get_rules
+import MissHannahRobot.modules.sql.rules_sql as rulessql
 
-# from HannahRobot.modules.sql import warns_sql as warnssql
-import HannahRobot.modules.sql.blacklist_sql as blacklistsql
-from HannahRobot.modules.sql import disable_sql as disabledsql
+# from MissHannahRobot.modules.sql import warns_sql as warnssql
+import MissHannahRobot.modules.sql.blacklist_sql as blacklistsql
+from MissHannahRobot.modules.sql import disable_sql as disabledsql
 
-# from HannahRobot.modules.sql import cust_filters_sql as filtersql
-# import HannahRobot.modules.sql.welcome_sql as welcsql
-import HannahRobot.modules.sql.locks_sql as locksql
-from HannahRobot.modules.connection import connected
+# from MissHannahRobot.modules.sql import cust_filters_sql as filtersql
+# import MissHannahRobot.modules.sql.welcome_sql as welcsql
+import MissHannahRobot.modules.sql.locks_sql as locksql
+from MissHannahRobot.modules.connection import connected
 
 
 @run_async
@@ -325,7 +325,7 @@ def export_data(update, context):
         },
     }
     baccinfo = json.dumps(backup, indent=4)
-    with open("HannahRobot{}.backup".format(chat_id), "w") as f:
+    with open("MissHannahRobot{}.backup".format(chat_id), "w") as f:
         f.write(str(baccinfo))
     context.bot.sendChatAction(current_chat_id, "upload_document")
     tgl = time.strftime("%H:%M:%S - %d/%m/%Y", time.localtime(time.time()))
@@ -341,15 +341,15 @@ def export_data(update, context):
         pass
     context.bot.sendDocument(
         current_chat_id,
-        document=open("HannahRobot{}.backup".format(chat_id), "rb"),
-        caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `HannahRobot-Backup` was specially made for notes.".format(
+        document=open("MissHannahRobot{}.backup".format(chat_id), "rb"),
+        caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `MissHannahRobot-Backup` was specially made for notes.".format(
             chat.title, chat_id, tgl
         ),
         timeout=360,
         reply_to_message_id=msg.message_id,
         parse_mode=ParseMode.MARKDOWN,
     )
-    os.remove("HannahRobot{}.backup".format(chat_id))  # Cleaning file
+    os.remove("MissHannahRobot{}.backup".format(chat_id))  # Cleaning file
 
 
 # Temporary data

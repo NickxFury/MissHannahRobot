@@ -1,17 +1,17 @@
 import html
 from typing import Optional
 
-import HannahRobot.modules.sql.blsticker_sql as sql
-from HannahRobot import LOGGER, dispatcher
-from HannahRobot.modules.connection import connected
-from HannahRobot.modules.disable import DisableAbleCommandHandler
-from HannahRobot.modules.helper_funcs.alternate import send_message
-from HannahRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from HannahRobot.modules.helper_funcs.misc import split_message
-from HannahRobot.modules.helper_funcs.string_handling import extract_time
+import MissHannahRobot.modules.sql.blsticker_sql as sql
+from MissHannahRobot import LOGGER, dispatcher
+from MissHannahRobot.modules.connection import connected
+from MissHannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot.modules.helper_funcs.alternate import send_message
+from MissHannahRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from MissHannahRobot.modules.helper_funcs.misc import split_message
+from MissHannahRobot.modules.helper_funcs.string_handling import extract_time
 
-from HannahRobot.modules.log_channel import loggable
-from HannahRobot.modules.warns import warn
+from MissHannahRobot.modules.log_channel import loggable
+from MissHannahRobot.modules.warns import warn
 from telegram import Chat, Message, ParseMode, Update, User, ChatPermissions
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, MessageHandler

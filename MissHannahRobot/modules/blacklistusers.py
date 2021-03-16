@@ -1,7 +1,7 @@
 # Module to blacklist users and prevent them from using commands by @TheRealPhoenix
 import html
-import HannahRobot.modules.sql.blacklistusers_sql as sql
-from HannahRobot import (
+import MissHannahRobot.modules.sql.blacklistusers_sql as sql
+from MissHannahRobot import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -10,12 +10,12 @@ from HannahRobot import (
     WOLVES,
     dispatcher,
 )
-from HannahRobot.modules.helper_funcs.chat_status import dev_plus
-from HannahRobot.modules.helper_funcs.extraction import (
+from MissHannahRobot.modules.helper_funcs.chat_status import dev_plus
+from MissHannahRobot.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from HannahRobot.modules.log_channel import gloggable
+from MissHannahRobot.modules.log_channel import gloggable
 from telegram import ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, run_async

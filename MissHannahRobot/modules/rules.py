@@ -1,9 +1,9 @@
 from typing import Optional
 
-import HannahRobot.modules.sql.rules_sql as sql
-from HannahRobot import dispatcher
-from HannahRobot.modules.helper_funcs.chat_status import user_admin
-from HannahRobot.modules.helper_funcs.string_handling import markdown_parser
+import MissHannahRobot.modules.sql.rules_sql as sql
+from MissHannahRobot import dispatcher
+from MissHannahRobot.modules.helper_funcs.chat_status import user_admin
+from MissHannahRobot.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,

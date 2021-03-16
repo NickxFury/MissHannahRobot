@@ -1,9 +1,9 @@
 import html
 
-from HannahRobot import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
-from HannahRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from HannahRobot.modules.log_channel import loggable
-from HannahRobot.modules.sql import reporting_sql as sql
+from MissHannahRobot import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
+from MissHannahRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from MissHannahRobot.modules.log_channel import loggable
+from MissHannahRobot.modules.sql import reporting_sql as sql
 from telegram import Chat, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (

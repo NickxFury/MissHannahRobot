@@ -1,6 +1,6 @@
-import HannahRobot.modules.sql.blacklistusers_sql as sql
-from HannahRobot import ALLOW_EXCL
-from HannahRobot import DEV_USERS, DRAGONS, DEMONS, TIGERS, WOLVES
+import MissHannahRobot.modules.sql.blacklistusers_sql as sql
+from MissHannahRobot import ALLOW_EXCL
+from MissHannahRobot import DEV_USERS, DRAGONS, DEMONS, TIGERS, WOLVES
 
 from telegram import Update
 from telegram.ext import CommandHandler, MessageHandler, RegexHandler, Filters

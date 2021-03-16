@@ -3,7 +3,7 @@ import threading
 
 from sqlalchemy import Column, String, Boolean
 
-from HannahRobot.modules.sql import SESSION, BASE
+from MissHannahRobot.modules.sql import SESSION, BASE
 
 
 class Permissions(BASE):

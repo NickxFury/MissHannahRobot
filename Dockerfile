@@ -64,12 +64,12 @@ RUN apt update && apt upgrade -y && \
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
-# Copy Python Requirements to /root/MissHannahRobot
-RUN git clone -b shiken https://github.com/Mr-Dark-Prince/MissHannahRobot /root/MissHannahRobot
-WORKDIR /root/MissHannahRobot
+# Copy Python Requirements to /root/MissMissHannahRobot
+RUN git clone -b shiken https://github.com/Mr-Dark-Prince/MissMissHannahRobot /root/MissMissHannahRobot
+WORKDIR /root/MissMissHannahRobot
 
-#Copy config file to /root/MissHannahRobot/MissHannahRobot
-COPY ./MissHannahRobot/sample_config.py ./MissHannahRobot/config.py* /root/MissHannahRobot/MissHannahRobot/
+#Copy config file to /root/MissMissHannahRobot/MissMissHannahRobot
+COPY ./MissMissHannahRobot/sample_config.py ./MissMissHannahRobot/config.py* /root/MissMissHannahRobot/MissMissHannahRobot/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -77,4 +77,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","MissHannahRobot"]
+CMD ["python3","-m","MissMissHannahRobot"]

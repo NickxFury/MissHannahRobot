@@ -5,7 +5,7 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-from HannahRobot import (
+from MissHannahRobot import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
@@ -15,8 +15,8 @@ from HannahRobot import (
     WOLVES,
     dispatcher,
 )
-from HannahRobot.modules.disable import DisableAbleCommandHandler
-from HannahRobot.modules.helper_funcs.chat_status import (
+from MissHannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot.modules.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     connection_status,
@@ -27,9 +27,9 @@ from HannahRobot.modules.helper_funcs.chat_status import (
     user_can_ban,
     can_delete,
 )
-from HannahRobot.modules.helper_funcs.extraction import extract_user_and_text
-from HannahRobot.modules.helper_funcs.string_handling import extract_time
-from HannahRobot.modules.log_channel import gloggable, loggable
+from MissHannahRobot.modules.helper_funcs.extraction import extract_user_and_text
+from MissHannahRobot.modules.helper_funcs.string_handling import extract_time
+from MissHannahRobot.modules.log_channel import gloggable, loggable
 
 
 @run_async

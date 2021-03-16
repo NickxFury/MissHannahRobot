@@ -3,8 +3,8 @@ from google_trans_new import LANGUAGES, google_translator
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 
-from HannahRobot import dispatcher
-from HannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot import dispatcher
+from MissHannahRobot.modules.disable import DisableAbleCommandHandler
 
 
 @run_async

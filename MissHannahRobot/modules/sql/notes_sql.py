@@ -1,8 +1,8 @@
 # Note: chat_id's are stored as strings because the int is too large to be stored in a PSQL database.
 import threading
 
-from HannahRobot.modules.helper_funcs.msg_types import Types
-from HannahRobot.modules.sql import BASE, SESSION
+from MissHannahRobot.modules.helper_funcs.msg_types import Types
+from MissHannahRobot.modules.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, Integer, String, UnicodeText, distinct, func
 
 

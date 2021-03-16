@@ -1,6 +1,6 @@
-from HannahRobot.modules.helper_funcs.chat_status import user_admin
-from HannahRobot.modules.disable import DisableAbleCommandHandler
-from HannahRobot import dispatcher
+from MissHannahRobot.modules.helper_funcs.chat_status import user_admin
+from MissHannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot import dispatcher
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram import ParseMode, Update
