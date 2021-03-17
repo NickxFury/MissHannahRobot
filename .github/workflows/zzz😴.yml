@@ -8,8 +8,8 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: "This person CREATED the chat, how can i set custom title for him?"
-          replace: "ഗ്രൂപ്പ്‌ മുതലാളിയുടെ അഡ്മിൻ നാമം മാറ്റാൻ എനിക്ക് കഴിയില്ല"
+          find: "Can't set title for non-admins!\nPromote them first to set custom title!"
+          replace: "അഡ്മിൻ അല്ലാത്ത ഒരാളിന് അഡ്മിൻ നെയിം എങ്ങനെ മാറ്റും..പൊട്ടൻ ആണോ നീ?"
       - name: Pull All Updates
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
