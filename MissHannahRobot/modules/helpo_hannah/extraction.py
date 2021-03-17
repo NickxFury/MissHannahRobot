@@ -76,8 +76,8 @@ def extract_user_and_text(
         if excp.message in ("User_id_invalid", "Chat not found"):
             message.reply_text(
                 "എനിക്ക് അദ്ദേഹത്തിന്റെ അക്കൗണ്ട് മനസ്സിലാക്കാൻ കഴിയുന്നില്ല.."
-                "them to give me control! (like a voodoo doll, I need a piece of them to be able "
-                "to execute certain commands...)"
+                "നിയന്ത്രണം നടപ്പിലാക്കാൻ അദ്ദേഹം അയച്ച ഒരു മെസ്സേജ് എനിക്ക് ഫോർവേഡ് ചെയ്യുക.. ( ചില കമാൻഡുകൾ "
+                "നടപ്പിലാക്കാൻ അത് അത്യാവശ്യം ആണ്⚠️...)"
             )
         else:
             LOGGER.exception("Exception %s on user %s", excp.message, user_id)
