@@ -211,7 +211,7 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
         if excp.message == "Reply message not found":
             # Do not reply
             message.reply_text(
-                f"ബാൻ ചെയ്തു! ഇയാളെ{time_val} വരെ ഇവിടെ ബാൻ ആണ്.", quote=False
+                f"ബാൻ ചെയ്തു! ഇയാൾ {time_val} വരെ ഇവിടെ ബാൻ ആണ്.", quote=False
             )
             return log
         else:
@@ -244,23 +244,23 @@ def punch(update: Update, context: CallbackContext) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("I doubt that's a user.")
+        message.reply_text("എന്നിക്ക് ഇയാളെ ഒരു സംശയം.")
         return log_message
 
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
-        if excp.message != "User not found":
+        if excp.message != "നിങ്ങൾ പറഞ്ഞ ആളെ കണ്ടെത്താൻ കഴിയുന്നില്ല":
             raise
 
-        message.reply_text("I can't seem to find this user.")
+        message.reply_text("നിങ്ങൾ പറഞ്ഞ ആളെ ഞാൻ ഇതുവരെ കണ്ടിട്ടില്ല.")
         return log_message
     if user_id == bot.id:
-        message.reply_text("Yeahhh I'm not gonna do that.")
+        message.reply_text("ഹ! ശരി നിങ്ങൾ പറഞ്ഞത് ഞാൻ ചെയ്യാം..")
         return log_message
 
     if is_user_ban_protected(chat, user_id):
-        message.reply_text("I really wish I could punch this user....")
+        message.reply_text("ഇദ്ദേഹത്തെ കിക്ക് ചെയ്യാൻ എന്നിക്ക് അതിയായ ആഗ്രഹം ഉണ്ട്....")
         return log_message
 
     res = chat.unban_member(user_id)  # unban on current user = kick
@@ -274,8 +274,8 @@ def punch(update: Update, context: CallbackContext) -> str:
         log = (
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"#KICKED\n"
-            f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-            f"<b>User:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
+            f"<b>അഡ്മിൻ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
+            f"<b>യൂസർ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
         )
         if reason:
             log += f"\n<b>Reason:</b> {reason}"
@@ -283,7 +283,7 @@ def punch(update: Update, context: CallbackContext) -> str:
         return log
 
     else:
-        message.reply_text("Well damn, I can't punch that user.")
+        message.reply_text("കോപ്പ് ഇയ്യാള കിക്ക് ചെയ്യാൻ എന്നിക്ക് സാധിക്കൂല്ല.")
 
     return log_message
 
@@ -294,7 +294,7 @@ def punch(update: Update, context: CallbackContext) -> str:
 def punchme(update: Update, context: CallbackContext):
     user_id = update.effective_message.from_user.id
     if is_user_admin(update.effective_chat, user_id):
-        update.effective_message.reply_text("I wish I could... but you're an admin.")
+        update.effective_message.reply_text("നിങ്ങൾ ഇവിടെ അഡ്മിൻ ആണ്.. എന്നിക്ക് അത് കഴിയില്ല..")
         return
 
     res = update.effective_chat.unban_member(user_id)  # unban on current user = kick
