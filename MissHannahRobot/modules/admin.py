@@ -224,7 +224,7 @@ def set_title(update: Update, context: CallbackContext):
 
     if user_member.status != "administrator":
         message.reply_text(
-            "Can't set title for non-admins!\nPromote them first to set custom title!"
+            "അഡ്മിൻ അല്ലാത്ത ഒരാളിന് എങ്ങനെ അഡ്മിൻ നാമം കൊടുക്കും.. പൊട്ടൻ ആണോ നീ?"
         )
         return
 
@@ -235,23 +235,23 @@ def set_title(update: Update, context: CallbackContext):
         return
 
     if not title:
-        message.reply_text("Setting blank title doesn't do anything!")
+        message.reply_text("എന്ത് പേര് ആണ് കൊടുക്കേണ്ടത് മിസ്റ്റർ!")
         return
 
     if len(title) > 16:
         message.reply_text(
-            "The title length is longer than 16 characters.\nTruncating it to 16 characters."
+            "ഇത്രയും ദീർഘമുള്ള പേര് സെറ്റ് ചെയ്യാൻ കഴിയില്ല."
         )
 
     try:
         bot.setChatAdministratorCustomTitle(chat.id, user_id, title)
     except BadRequest:
-        message.reply_text("I can't set custom title for admins that I didn't promote!")
+        message.reply_text("ഞാൻ പ്രൊമോട്ട് ചെയ്തു അഡ്മിൻ അഡ്മിൻ ആയവരുടെ പേര് മാത്രമേ മാറ്റം വരുത്തുകയുള്ളു..")
         return
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully set title for <code>{user_member.user.first_name or user_id}</code> "
+        f"അഡ്മിൻ നാമം വിജയകരമായി സെറ്റ് ചെയ്തു.. <code>{user_member.user.first_name or user_id}</code> "
         f"to <code>{html.escape(title[:16])}</code>!",
         parse_mode=ParseMode.HTML,
     )
