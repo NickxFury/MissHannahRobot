@@ -175,7 +175,7 @@ def demote(update: Update, context: CallbackContext) -> str:
         return log_message
     except BadRequest:
         message.reply_text(
-            "Could not demote. I might not be admin, or the admin status was appointed by another"
+            "അഡ്മിൻ സ്ഥാനം മാറ്റുവാൻ കഴിയില്ല..ഒന്നുകിൽ ഞാൻ അഡ്മിൻ അല്ല..അല്ലെങ്കിൽ അദ്ദേഹത്തെ അഡ്മിൻ ആക്കിയത് മറ്റാരോ ആണ്.."
             " user, so I can't act upon them!"
         )
         return
