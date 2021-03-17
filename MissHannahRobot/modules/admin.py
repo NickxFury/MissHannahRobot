@@ -138,7 +138,7 @@ def demote(update: Update, context: CallbackContext) -> str:
         return
 
     if not user_member.status == "administrator":
-        message.reply_text("Can't demote what wasn't promoted!")
+        message.reply_text("ഞാൻ പ്രൊമോട്ട് ചെയ്യാത്ത ഒരാളെ ഡിമോട്ട് ചെയ്യാൻ എനിക്ക് മനസ്സില്ല 😁")
         return
 
     if user_id == bot.id:
