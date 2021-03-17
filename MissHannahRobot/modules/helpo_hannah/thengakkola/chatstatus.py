@@ -1,4 +1,4 @@
-from SaitamaRobot.modules.helper_funcs.thengakkola import IMMUNE_USERS, thengakkola
+from SaitamaRobot.modules.helpo_hannah.thengakkola import IMMUNE_USERS, thengakkola
 from SaitamaRobot import DRAGONS
 from telethon.tl.types import ChannelParticipantsAdmins
 

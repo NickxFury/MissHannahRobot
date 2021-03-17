@@ -13,12 +13,12 @@ from SaitamaRobot import (
     WOLVES,
     dispatcher,
 )
-from SaitamaRobot.modules.helper_funcs.chat_status import (
+from SaitamaRobot.modules.helpo_hannah.chat_status import (
     dev_plus,
     sudo_plus,
     whitelist_plus,
 )
-from SaitamaRobot.modules.helper_funcs.extraction import extract_user
+from SaitamaRobot.modules.helpo_hannah.extraction import extract_user
 from SaitamaRobot.modules.log_channel import gloggable
 from telegram import ParseMode, TelegramError, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async

@@ -8,8 +8,8 @@ from telegram.ext import CommandHandler, run_async
 import SaitamaRobot.modules.sql.notes_sql as sql
 from SaitamaRobot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
 from SaitamaRobot.__main__ import DATA_IMPORT
-from SaitamaRobot.modules.helper_funcs.chat_status import user_admin
-from SaitamaRobot.modules.helper_funcs.alternate import typing_action
+from SaitamaRobot.modules.helpo_hannah.chat_status import user_admin
+from SaitamaRobot.modules.helpo_hannah.alternate import typing_action
 
 # from SaitamaRobot.modules.rules import get_rules
 import SaitamaRobot.modules.sql.rules_sql as rulessql

@@ -1,7 +1,7 @@
 import html
 
 from SaitamaRobot import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
-from SaitamaRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from SaitamaRobot.modules.helpo_hannah.chat_status import user_admin, user_not_admin
 from SaitamaRobot.modules.log_channel import loggable
 from SaitamaRobot.modules.sql import reporting_sql as sql
 from telegram import Chat, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update

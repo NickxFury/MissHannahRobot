@@ -30,16 +30,16 @@ from SaitamaRobot import (
     sw,
     dispatcher,
 )
-from SaitamaRobot.modules.helper_funcs.chat_status import (
+from SaitamaRobot.modules.helpo_hannah.chat_status import (
     is_user_admin,
     support_plus,
     user_admin,
 )
-from SaitamaRobot.modules.helper_funcs.extraction import (
+from SaitamaRobot.modules.helpo_hannah.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from SaitamaRobot.modules.helper_funcs.misc import send_to_list
+from SaitamaRobot.modules.helpo_hannah.misc import send_to_list
 
 GBAN_ENFORCE_GROUP = 6
 

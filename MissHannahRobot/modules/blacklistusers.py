@@ -10,8 +10,8 @@ from SaitamaRobot import (
     WOLVES,
     dispatcher,
 )
-from SaitamaRobot.modules.helper_funcs.chat_status import dev_plus
-from SaitamaRobot.modules.helper_funcs.extraction import (
+from SaitamaRobot.modules.helpo_hannah.chat_status import dev_plus
+from SaitamaRobot.modules.helpo_hannah.extraction import (
     extract_user,
     extract_user_and_text,
 )

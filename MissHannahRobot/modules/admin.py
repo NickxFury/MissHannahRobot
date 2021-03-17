@@ -7,7 +7,7 @@ from telegram.utils.helpers import mention_html
 
 from SaitamaRobot import DRAGONS, dispatcher
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.helper_funcs.chat_status import (
+from SaitamaRobot.modules.helpo_hannah.chat_status import (
     bot_admin,
     can_pin,
     can_promote,
@@ -16,12 +16,12 @@ from SaitamaRobot.modules.helper_funcs.chat_status import (
     ADMIN_CACHE,
 )
 
-from SaitamaRobot.modules.helper_funcs.extraction import (
+from SaitamaRobot.modules.helpo_hannah.extraction import (
     extract_user,
     extract_user_and_text,
 )
 from SaitamaRobot.modules.log_channel import loggable
-from SaitamaRobot.modules.helper_funcs.alternate import send_message
+from SaitamaRobot.modules.helpo_hannah.alternate import send_message
 
 
 @run_async

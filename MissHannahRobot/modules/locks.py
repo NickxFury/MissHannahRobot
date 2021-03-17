@@ -12,7 +12,7 @@ from alphabet_detector import AlphabetDetector
 import SaitamaRobot.modules.sql.locks_sql as sql
 from SaitamaRobot import dispatcher, DRAGONS, LOGGER
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.helper_funcs.chat_status import (
+from SaitamaRobot.modules.helpo_hannah.chat_status import (
     can_delete,
     is_user_admin,
     user_not_admin,
@@ -22,7 +22,7 @@ from SaitamaRobot.modules.helper_funcs.chat_status import (
 from SaitamaRobot.modules.log_channel import loggable
 from SaitamaRobot.modules.connection import connected
 from SaitamaRobot.modules.sql.approve_sql import is_approved
-from SaitamaRobot.modules.helper_funcs.alternate import send_message, typing_action
+from SaitamaRobot.modules.helpo_hannah.alternate import send_message, typing_action
 
 ad = AlphabetDetector()
 

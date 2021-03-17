@@ -6,7 +6,7 @@ from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 
 from SaitamaRobot import StartTime, dispatcher
-from SaitamaRobot.modules.helper_funcs.chat_status import sudo_plus
+from SaitamaRobot.modules.helpo_hannah.chat_status import sudo_plus
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
 
 sites_list = {

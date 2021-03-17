@@ -2,7 +2,7 @@ import html
 
 from SaitamaRobot import ALLOW_EXCL, CustomCommandHandler, dispatcher
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.helper_funcs.chat_status import (
+from SaitamaRobot.modules.helpo_hannah.chat_status import (
     bot_can_delete,
     connection_status,
     dev_plus,

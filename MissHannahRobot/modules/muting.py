@@ -2,18 +2,18 @@ import html
 from typing import Optional
 
 from SaitamaRobot import LOGGER, TIGERS, dispatcher
-from SaitamaRobot.modules.helper_funcs.chat_status import (
+from SaitamaRobot.modules.helpo_hannah.chat_status import (
     bot_admin,
     can_restrict,
     connection_status,
     is_user_admin,
     user_admin,
 )
-from SaitamaRobot.modules.helper_funcs.extraction import (
+from SaitamaRobot.modules.helpo_hannah.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from SaitamaRobot.modules.helper_funcs.string_handling import extract_time
+from SaitamaRobot.modules.helpo_hannah.string_handling import extract_time
 from SaitamaRobot.modules.log_channel import loggable
 from telegram import Bot, Chat, ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest

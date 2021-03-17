@@ -180,7 +180,7 @@ DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
 
 # Load at end to ensure all prev variables have been set
-from SaitamaRobot.modules.helper_funcs.handlers import (
+from SaitamaRobot.modules.helpo_hannah.handlers import (
     CustomCommandHandler,
     CustomMessageHandler,
     CustomRegexHandler,

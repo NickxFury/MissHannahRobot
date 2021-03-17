@@ -30,8 +30,8 @@ from SaitamaRobot.modules.disable import DisableAbleCommandHandler
 from SaitamaRobot.modules.sql.global_bans_sql import is_user_gbanned
 from SaitamaRobot.modules.sql.afk_sql import is_afk, check_afk_status
 from SaitamaRobot.modules.sql.users_sql import get_user_num_chats
-from SaitamaRobot.modules.helper_funcs.chat_status import sudo_plus
-from SaitamaRobot.modules.helper_funcs.extraction import extract_user
+from SaitamaRobot.modules.helpo_hannah.chat_status import sudo_plus
+from SaitamaRobot.modules.helpo_hannah.extraction import extract_user
 from SaitamaRobot import thengakkola as SaitamaTelethonClient, TIGERS, DRAGONS, DEMONS
 
 

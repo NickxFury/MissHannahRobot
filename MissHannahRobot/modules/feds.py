@@ -18,14 +18,14 @@ from SaitamaRobot import (
     dispatcher,
 )
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.helper_funcs.alternate import send_message
-from SaitamaRobot.modules.helper_funcs.chat_status import is_user_admin
-from SaitamaRobot.modules.helper_funcs.extraction import (
+from SaitamaRobot.modules.helpo_hannah.alternate import send_message
+from SaitamaRobot.modules.helpo_hannah.chat_status import is_user_admin
+from SaitamaRobot.modules.helpo_hannah.extraction import (
     extract_unt_fedban,
     extract_user,
     extract_user_fban,
 )
-from SaitamaRobot.modules.helper_funcs.string_handling import markdown_parser
+from SaitamaRobot.modules.helpo_hannah.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,

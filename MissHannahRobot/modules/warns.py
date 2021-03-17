@@ -5,7 +5,7 @@ from typing import Optional
 import telegram
 from SaitamaRobot import TIGERS, WOLVES, dispatcher
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.helper_funcs.chat_status import (
+from SaitamaRobot.modules.helpo_hannah.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
@@ -13,14 +13,14 @@ from SaitamaRobot.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
     can_delete,
 )
-from SaitamaRobot.modules.helper_funcs.extraction import (
+from SaitamaRobot.modules.helpo_hannah.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from SaitamaRobot.modules.helper_funcs.filters import CustomFilters
-from SaitamaRobot.modules.helper_funcs.misc import split_message
-from SaitamaRobot.modules.helper_funcs.string_handling import split_quotes
+from SaitamaRobot.modules.helpo_hannah.filters import CustomFilters
+from SaitamaRobot.modules.helpo_hannah.misc import split_message
+from SaitamaRobot.modules.helpo_hannah.string_handling import split_quotes
 from SaitamaRobot.modules.log_channel import loggable
 from SaitamaRobot.modules.sql import warns_sql as sql
 from telegram import (
