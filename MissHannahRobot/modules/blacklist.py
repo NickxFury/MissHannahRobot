@@ -178,14 +178,14 @@ def unblacklist(update, context):
         elif not successful:
             send_message(
                 update.effective_message,
-                "None of these triggers exist so it can't be removed.",
+                "നിങ്ങൾ ഇപ്പോൾ പറഞ്ഞ ട്രിഗേർസ് ഈ ചാറ്റിൽ ഇതുവരെ അഡ് ചെയിതിട്ടില്ല!.",
                 parse_mode=ParseMode.HTML,
             )
 
         else:
             send_message(
                 update.effective_message,
-                "Removed <code>{}</code> from blacklist. {} did not exist, "
+                "<code>{}</code> ഈ ട്രിഗർ ഇതുവരെ {} ആഡ് ആക്കിട്ടില്ല!"
                 "so were not removed.".format(
                     successful, len(to_unblacklist) - successful
                 ),
@@ -194,7 +194,7 @@ def unblacklist(update, context):
     else:
         send_message(
             update.effective_message,
-            "Tell me which words you would like to remove from blacklist!",
+            "ഏത്ഒക്കെ ട്രിഗേർസ് ആണ് ഈ ചാറ്റിൽ നിന്ന് റീമൂവ് ആകേണ്ടത് എന്ന പറയു!",
         )
 
 
@@ -217,7 +217,7 @@ def blacklist_mode(update, context):
         if update.effective_message.chat.type == "private":
             send_message(
                 update.effective_message,
-                "This command can be only used in group not in PM",
+                "ഈ കമാൻഡ് പി.എം അല്ല ഗ്രൂപ്പിൽ ആണ് ഉപയോഗിക്കേണ്ടത്.",
             )
             return ""
         chat = update.effective_chat
@@ -245,7 +245,7 @@ def blacklist_mode(update, context):
             sql.set_blacklist_strength(chat_id, 5, "0")
         elif args[0].lower() == "tban":
             if len(args) == 1:
-                teks = """It looks like you tried to set time value for blacklist but you didn't specified time; Try, `/blacklistmode tban <timevalue>`.
+                teks = """ നിങ്ങൾ ഈ ട്രിഗർനിന്ന് വേണ്ടി പറഞ്ഞ സമയ വാല്യു തെറ്റ് ആണ്; Try, `/blacklistmode tban <timevalue>`.
 				
 Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks."""
                 send_message(update.effective_message, teks, parse_mode="markdown")
@@ -276,20 +276,20 @@ Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
         else:
             send_message(
                 update.effective_message,
-                "I only understand: off/del/warn/ban/kick/mute/tban/tmute!",
+                "നിങ്ങൾ പറഞ്ഞത് എന്നിക്ക് മനസ്സിലായില്ല: off/del/warn/ban/kick/mute/tban/tmute!",
             )
             return ""
         if conn:
-            text = "Changed blacklist mode: `{}` in *{}*!".format(
+            text = "ബ്ലാക്ക്ലിസ്റ്റ് മോഡ് ചെയ്ഞ്ച് ആക്കി: `{}` ടൂ' *{}*!".format(
                 settypeblacklist, chat_name
             )
         else:
-            text = "Changed blacklist mode: `{}`!".format(settypeblacklist)
+            text = "ബ്ലാക്ക്ലിസ്റ്റ് മോഡ് ചെയ്ഞ്ച് ആക്കി: `{}`!".format(settypeblacklist)
         send_message(update.effective_message, text, parse_mode="markdown")
         return (
             "<b>{}:</b>\n"
-            "<b>Admin:</b> {}\n"
-            "Changed the blacklist mode. will {}.".format(
+            "<b> അഡ്മിൻ:</b> {}\n"
+            "ബ്ലാക്ക്ലിസ്റ്റ് മോഡ് മാറ്റി. ഇപ്പോൾ നിലവിലുള്ള മോഡ്{}.".format(
                 html.escape(chat.title),
                 mention_html(user.id, html.escape(user.first_name)),
                 settypeblacklist,
@@ -314,11 +314,11 @@ Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
         elif getmode == 7:
             settypeblacklist = "temporarily mute for {}".format(getvalue)
         if conn:
-            text = "Current blacklistmode: *{}* in *{}*.".format(
+            text = "ഇപ്പോഴത്തെ ബ്ലാക്ക്ലിസ്റ്റ് മോഡ്: *{}* ടൂ *{}*.".format(
                 settypeblacklist, chat_name
             )
         else:
-            text = "Current blacklistmode: *{}*.".format(settypeblacklist)
+            text = " ഇപ്പോഴത്തെ ബ്ലാക്ക്ലിസ്റ്റ് മോഡ്: *{}*.".format(settypeblacklist)
         send_message(update.effective_message, text, parse_mode=ParseMode.MARKDOWN)
     return ""
 
