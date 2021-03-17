@@ -218,7 +218,7 @@ def set_title(update: Update, context: CallbackContext):
 
     if user_member.status == "creator":
         message.reply_text(
-            "This person CREATED the chat, how can i set custom title for him?"
+            "ഗ്രൂപ്പ്‌ മുതലാളിയുടെ അഡ്മിൻ നാമം മാറ്റാൻ എനിക്ക് കഴിയില്ല?"
         )
         return
 
