@@ -360,7 +360,7 @@ def adminlist(update, context):
     bot = context.bot
 
     if update.effective_message.chat.type == "private":
-        send_message(update.effective_message, "This command only works in Groups.")
+        send_message(update.effective_message, "ഈ കമാൻഡ് ഗ്രൂപ്പിൽ മാത്രമേ വർക്ക്‌ ആവുകയുള്ളു...")
         return
 
     chat = update.effective_chat
