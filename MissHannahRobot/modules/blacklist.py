@@ -117,7 +117,7 @@ def add_blacklist(update, context):
     else:
         send_message(
             update.effective_message,
-            "Tell me which words you would like to add in blacklist.",
+            "ബ്ലാക്ക്ലിസ്റ്റ് ചേർക്കേണ്ട പദങ്ങൾ അയ്ക്കു.",
         )
 
 
@@ -156,20 +156,20 @@ def unblacklist(update, context):
             if successful:
                 send_message(
                     update.effective_message,
-                    "Removed <code>{}</code> from blacklist in <b>{}</b>!".format(
+                    "<code>{}</code>ഈ പദം <b>{}</b> ഗ്രൂപ്പിലെ ബ്ലാക്ക്ലിസ്റ്റ് നിന്ന് ഒഴിവാക്കി!".format(
                         html.escape(to_unblacklist[0]), html.escape(chat_name)
                     ),
                     parse_mode=ParseMode.HTML,
                 )
             else:
                 send_message(
-                    update.effective_message, "This is not a blacklist trigger!"
+                    update.effective_message, "ഇത് ഒരു ബ്ലാക്ക്ലിസ്റ്റ് പദം അല്ല!"
                 )
 
         elif successful == len(to_unblacklist):
             send_message(
                 update.effective_message,
-                "Removed <code>{}</code> from blacklist in <b>{}</b>!".format(
+                "<code>{}</code> ഈ പദം <b>{}</b> ലെ ബ്ലാക്ക്ലിസ്റ്റ്ൽ നിന്ന് ഒഴിവാക്കി!".format(
                     successful, html.escape(chat_name)
                 ),
                 parse_mode=ParseMode.HTML,
