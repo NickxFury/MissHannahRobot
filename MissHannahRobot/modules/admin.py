@@ -469,9 +469,9 @@ __help__ = """
  • `/admins`*:* list of admins in the chat
 
 *Admins only:*
-➩ `/pin`*:* _ഒരു മെസ്സേജ് പിൻ ചെയ്യുന്നതിന്_
-➩ `/unpin`*:* unpins the currently pinned message
-➩ `/invitelink`*:* gets invitelink
+➩ `/pin`*:* _ഒരു മെസ്സേജ് പിൻ ചെയ്യുന്നതിന്._
+➩ `/unpin`*:* _നിലവിൽ പിൻ ചെയ്തിരിക്കുന്ന സന്ദേശം നീക്കം ചെയ്യുന്നതിന്._
+➩ `/invitelink`*:* _ഗ്രൂപ്പിന്റെ ഇൻവിറ്റേഷൻ ലിങ്ക് ലഭിക്കുന്നു._
 ➩ `/promote`*:* promotes the user replied to
 ➩ `/demote`*:* demotes the user replied to
 ➩ `/title <title here>`*:* sets a custom title for an admin that the bot promoted
