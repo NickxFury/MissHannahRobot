@@ -93,11 +93,11 @@ def ban(update: Update, context: CallbackContext) -> str:
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#{'S' if silent else ''}BANNED\n"
-        f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-        f"<b>User:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
+        f"<b>അഡ്മിൻ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
+        f"<b>യൂസർ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
     )
     if reason:
-        log += "\n<b>Reason:</b> {}".format(reason)
+        log += "\n<b>കാരണം:</b> {}".format(reason)
 
     try:
         chat.kick_member(user_id)
@@ -114,16 +114,16 @@ def ban(update: Update, context: CallbackContext) -> str:
             f"<code> </code><b>•  User:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
         )
         if reason:
-            reply += f"\n<code> </code><b>•  Reason:</b> \n{html.escape(reason)}"
+            reply += f"\n<code> </code><b>•  കാരണം:</b> \n{html.escape(reason)}"
         bot.sendMessage(chat.id, reply, parse_mode=ParseMode.HTML, quote=False)
         return log
 
     except BadRequest as excp:
-        if excp.message == "Reply message not found":
+        if excp.message == "റിപ്ലേ സന്ദേശം കണ്ടെത്താൻ കഴിയുന്നില്ല":
             # Do not reply
             if silent:
                 return log
-            message.reply_text("Banned!", quote=False)
+            message.reply_text("ബാൻ ചെയ്തു!", quote=False)
             return log
         else:
             LOGGER.warning(update)
@@ -134,7 +134,7 @@ def ban(update: Update, context: CallbackContext) -> str:
                 chat.id,
                 excp.message,
             )
-            message.reply_text("Uhm...that didn't work...")
+            message.reply_text(" ഇത്... ഒരു വാക്കാണ് എന്ന് തോന്നുന്നില്ല...")
 
     return log_message
 
@@ -155,22 +155,22 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("I doubt that's a user.")
+        message.reply_text("നിങ്ങൾ പറഞ്ഞ ആളെ കുറിച്ച് എന്നിക്ക് ഒരു സംശയം.")
         return log_message
 
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
-        if excp.message != "User not found":
+        if excp.message != "നിങ്ങൾ പറഞ്ഞആളെ കണ്ടെത്താൻ കഴിയുന്നില്ല":
             raise
-        message.reply_text("I can't seem to find this user.")
+        message.reply_text("നിങ്ങൾ പറഞ്ഞ ആളെ ഞാൻ ഇതുവരെ കണ്ടിട്ടില്ല.")
         return log_message
     if user_id == bot.id:
-        message.reply_text("I'm not gonna BAN myself, are you crazy?")
+        message.reply_text("ഭ... നിനക്ക് ഭ്രാന്ത് ആണോ? ഞാൻ എന്നെ തന്നെ ബാൻ ചെയ്യണം എന്നോ?")
         return log_message
 
     if is_user_ban_protected(chat, user_id, member):
-        message.reply_text("I don't feel like it.")
+        message.reply_text("എന്തോ? എങ്ങനെ?.")
         return log_message
 
     if not reason:
