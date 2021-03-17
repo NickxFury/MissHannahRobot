@@ -1,8 +1,8 @@
 import time
 from telethon import events
 
-from SaitamaRobot import telethn
-from SaitamaRobot.modules.helper_funcs.telethn.chatstatus import (
+from SaitamaRobot import thengakkola
+from SaitamaRobot.modules.helper_funcs.thengakkola.chatstatus import (
     can_delete_messages,
     user_is_admin,
 )
@@ -80,8 +80,8 @@ __help__ = """
 PURGE_HANDLER = purge_messages, events.NewMessage(pattern="^[!/]purge$")
 DEL_HANDLER = delete_messages, events.NewMessage(pattern="^[!/]del$")
 
-telethn.add_event_handler(*PURGE_HANDLER)
-telethn.add_event_handler(*DEL_HANDLER)
+thengakkola.add_event_handler(*PURGE_HANDLER)
+thengakkola.add_event_handler(*DEL_HANDLER)
 
 __mod_name__ = "Purges"
 __command_list__ = ["del", "purge"]

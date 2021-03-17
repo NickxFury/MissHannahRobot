@@ -1,7 +1,7 @@
 import importlib
 import collections
 
-from SaitamaRobot import dispatcher, telethn
+from SaitamaRobot import dispatcher, thengakkola
 from SaitamaRobot.__main__ import (
     CHAT_SETTINGS,
     DATA_EXPORT,
@@ -49,7 +49,7 @@ def load(update: Update, context: CallbackContext):
             else:
                 if isinstance(handler[0], collections.Callable):
                     callback, telethon_event = handler
-                    telethn.add_event_handler(callback, telethon_event)
+                    thengakkola.add_event_handler(callback, telethon_event)
                 else:
                     handler_name, priority = handler
                     dispatcher.add_handler(handler_name, priority)
@@ -121,7 +121,7 @@ def unload(update: Update, context: CallbackContext):
             else:
                 if isinstance(handler[0], collections.Callable):
                     callback, telethon_event = handler
-                    telethn.remove_event_handler(callback, telethon_event)
+                    thengakkola.remove_event_handler(callback, telethon_event)
                 else:
                     handler_name, priority = handler
                     dispatcher.remove_handler(handler_name, priority)

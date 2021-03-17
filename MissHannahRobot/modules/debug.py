@@ -5,7 +5,7 @@ from telethon import events
 from telegram import Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 
-from SaitamaRobot import telethn, dispatcher
+from SaitamaRobot import thengakkola, dispatcher
 from SaitamaRobot.modules.helper_funcs.chat_status import dev_plus
 
 DEBUG_MODE = False
@@ -32,7 +32,7 @@ def debug(update: Update, context: CallbackContext):
             message.reply_text("Debug mode is currently off.")
 
 
-@telethn.on(events.NewMessage(pattern="[/!].*"))
+@thengakkola.on(events.NewMessage(pattern="[/!].*"))
 async def i_do_nothing_yes(event):
     global DEBUG_MODE
     if DEBUG_MODE:
