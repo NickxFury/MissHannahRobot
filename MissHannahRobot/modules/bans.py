@@ -299,9 +299,9 @@ def punchme(update: Update, context: CallbackContext):
 
     res = update.effective_chat.unban_member(user_id)  # unban on current user = kick
     if res:
-        update.effective_message.reply_text("*punches you out of the group*")
+        update.effective_message.reply_text("*നീ പുറത്ത് പോ.*")
     else:
-        update.effective_message.reply_text("Huh? I can't :/")
+        update.effective_message.reply_text("എന്നെകൊണ്ട് ഒന്നും വയ്യ!' :/")
 
 
 @run_async
@@ -320,35 +320,35 @@ def unban(update: Update, context: CallbackContext) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("I doubt that's a user.")
+        message.reply_text("നിങ്ങൾ പറഞ്ഞ ആളെ എന്നിക്ക് സംശയം ഉണ്ട്.")
         return log_message
 
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
-        if excp.message != "User not found":
+        if excp.message != "നിങ്ങൾ പറഞ്ഞ ആളെ കണ്ടെത്താൻ കഴിയുന്നില്ല":
             raise
-        message.reply_text("I can't seem to find this user.")
+        message.reply_text("ഞാൻ നിങ്ങൾ പറഞ്ഞ ആളെ ഇതുവരെ കണ്ടിട്ടില്ല.")
         return log_message
     if user_id == bot.id:
-        message.reply_text("How would I unban myself if I wasn't here...?")
+        message.reply_text("നീ എന്ത് തേങ്ങയാ ഈ പറയുന്നത്")
         return log_message
 
     if is_user_in_chat(chat, user_id):
-        message.reply_text("Isn't this person already here??")
+        message.reply_text("നിങ്ങൾ പറഞ്ഞ ആൾ ഇവിടെ ഉണ്ടല്ലേ?")
         return log_message
 
     chat.unban_member(user_id)
-    message.reply_text("Yep, this user can join!")
+    message.reply_text("ശരി. ഇയാൾക്ക് വീണ്ടും ഇവിടെ ജോയിൻ ചെയ്യാം!")
 
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#UNBANNED\n"
-        f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-        f"<b>User:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
+        f"<b>അഡ്മിൻ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
+        f"<b>യൂസർ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
     )
     if reason:
-        log += f"\n<b>Reason:</b> {reason}"
+        log += f"\n<b>കാരണം:</b> {reason}"
 
     return log
 
@@ -368,7 +368,7 @@ def selfunban(context: CallbackContext, update: Update) -> str:
     try:
         chat_id = int(args[0])
     except:
-        message.reply_text("Give a valid chat ID.")
+        message.reply_text("ശരിയായ ചാറ്റ് ഐഡി തരു.")
         return
 
     chat = bot.getChat(chat_id)
@@ -376,23 +376,23 @@ def selfunban(context: CallbackContext, update: Update) -> str:
     try:
         member = chat.get_member(user.id)
     except BadRequest as excp:
-        if excp.message == "User not found":
-            message.reply_text("I can't seem to find this user.")
+        if excp.message == "നിങ്ങൾ പറഞ്ഞ ആളെ കണ്ടെത്താൻ കഴിയുന്നില്ല":
+            message.reply_text("നിങ്ങൾ പറഞ്ഞ ആളെ ഞാൻ ഇതുവരെ കണ്ടിട്ടില്ല.")
             return
         else:
             raise
 
     if is_user_in_chat(chat, user.id):
-        message.reply_text("Aren't you already in the chat??")
+        message.reply_text("ഇദ്ദേഹം ഈ ഗ്രൂപ്പിൽ ഇല്ലെ??")
         return
 
     chat.unban_member(user.id)
-    message.reply_text("Yep, I have unbanned you.")
+    message.reply_text("ശരി നിങ്ങളെ ഞാൻ അൺ ബാൻ ചെയ്യാം.")
 
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#UNBANNED\n"
-        f"<b>User:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
+        f"<b>യൂസർ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
     )
 
     return log
