@@ -42,13 +42,13 @@ async def is_user_admin(user_id: int, chat_id):
     return status
 
 
-async def saitama_is_admin(chat_id: int):
+async def hannah_is_admin(chat_id: int):
     status = False
-    saitama = await thengakkola.get_me()
+    hannah = await thengakkola.get_me()
     async for user in thengakkola.iter_participants(
         chat_id, filter=ChannelParticipantsAdmins
     ):
-        if saitama.id == user.id:
+        if hannah.id == user.id:
             status = True
             break
     return status
