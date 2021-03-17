@@ -75,7 +75,7 @@ def extract_user_and_text(
     except BadRequest as excp:
         if excp.message in ("User_id_invalid", "Chat not found"):
             message.reply_text(
-                "I don't seem to have interacted with this user before - please forward a message from "
+                "എനിക്ക് അദ്ദേഹത്തിന്റെ അക്കൗണ്ട് മനസ്സിലാക്കാൻ കഴിയുന്നില്ല.."
                 "them to give me control! (like a voodoo doll, I need a piece of them to be able "
                 "to execute certain commands...)"
             )
