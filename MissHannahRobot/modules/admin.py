@@ -472,10 +472,10 @@ __help__ = """
 ➩ `/pin`*:* _ഒരു മെസ്സേജ് പിൻ ചെയ്യുന്നതിന്._
 ➩ `/unpin`*:* _നിലവിൽ പിൻ ചെയ്തിരിക്കുന്ന സന്ദേശം നീക്കം ചെയ്യുന്നതിന്._
 ➩ `/invitelink`*:* _ഗ്രൂപ്പിന്റെ ഇൻവിറ്റേഷൻ ലിങ്ക് ലഭിക്കുന്നു._
-➩ `/promote`*:* promotes the user replied to
-➩ `/demote`*:* demotes the user replied to
-➩ `/title <title here>`*:* sets a custom title for an admin that the bot promoted
-➩ `/admincache`*:* force refresh the admins list
+➩ `/promote`*:* _ഒരു ഗ്രൂപ്പ്‌ മെമ്പറെ അഡ്മിൻ ആക്കുന്നു_
+➩ `/demote`*:* _നിലവിൽ അഡ്മിൻ ആയിരിക്കുന്ന ഒരാളെ അഡ്മിൻ സ്ഥാനത്ത് നിന്ന് ഒഴിവാക്കുന്നു._
+➩ `/title <title here>`*:* _ഗ്രൂപ്പ്‌ അഡ്മിന്റെ അഡ്മിൻ ടൈറ്റിൽ മാറ്റുന്നു.(ബോട്ടിനാൽ പ്രൊമോട്ട് ചെയ്തവർ മാത്രം)_
+➩ `/admincache`*:* അഡ്മിൻ ലിസ്റ്റ് പുതുക്കുന്നു.(പുതുതായി ആഡ് ചെയ്ത അഡ്മിൻസിനെ ബോട്ട് റീഡ് ചെയ്യാൻ പ്രയാസമാണ്..ഈ കമാൻഡ് അതിനു വേണ്ടി ഉള്ളതാണ്._ 
 """
 
 ADMINLIST_HANDLER = DisableAbleCommandHandler("admins", adminlist)
