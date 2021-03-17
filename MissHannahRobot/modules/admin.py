@@ -86,9 +86,9 @@ def promote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("I can't promote someone who isn't in the group.")
+            message.reply_text("ഗ്രൂപ്പിൽ ഇല്ലാത്ത ഒരാളിനെ ഞാൻ എങ്ങനെ അഡ്മിൻ ആക്കും.")
         else:
-            message.reply_text("An error occured while promoting.")
+            message.reply_text("🙄 എന്തെരോ ഒരു തകരാറ് പോല.")
         return
 
     bot.sendMessage(
