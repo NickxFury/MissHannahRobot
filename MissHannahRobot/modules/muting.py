@@ -23,7 +23,7 @@ from telegram.utils.helpers import mention_html
 
 def check_user(user_id: int, bot: Bot, chat: Chat) -> Optional[str]:
     if not user_id:
-        reply = "You don't seem to be referring to a user or the ID specified is incorrect.."
+        reply = "നിങ്ങൾ ഒരു ഉപയോക്താവിനെ പരാമർശിക്കുന്നതായി തോന്നുന്നില്ല അല്ലെങ്കിൽ യൂസർ ഐഡി തെറ്റാണ് .."
         return reply
 
     try:

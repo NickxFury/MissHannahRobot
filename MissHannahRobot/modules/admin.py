@@ -124,7 +124,7 @@ def demote(update: Update, context: CallbackContext) -> str:
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "നിങ്ങൾ ഒരു ഉപയോക്താവിനെ പരാമർശിക്കുന്നതായി തോന്നുന്നില്ല അല്ലെങ്കിൽ യൂസർ ഐഡി തെറ്റാണ് .."
         )
         return
 
@@ -212,7 +212,7 @@ def set_title(update: Update, context: CallbackContext):
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "നിങ്ങൾ ഒരു ഉപയോക്താവിനെ പരാമർശിക്കുന്നതായി തോന്നുന്നില്ല അല്ലെങ്കിൽ യൂസർ ഐഡി തെറ്റാണ് .."
         )
         return
 

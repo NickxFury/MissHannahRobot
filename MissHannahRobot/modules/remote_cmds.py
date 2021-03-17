@@ -96,7 +96,7 @@ def rban(update: Update, context: CallbackContext):
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "നിങ്ങൾ ഒരു ഉപയോക്താവിനെ പരാമർശിക്കുന്നതായി തോന്നുന്നില്ല അല്ലെങ്കിൽ യൂസർ ഐഡി തെറ്റാണ് .."
         )
         return
     elif not chat_id:
@@ -179,7 +179,7 @@ def runban(update: Update, context: CallbackContext):
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "നിങ്ങൾ ഒരു ഉപയോക്താവിനെ പരാമർശിക്കുന്നതായി തോന്നുന്നില്ല അല്ലെങ്കിൽ യൂസർ ഐഡി തെറ്റാണ് .."
         )
         return
     elif not chat_id:
@@ -264,7 +264,7 @@ def rkick(update: Update, context: CallbackContext):
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "നിങ്ങൾ ഒരു ഉപയോക്താവിനെ പരാമർശിക്കുന്നതായി തോന്നുന്നില്ല അല്ലെങ്കിൽ യൂസർ ഐഡി തെറ്റാണ് .."
         )
         return
     elif not chat_id:
@@ -347,7 +347,7 @@ def rmute(update: Update, context: CallbackContext):
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "നിങ്ങൾ ഒരു ഉപയോക്താവിനെ പരാമർശിക്കുന്നതായി തോന്നുന്നില്ല അല്ലെങ്കിൽ യൂസർ ഐഡി തെറ്റാണ് .."
         )
         return
     elif not chat_id:
@@ -432,7 +432,7 @@ def runmute(update: Update, context: CallbackContext):
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "നിങ്ങൾ ഒരു ഉപയോക്താവിനെ പരാമർശിക്കുന്നതായി തോന്നുന്നില്ല അല്ലെങ്കിൽ യൂസർ ഐഡി തെറ്റാണ് .."
         )
         return
     elif not chat_id:
