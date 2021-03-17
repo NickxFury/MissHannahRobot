@@ -292,7 +292,7 @@ def pin(update: Update, context: CallbackContext) -> str:
                 raise
         log_message = (
             f"<b>{html.escape(chat.title)}:</b>\n"
-            f"#PINNED\n"
+            f"#📌പിൻ ചെയ്തു\n"
             f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}"
         )
 
@@ -319,7 +319,7 @@ def unpin(update: Update, context: CallbackContext) -> str:
 
     log_message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
-        f"#UNPINNED\n"
+        f"#നിലവിൽ പിൻ ചെയ്തിരുന്നു മെസ്സേജ് ഒഴിവാക്കി\n"
         f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}"
     )
 
@@ -343,11 +343,11 @@ def invite(update: Update, context: CallbackContext):
             update.effective_message.reply_text(invitelink)
         else:
             update.effective_message.reply_text(
-                "I don't have access to the invite link, try changing my permissions!"
+                "ഗ്രൂപ്പ്‌ ലിങ്ക് എടുക്കുന്നതിനുള്ള പെർമിഷൻ എനിക്കില്ല..!"
             )
     else:
         update.effective_message.reply_text(
-            "I can only give you invite links for supergroups and channels, sorry!"
+            "സൂപ്പർ ഗ്രൂപ്പുകളുടെയോ അല്ലെങ്കിൽ ചാനലുകളുടെയോ ലിങ്ക് മാത്രമേ എനിക്ക് തരുവാൻ സാധിക്കുകയുള്ളു.."
         )
 
 
