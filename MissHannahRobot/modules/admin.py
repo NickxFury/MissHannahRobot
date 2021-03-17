@@ -230,7 +230,7 @@ def set_title(update: Update, context: CallbackContext):
 
     if user_id == bot.id:
         message.reply_text(
-            "I can't set my own title myself! Get the one who made me admin to do it for me."
+            "എനിക്ക് എന്റെ അഡ്മിൻ നാമം മാറ്റാൻ കഴിയില്ല..."
         )
         return
 
