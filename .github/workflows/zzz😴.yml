@@ -8,8 +8,8 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: "ഞാൻ പ്രൊമോട്ട് ചെയ്തു അഡ്മിൻ അഡ്മിൻ ആയവരുടെ പേര് മാത്രമേ മാറ്റം വരുത്തുകയുള്ളു.."
-          replace: "ഞാൻ പ്രൊമോട്ട് ചെയ്തു അഡ്മിൻ ആക്കിയവരുടെ പേര് മാത്രമേ മാറ്റം വരുത്തുകയുള്ളു.."
+          find: "This command only works in Groups"
+          replace: "ഈ കമാൻഡ് ഗ്രൂപ്പിൽ മാത്രമേ വർക്ക്‌ ആവുകയുള്ളു.."
       - name: Pull All Updates
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
