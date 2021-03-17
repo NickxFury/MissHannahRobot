@@ -8,8 +8,8 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: "Can't set title for non-admins!\nPromote them first to set custom title!"
-          replace: "അഡ്മിൻ അല്ലാത്ത ഒരാളിന് അഡ്മിൻ നെയിം എങ്ങനെ മാറ്റും..പൊട്ടൻ ആണോ നീ?"
+          find: "I can't set my own title myself! Get the one who made me admin to do it for me"
+          replace: "എനിക്ക് എന്റെ അഡ്മിൻ നാമം മാറ്റാൻ കഴിയില്ല.."
       - name: Pull All Updates
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
