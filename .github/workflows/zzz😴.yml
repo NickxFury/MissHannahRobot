@@ -8,8 +8,8 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: "Could not demote. I might not be admin, or the admin status was appointed by another"
-          replace: "അഡ്മിൻ സ്ഥാനം മാറ്റുവാൻ കഴിയില്ല..ഒന്നുകിൽ ഞാൻ അഡ്മിൻ അല്ല..അല്ലെങ്കിൽ അദ്ദേഹത്തെ അഡ്മിൻ ആക്കിയത് മറ്റാരോ ആണ്..."
+          find: "user, so I can't act upon them"
+          replace: "ആയതിനാൽ എനിക്ക് ഒന്നും ചെയ്യാൻ കഴിയില്ല.."
       - name: Pull All Updates
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
