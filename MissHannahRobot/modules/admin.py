@@ -246,7 +246,7 @@ def set_title(update: Update, context: CallbackContext):
     try:
         bot.setChatAdministratorCustomTitle(chat.id, user_id, title)
     except BadRequest:
-        message.reply_text("ഞാൻ പ്രൊമോട്ട് ചെയ്തു അഡ്മിൻ അഡ്മിൻ ആയവരുടെ പേര് മാത്രമേ മാറ്റം വരുത്തുകയുള്ളു..")
+        message.reply_text("ഞാൻ പ്രൊമോട്ട് ചെയ്തു അഡ്മിൻ ആക്കിയവരുടെ പേര് മാത്രമേ മാറ്റം വരുത്തുകയുള്ളു..")
         return
 
     bot.sendMessage(
