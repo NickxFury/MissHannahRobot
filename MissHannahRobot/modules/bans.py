@@ -49,40 +49,40 @@ def ban(update: Update, context: CallbackContext) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("I doubt that's a user.")
+        message.reply_text("ബാൻ ചെയ്യാൻ പറഞ്ഞ ആളെ എന്നിക്ക് ഒരു സംശയം😜.")
         return log_message
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
-        if excp.message != "User not found":
+        if excp.message != "ഇയാളെ കണ്ടെത്താൻ പറ്റുന്നില്ല🥺.":
             raise
-        message.reply_text("Can't seem to find this person.")
+        message.reply_text("ഇയാളെ ഞാൻ ഇതുവരെ കണ്ടിട്ടില്ല അതു എന്നക്ക് ബാൻ ചെയ്യാൻ കഴിയില്ല🤪.")
         return log_message
     if user_id == bot.id:
-        message.reply_text("Oh yeah, ban myself, noob!")
+        message.reply_text("ഭാ... ഞാൻ എന്നെ തന്നെ ബാൻ ചെയ്യണം എന്നോ😏")
         return log_message
 
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
-            message.reply_text("Trying to put me against a God level disaster huh?")
+            message.reply_text("ഇദ്ദേഹം എൻ്റെ മുതലാളി ആണ്. അതുകൊണ്ട് എന്നിക്ക് ബാൻ ചെയ്യാൻ കഴിയില്ല.")
         elif user_id in DEV_USERS:
-            message.reply_text("I can't act against our own.")
+            message.reply_text(" ഇയാളെ ബാൻ ആക്കാൻ എന്നക്ക് കഴിയില്ല.")
         elif user_id in DRAGONS:
             message.reply_text(
-                "Fighting this Dragon here will put civilian lives at risk."
+                " ആഹാ! ഇയാളെ ബാൻ ആക്കണം അല്ലെ? ഒരിക്കിലും നടക്കാത്ത മനോഹരമായ സ്വപനം."
             )
         elif user_id in DEMONS:
             message.reply_text(
-                "Bring an order from Heroes association to fight a Demon disaster."
+                "വിട്ടോ വിട്ടോ ഇതൊന്നും നടക്കില്ല."
             )
         elif user_id in TIGERS:
             message.reply_text(
-                "Bring an order from Heroes association to fight a Tiger disaster."
+                "നഹി! നഹി എന്ന് പറഞ്ഞാൽ നഹി ഹേ പോടോ ഹേ!."
             )
         elif user_id in WOLVES:
-            message.reply_text("Wolf abilities make them ban immune!")
+            message.reply_text("ഇത് എൻ്റെ അടുത്ത സുഹൃത്ത് ആണ്. ഇയാളെ ബാൻ ചെയ്യാൻ കഴിയില്ല.")
         else:
-            message.reply_text("This user has immunity and cannot be banned.")
+            message.reply_text("ഇദ്ദേഹം എൻ്റെ ഏറ്റവു അടുത്ത നല്ല സൂഹൃത്ത് ആണ്! ഇയാളെ ബാൻ ചെയ്യാൻ എന്നിക്ക് ഒരികില്ലും സാധിക്കില്ല.")
         return log_message
     if message.text.startswith("/s"):
         silent = True
