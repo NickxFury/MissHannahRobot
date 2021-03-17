@@ -1,9 +1,9 @@
 from typing import Optional
 
-import SaitamaRobot.modules.sql.rules_sql as sql
-from SaitamaRobot import dispatcher
-from SaitamaRobot.modules.helpo_hannah.chat_status import user_admin
-from SaitamaRobot.modules.helpo_hannah.string_handling import markdown_parser
+import MissHannahRobot.modules.sql.rules_sql as sql
+from MissHannahRobot import dispatcher
+from MissHannahRobot.modules.helpo_hannah.chat_status import user_admin
+from MissHannahRobot.modules.helpo_hannah.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,

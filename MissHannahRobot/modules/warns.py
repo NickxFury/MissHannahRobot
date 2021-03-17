@@ -3,9 +3,9 @@ import re
 from typing import Optional
 
 import telegram
-from SaitamaRobot import TIGERS, WOLVES, dispatcher
-from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.helpo_hannah.chat_status import (
+from MissHannahRobot import TIGERS, WOLVES, dispatcher
+from MissHannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot.modules.helpo_hannah.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
@@ -13,16 +13,16 @@ from SaitamaRobot.modules.helpo_hannah.chat_status import (
     user_admin_no_reply,
     can_delete,
 )
-from SaitamaRobot.modules.helpo_hannah.extraction import (
+from MissHannahRobot.modules.helpo_hannah.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from SaitamaRobot.modules.helpo_hannah.filters import CustomFilters
-from SaitamaRobot.modules.helpo_hannah.misc import split_message
-from SaitamaRobot.modules.helpo_hannah.string_handling import split_quotes
-from SaitamaRobot.modules.log_channel import loggable
-from SaitamaRobot.modules.sql import warns_sql as sql
+from MissHannahRobot.modules.helpo_hannah.filters import CustomFilters
+from MissHannahRobot.modules.helpo_hannah.misc import split_message
+from MissHannahRobot.modules.helpo_hannah.string_handling import split_quotes
+from MissHannahRobot.modules.log_channel import loggable
+from MissHannahRobot.modules.sql import warns_sql as sql
 from telegram import (
     CallbackQuery,
     Chat,
@@ -44,7 +44,7 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html
-from SaitamaRobot.modules.sql.approve_sql import is_approved
+from MissHannahRobot.modules.sql.approve_sql import is_approved
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"

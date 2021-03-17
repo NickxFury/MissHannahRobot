@@ -6,18 +6,18 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-import SaitamaRobot.modules.sql.blacklist_sql as sql
-from SaitamaRobot import dispatcher, LOGGER
-from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.helpo_hannah.chat_status import user_admin, user_not_admin
-from SaitamaRobot.modules.helpo_hannah.extraction import extract_text
-from SaitamaRobot.modules.helpo_hannah.misc import split_message
-from SaitamaRobot.modules.log_channel import loggable
-from SaitamaRobot.modules.warns import warn
-from SaitamaRobot.modules.helpo_hannah.string_handling import extract_time
-from SaitamaRobot.modules.connection import connected
-from SaitamaRobot.modules.sql.approve_sql import is_approved
-from SaitamaRobot.modules.helpo_hannah.alternate import send_message, typing_action
+import MissHannahRobot.modules.sql.blacklist_sql as sql
+from MissHannahRobot import dispatcher, LOGGER
+from MissHannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot.modules.helpo_hannah.chat_status import user_admin, user_not_admin
+from MissHannahRobot.modules.helpo_hannah.extraction import extract_text
+from MissHannahRobot.modules.helpo_hannah.misc import split_message
+from MissHannahRobot.modules.log_channel import loggable
+from MissHannahRobot.modules.warns import warn
+from MissHannahRobot.modules.helpo_hannah.string_handling import extract_time
+from MissHannahRobot.modules.connection import connected
+from MissHannahRobot.modules.sql.approve_sql import is_approved
+from MissHannahRobot.modules.helpo_hannah.alternate import send_message, typing_action
 
 BLACKLIST_GROUP = 11
 

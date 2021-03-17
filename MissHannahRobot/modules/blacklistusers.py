@@ -1,7 +1,7 @@
 # Module to blacklist users and prevent them from using commands by @TheRealPhoenix
 import html
-import SaitamaRobot.modules.sql.blacklistusers_sql as sql
-from SaitamaRobot import (
+import MissHannahRobot.modules.sql.blacklistusers_sql as sql
+from MissHannahRobot import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -10,12 +10,12 @@ from SaitamaRobot import (
     WOLVES,
     dispatcher,
 )
-from SaitamaRobot.modules.helpo_hannah.chat_status import dev_plus
-from SaitamaRobot.modules.helpo_hannah.extraction import (
+from MissHannahRobot.modules.helpo_hannah.chat_status import dev_plus
+from MissHannahRobot.modules.helpo_hannah.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from SaitamaRobot.modules.log_channel import gloggable
+from MissHannahRobot.modules.log_channel import gloggable
 from telegram import ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, run_async

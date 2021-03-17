@@ -1,12 +1,12 @@
-from SaitamaRobot import dispatcher
-from SaitamaRobot.modules.helpo_hannah.chat_status import (
+from MissHannahRobot import dispatcher
+from MissHannahRobot.modules.helpo_hannah.chat_status import (
     bot_admin,
     is_bot_admin,
     is_user_ban_protected,
     is_user_in_chat,
 )
-from SaitamaRobot.modules.helpo_hannah.extraction import extract_user_and_text
-from SaitamaRobot.modules.helpo_hannah.filters import CustomFilters
+from MissHannahRobot.modules.helpo_hannah.extraction import extract_user_and_text
+from MissHannahRobot.modules.helpo_hannah.filters import CustomFilters
 from telegram import Update, ChatPermissions
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, run_async

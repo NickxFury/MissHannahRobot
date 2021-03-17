@@ -1,5 +1,5 @@
-from SaitamaRobot.modules.helpo_hannah.thengakkola import IMMUNE_USERS, thengakkola
-from SaitamaRobot import DRAGONS
+from MissHannahRobot.modules.helpo_hannah.thengakkola import IMMUNE_USERS, thengakkola
+from MissHannahRobot import DRAGONS
 from telethon.tl.types import ChannelParticipantsAdmins
 
 

@@ -6,8 +6,8 @@ import time
 import uuid
 from io import BytesIO
 
-import SaitamaRobot.modules.sql.feds_sql as sql
-from SaitamaRobot import (
+import MissHannahRobot.modules.sql.feds_sql as sql
+from MissHannahRobot import (
     EVENT_LOGS,
     LOGGER,
     SUPPORT_CHAT,
@@ -17,15 +17,15 @@ from SaitamaRobot import (
     WOLVES,
     dispatcher,
 )
-from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.helpo_hannah.alternate import send_message
-from SaitamaRobot.modules.helpo_hannah.chat_status import is_user_admin
-from SaitamaRobot.modules.helpo_hannah.extraction import (
+from MissHannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot.modules.helpo_hannah.alternate import send_message
+from MissHannahRobot.modules.helpo_hannah.chat_status import is_user_admin
+from MissHannahRobot.modules.helpo_hannah.extraction import (
     extract_unt_fedban,
     extract_user,
     extract_user_fban,
 )
-from SaitamaRobot.modules.helpo_hannah.string_handling import markdown_parser
+from MissHannahRobot.modules.helpo_hannah.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,

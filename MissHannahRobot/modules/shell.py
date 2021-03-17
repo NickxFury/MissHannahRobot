@@ -1,7 +1,7 @@
 import subprocess
 
-from SaitamaRobot import LOGGER, dispatcher
-from SaitamaRobot.modules.helpo_hannah.chat_status import dev_plus
+from MissHannahRobot import LOGGER, dispatcher
+from MissHannahRobot.modules.helpo_hannah.chat_status import dev_plus
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler
 from telegram.ext.dispatcher import run_async

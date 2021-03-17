@@ -1,8 +1,8 @@
 import time
 from telethon import events
 
-from SaitamaRobot import thengakkola
-from SaitamaRobot.modules.helpo_hannah.thengakkola.chatstatus import (
+from MissHannahRobot import thengakkola
+from MissHannahRobot.modules.helpo_hannah.thengakkola.chatstatus import (
     can_delete_messages,
     user_is_admin,
 )

@@ -6,8 +6,8 @@ import textwrap
 import traceback
 from contextlib import redirect_stdout
 
-from SaitamaRobot import LOGGER, dispatcher
-from SaitamaRobot.modules.helpo_hannah.chat_status import dev_plus
+from MissHannahRobot import LOGGER, dispatcher
+from MissHannahRobot.modules.helpo_hannah.chat_status import dev_plus
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 
@@ -76,7 +76,7 @@ def do(func, bot, update):
 
     os.chdir(os.getcwd())
     with open(
-        os.path.join(os.getcwd(), "SaitamaRobot/modules/helpo_hannah/temp.txt"), "w"
+        os.path.join(os.getcwd(), "MissHannahRobot/modules/helpo_hannah/temp.txt"), "w"
     ) as temp:
         temp.write(body)
 

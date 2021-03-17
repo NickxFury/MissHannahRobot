@@ -5,10 +5,10 @@ from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, Upda
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import CommandHandler, CallbackQueryHandler, run_async
 
-import SaitamaRobot.modules.sql.connection_sql as sql
-from SaitamaRobot import dispatcher, DRAGONS, DEV_USERS
-from SaitamaRobot.modules.helpo_hannah import chat_status
-from SaitamaRobot.modules.helpo_hannah.alternate import send_message, typing_action
+import MissHannahRobot.modules.sql.connection_sql as sql
+from MissHannahRobot import dispatcher, DRAGONS, DEV_USERS
+from MissHannahRobot.modules.helpo_hannah import chat_status
+from MissHannahRobot.modules.helpo_hannah.alternate import send_message, typing_action
 
 user_admin = chat_status.user_admin
 

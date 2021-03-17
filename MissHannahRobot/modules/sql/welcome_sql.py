@@ -2,8 +2,8 @@ import random
 import threading
 from typing import Union
 
-from SaitamaRobot.modules.helpo_hannah.msg_types import Types
-from SaitamaRobot.modules.sql import BASE, SESSION
+from MissHannahRobot.modules.helpo_hannah.msg_types import Types
+from MissHannahRobot.modules.sql import BASE, SESSION
 from sqlalchemy import BigInteger, Boolean, Column, Integer, String, UnicodeText
 
 DEFAULT_WELCOME = "Hey {first}, how are you?"

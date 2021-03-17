@@ -1,6 +1,6 @@
-from SaitamaRobot.modules.helpo_hannah.chat_status import user_admin
-from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot import dispatcher
+from MissHannahRobot.modules.helpo_hannah.chat_status import user_admin
+from MissHannahRobot.modules.disable import DisableAbleCommandHandler
+from MissHannahRobot import dispatcher
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram import ParseMode, Update
