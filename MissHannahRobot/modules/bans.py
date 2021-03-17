@@ -49,7 +49,7 @@ def ban(update: Update, context: CallbackContext) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("ബാൻ ചെയ്യാൻ പറഞ്ഞ ആളെ എന്നിക്ക് ഒരു സംശയം😜.")
+        message.reply_text("ബാൻ ചെയ്യാൻ പറഞ്ഞ ആളെ എനിക്ക് ഒരു സംശയം😜. ആരെയാണ് ബാൻ ചെയ്യേണ്ടത് മിസ്റ്റർ 🙄")
         return log_message
     try:
         member = chat.get_member(user_id)
