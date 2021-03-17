@@ -134,7 +134,7 @@ def demote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status == "creator":
-        message.reply_text("This person CREATED the chat, how would I demote them?")
+        message.reply_text("ഇദ്ദേഹം ആണ് ഈ ഗ്രൂപ്പിന്റെ മൊയലാളി 😁 അയാളെ അഡ്മിൻ സ്ഥാനത്ത് നിന്ന് മാറ്റാൻ എനിക്ക് കഴിയില്ല.. ഓടിക്കോ ഹംകേ..🤭?")
         return
 
     if not user_member.status == "administrator":
