@@ -8,8 +8,8 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: "You don't seem to be referring to a user or the ID specified is incorrect.."
-          replace: "നിങ്ങൾ ഒരു ഉപയോക്താവിനെ പരാമർശിക്കുന്നതായി തോന്നുന്നില്ല അല്ലെങ്കിൽ യൂസർ ഐഡി തെറ്റാണ് .."
+          find: "This person CREATED the chat, how would I demote them?"
+          replace: "ഇദ്ദേഹം ആണ് ഈ ഗ്രൂപ്പിന്റെ മൊയലാളി 😁 അയാളെ അഡ്മിൻ സ്ഥാനത്ത് നിന്ന് മാറ്റാൻ എനിക്ക് കഴിയില്ല.. ഓടിക്കോ ഹംകേ..🤭"
       - name: Pull All Updates
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
