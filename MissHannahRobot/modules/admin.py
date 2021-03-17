@@ -189,7 +189,7 @@ def refresh_admin(update, _):
     except KeyError:
         pass
 
-    update.effective_message.reply_text("Admins cache refreshed!")
+    update.effective_message.reply_text("അഡ്മിൻ ലിസ്റ്റ് അപ്ഡേറ്റ് ചെയ്തു☑️")
 
 
 @run_async
