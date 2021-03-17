@@ -8,12 +8,12 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: "helper_funcs"
-          replace: "helpo_hannah"
+          find: "SaitamaRoBot"
+          replace: "MissHannahRobot"
       - name: Pull All Updates
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: '😹😜 മലയാളികളുടെ സ്വന്തം ഹന്ന ബോട്ടിലേക്ക് സ്വാഗതം..🍀'
+          commit_message: '🌳മലയാളികളുടെ സ്വന്തം ഹന്ന ബോട്ടിലേക്ക് സ്വാഗതം.🌴'
           commit_options: '--no-verify'
           repository: .
           commit_user_name: Mr-Dark-Prince
