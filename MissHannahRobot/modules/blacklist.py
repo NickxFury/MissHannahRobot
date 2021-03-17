@@ -40,7 +40,7 @@ def blacklist(update, context):
         chat_id = update.effective_chat.id
         chat_name = chat.title
 
-    filter_list = "Current blacklisted words in <b>{}</b>:\n".format(chat_name)
+    filter_list = "<b>{}</b> ഗ്രൂപ്പിലെ ബ്ലാക്ക്ലിസ്റ്റ് പദങ്ങൾ:\n".format(chat_name)
 
     all_blacklisted = sql.get_chat_blacklist(chat_id)
 
@@ -56,7 +56,7 @@ def blacklist(update, context):
 
     split_text = split_message(filter_list)
     for text in split_text:
-        if filter_list == "Current blacklisted words in <b>{}</b>:\n".format(
+        if filter_list == "<b>{}</b> ഗ്രൂപ്പിൽ ഇപ്പോൾ ഉള്ള ബ്ലാക്ക്ലിസ്റ്റ് പദങ്ങൾ:\n".format(
             html.escape(chat_name)
         ):
             send_message(
