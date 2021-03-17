@@ -93,7 +93,7 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully promoted <b>{user_member.user.first_name or user_id}</b>!",
+        f"അഡ്മിൻ ആക്കിയിട്ടുണ്ട് 🙇‍♀️ <b>{user_member.user.first_name or user_id}</b>!",
         parse_mode=ParseMode.HTML,
     )
 
@@ -142,7 +142,7 @@ def demote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_id == bot.id:
-        message.reply_text("എനിക്ക് എന്നെത്തന്നെ അഡ്മിൻ സ്ഥാനത്ത് നിന്ന് മാറ്റാൻ കഴിയില്ല!  എനിക്കായി ഇത് ചെയ്യാൻ ഒരു അഡ്മിന്റെ സഹായം തേടുക...")
+        message.reply_text("I can't demote myself! Get an admin to do it for me.")
         return
 
     try:
@@ -161,7 +161,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         bot.sendMessage(
             chat.id,
-            f"Sucessfully demoted <b>{user_member.user.first_name or user_id}</b>!",
+            f"അഡ്മിൻ സ്ഥാനം ഒഴിവാക്കി 🌚 <b>{user_member.user.first_name or user_id}</b>!",
             parse_mode=ParseMode.HTML,
         )
 
@@ -175,7 +175,7 @@ def demote(update: Update, context: CallbackContext) -> str:
         return log_message
     except BadRequest:
         message.reply_text(
-            "അഡ്മിൻ സ്ഥാനം മാറ്റുവാൻ കഴിയില്ല..ഒന്നുകിൽ ഞാൻ അഡ്മിൻ അല്ല..അല്ലെങ്കിൽ അദ്ദേഹത്തെ അഡ്മിൻ ആക്കിയത് മറ്റാരോ ആണ്.."
+            "Could not demote. I might not be admin, or the admin status was appointed by another"
             " user, so I can't act upon them!"
         )
         return
