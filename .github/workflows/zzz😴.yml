@@ -8,8 +8,8 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: "them to give me control! (like a voodoo doll, I need a piece of them to be able "
-          replace: "ആയതിനാൽ അയാൾ അയച്ചിട്ടുള്ള ഒരു മെസ്സേജ് എനിക്ക് ഫോർവേഡ് ചെയ്യുക.. "
+          find: ""
+          replace: ""
       - name: Pull All Updates
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
