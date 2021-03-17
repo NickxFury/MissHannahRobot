@@ -93,11 +93,11 @@ def ban(update: Update, context: CallbackContext) -> str:
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#{'S' if silent else ''}ബാൻ ചെയ്തു!\n"
-        f"<b>അഡ്മിൻ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-        f"<b>മെമ്പർ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
+        f"<b>😺അഡ്മിൻ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
+        f"<b>👤മെമ്പർ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
     )
     if reason:
-        log += "\n<b>കാരണം:</b> {}".format(reason)
+        log += "\n<b>📰കാരണം:</b> {}".format(reason)
 
     try:
         chat.kick_member(user_id)
@@ -155,18 +155,18 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("നിങ്ങൾ പറഞ്ഞ ആളെ കുറിച്ച് എന്നിക്ക് ഒരു സംശയം.")
+        message.reply_text("നിങ്ങൾ പറഞ്ഞ മെമ്പറെക്കുറിച്ച് എനിക്ക് ഒന്നും അറിയില്ല..")
         return log_message
 
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
-        if excp.message != "നിങ്ങൾ പറഞ്ഞആളെ കണ്ടെത്താൻ കഴിയുന്നില്ല":
+        if excp.message != "നിങ്ങൾ പറഞ്ഞ മെമ്പറെ കണ്ടെത്താൻ കഴിയുന്നില്ല":
             raise
-        message.reply_text("നിങ്ങൾ പറഞ്ഞ ആളെ ഞാൻ ഇതുവരെ കണ്ടിട്ടില്ല.")
+        message.reply_text("നിങ്ങൾ പറഞ്ഞ മെമ്പറെ ഞാൻ ഇതുവരെ കണ്ടിട്ടില്ല.")
         return log_message
     if user_id == bot.id:
-        message.reply_text("ഭ... നിനക്ക് ഭ്രാന്ത് ആണോ? ഞാൻ എന്നെ തന്നെ ബാൻ ചെയ്യണം എന്നോ?")
+        message.reply_text("ഭ... നിനക്ക് ഭ്രാന്ത് ആണോ? ഞാൻ എന്നെ തന്നെ ബാൻ ചെയ്യണം എന്നോ?..നടക്കില്ല മോനെ..")
         return log_message
 
     if is_user_ban_protected(chat, user_id, member):
@@ -174,7 +174,7 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
         return log_message
 
     if not reason:
-        message.reply_text("നിങ്ങൾ വ്യക്കമായ ഒരു സമയം പറഞ്ഞാലെ നിങ്ങൾ പറഞ്ഞത് പോലെ എന്നിക്ക് ചെയ്യാൻ കഴിയു!")
+        message.reply_text("നിങ്ങൾ വ്യക്കമായ ഒരു കാരണം പറഞ്ഞാൽ മാത്രമേ, നിങ്ങൾ പറഞ്ഞത് പോലെ ആ കാരണം വെച്ച് എനിക്ക് ബാൻ ചെയ്യുവാൻ കഴിയുള്ളൂ..!")
         return log_message
 
     split_reason = reason.split(None, 1)
@@ -189,12 +189,12 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
         "#TEMP BANNED\n"
-        f"<b>അഡ്മിൻ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-        f"<b>യൂസർ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}\n"
-        f"<b>സമയം:</b> {time_val}"
+        f"<b>😹അഡ്മിൻ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
+        f"<b>👤യൂസർ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}\n"
+        f"<b>⏰️സമയം:</b> {time_val}"
     )
     if reason:
-        log += "\n<b>കാരണം:</b> {}".format(reason)
+        log += "\n<b>📰കാരണം:</b> {}".format(reason)
 
     try:
         chat.kick_member(user_id, until_date=bantime)
