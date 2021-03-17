@@ -12,6 +12,6 @@ The easiest way to deploy this Bot
 
  ❍ [Mr Dark Prince](https://t.me/Mr_Dark_Prince)
  
- ❍ [Mr Srlock](https://t.me/Mr_SRLOCK)
+ ❍ [Mr Sherlock](https://t.me/Mr_SRLOCK)
  
  ❍ [Don Of Telegram](https://t.me/Villain_XD)
