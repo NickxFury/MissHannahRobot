@@ -369,15 +369,15 @@ def adminlist(update, context):
 
     try:
         msg = update.effective_message.reply_text(
-            "Fetching group admins...", parse_mode=ParseMode.HTML
+            "🔎 ഗ്രൂപ്പ്‌ അഡ്മിൻസിനെ സെർച് ചെയ്യുന്നു..", parse_mode=ParseMode.HTML
         )
     except BadRequest:
         msg = update.effective_message.reply_text(
-            "Fetching group admins...", quote=False, parse_mode=ParseMode.HTML
+            "🔎 ഗ്രൂപ്പ്‌ അഡ്മിൻസിനെ സെർച് ചെയ്യുന്നു..", quote=False, parse_mode=ParseMode.HTML
         )
 
     administrators = bot.getChatAdministrators(chat_id)
-    text = "Admins in <b>{}</b>:".format(html.escape(update.effective_chat.title))
+    text = "😾 **അധികാരികൾ** 😾\n <b>{}</b>:".format(html.escape(update.effective_chat.title))
 
     bot_admin_list = []
 
