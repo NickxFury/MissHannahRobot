@@ -8,8 +8,8 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: ""
-          replace: ""
+          find: "You don't seem to be referring to a user or the ID specified is incorrect.."
+          replace: "നിങ്ങൾ ഒരു ഉപയോക്താവിനെ പരാമർശിക്കുന്നതായി തോന്നുന്നില്ല അല്ലെങ്കിൽ യൂസർ ഐഡി തെറ്റാണ് .."
       - name: Pull All Updates
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
