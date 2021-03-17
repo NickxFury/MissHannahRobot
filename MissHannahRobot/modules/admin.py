@@ -51,7 +51,7 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     if not user_id:
         message.reply_text(
-            f"⚠️പ്രൊമോട്ട് ചെയ്യേണ്ട ആളുടെ മെസ്സേജിന് മറുപടിയായി കമാൻഡ് നൽകുക. അല്ലെങ്കിൽ `/promote <username/id>` നൽകുക.."
+            f"⚠️പ്രൊമോട്ട് ചെയ്യേണ്ട മെമ്പറുടെ മെസ്സേജിന് മറുപടിയായി കമാൻഡ് നൽകുക. അല്ലെങ്കിൽ ```/promote <username/id>``` നൽകുക.."
         )
         return
 
