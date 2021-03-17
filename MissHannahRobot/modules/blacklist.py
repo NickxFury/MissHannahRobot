@@ -245,7 +245,7 @@ def blacklist_mode(update, context):
             sql.set_blacklist_strength(chat_id, 5, "0")
         elif args[0].lower() == "tban":
             if len(args) == 1:
-                teks = """ നിങ്ങൾക്ക് ബ്ലാക്ക്ലിസ്റ്റ് മോഡ് തന്നിരിക്കുന്ന രീതിയിൽ സെറ്റ് ചെയു;Try, `/blacklistmode tban <timevalue>`.
+                teks = """ നിങ്ങൾ തന്ന ബ്ലാക്ക്ലിസ്റ്റ് മോഡ് തന്നിരിക്കുന്ന രീതിയിൽ സെറ്റ് ചെയു ;Try, `/blacklistmode tban <timevalue>`.
 				
 Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks."""
                 send_message(update.effective_message, teks, parse_mode="markdown")
@@ -256,11 +256,11 @@ Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
 Example of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks."""
                 send_message(update.effective_message, teks, parse_mode="markdown")
                 return ""
-            settypeblacklist = "temporarily ban for {}".format(args[1])
+            settypeblacklist = "{} വരെ താൽക്കാലിക നിരോധനം".format(args[1])
             sql.set_blacklist_strength(chat_id, 6, str(args[1]))
         elif args[0].lower() == "tmute":
             if len(args) == 1:
-                teks = """It looks like you tried to set time value for blacklist but you didn't specified  time; try, `/blacklistmode tmute <timevalue>`.
+                teks = """നിങ്ങൾ തന്ന ബ്ലാക്ക്ലിസ്റ്റ് മോഡ് തന്നിരിക്കുന്ന രീതിയിൽ സെറ്റ് ചെയു ;try, `/blacklistmode tmute <timevalue>`.
 
 Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks."""
                 send_message(update.effective_message, teks, parse_mode="markdown")
@@ -271,7 +271,7 @@ Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
 Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks."""
                 send_message(update.effective_message, teks, parse_mode="markdown")
                 return ""
-            settypeblacklist = "temporarily mute for {}".format(args[1])
+            settypeblacklist = "{} താല്കാലിക നിശബ്ദംദം.".format(args[1])
             sql.set_blacklist_strength(chat_id, 7, str(args[1]))
         else:
             send_message(
@@ -310,9 +310,9 @@ Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
         elif getmode == 5:
             settypeblacklist = "ban"
         elif getmode == 6:
-            settypeblacklist = "temporarily ban for {}".format(getvalue)
+            settypeblacklist = "{} വരെ താൽക്കാലിക നിരോധനം".format(getvalue)
         elif getmode == 7:
-            settypeblacklist = "temporarily mute for {}".format(getvalue)
+            settypeblacklist = "{} വരെ താൽക്കാലിക നിശബ്ദംദം ".format(getvalue)
         if conn:
             text = "ഇപ്പോഴത്തെ ബ്ലാക്ക്ലിസ്റ്റ് മോഡ്: *{}* ടൂ *{}*.".format(
                 settypeblacklist, chat_name
@@ -364,7 +364,7 @@ def del_blacklist(update, context):
                     warn(
                         update.effective_user,
                         chat,
-                        ("Using blacklisted trigger: {}".format(trigger)),
+                        ("ഉപയോഗിക്കുന്ന ബ്ലാക്ക്ലിസ്റ്റ് ട്രിഗർ: {}".format(trigger)),
                         message,
                         update.effective_user,
                     )
@@ -378,7 +378,7 @@ def del_blacklist(update, context):
                     )
                     bot.sendMessage(
                         chat.id,
-                        f"Muted {user.first_name} for using Blacklisted word: {trigger}!",
+                        f"{user.first_name} നെ നിശബ്ദം ആക്കിയതിൻ്റെ കാരണം ബ്ലാക്ക്ലിസ്റ്റ് പദം ഉപയോഗിച്ചു: {trigger}!",
                     )
                     return
                 elif getmode == 4:
@@ -387,7 +387,7 @@ def del_blacklist(update, context):
                     if res:
                         bot.sendMessage(
                             chat.id,
-                            f"Kicked {user.first_name} for using Blacklisted word: {trigger}!",
+                            f"{user.first_name} നെ കിക്ക് ചെയ്തിതിൻ്റെ കാരണം ബ്ലാക്ക്ലിസ്റ്റ് പദം ഉപയോഗിച്ചു: {trigger}!",
                         )
                     return
                 elif getmode == 5:
@@ -395,7 +395,7 @@ def del_blacklist(update, context):
                     chat.kick_member(user.id)
                     bot.sendMessage(
                         chat.id,
-                        f"Banned {user.first_name} for using Blacklisted word: {trigger}",
+                        f"{user.first_name} നെ ബാൻ ചെയ്തു കാരണം ബ്ലാക്ക്ലിസ്റ്റ് പദം ഉപയോഗിച്ചു: {trigger}",
                     )
                     return
                 elif getmode == 6:
@@ -404,7 +404,7 @@ def del_blacklist(update, context):
                     chat.kick_member(user.id, until_date=bantime)
                     bot.sendMessage(
                         chat.id,
-                        f"Banned {user.first_name} until '{value}' for using Blacklisted word: {trigger}!",
+                        f"നിശ്ചിത സമയത്തേക്ക് {user.first_name} ബാൻ ചെയ്തു. ബാൻ സമയം '{value}' ബാൻ ചെയ്യാൻ ഉള്ള കാരണം ബ്ലാക്ക്ലിസ്റ്റ് പദം ഉപയോഗിച്ചു: {trigger}!",
                     )
                     return
                 elif getmode == 7:
@@ -418,12 +418,12 @@ def del_blacklist(update, context):
                     )
                     bot.sendMessage(
                         chat.id,
-                        f"Muted {user.first_name} until '{value}' for using Blacklisted word: {trigger}!",
+                        f"നിശ്ചിത സമയത്തേക്ക് {user.first_name} നെ മ്യൂട്ട് ആക്കി. മ്യൂട്ട് സമയം.'{value}' മ്യൂട്ട് ചെയ്യാൻ ഉള്ള കാരണം ബ്ലാക്ക്ലിസ്റ്റ് പദം ഉപയോഗിച്ചു: {trigger}!",
                     )
                     return
             except BadRequest as excp:
-                if excp.message != "Message to delete not found":
-                    LOGGER.exception("Error while deleting blacklist message.")
+                if excp.message != "ഡിലിറ്റ് ചെയ്യാൻ ഉള്ള സന്ദേശം ലിച്ചില്ല.":
+                    LOGGER.exception("സന്ദേശങ്ങൾ ഇല്ലാതാക്കാൻ പറ്റുന്നില്ല.")
             break
 
 
@@ -440,7 +440,7 @@ def __migrate__(old_chat_id, new_chat_id):
 
 def __chat_settings__(chat_id, user_id):
     blacklisted = sql.num_blacklist_chat_filters(chat_id)
-    return "There are {} blacklisted words.".format(blacklisted)
+    return " ഇത്രയും{} ബ്ലാക്ക്ലിസ്റ്റ് പദങ്ങൾ.".format(blacklisted)
 
 
 def __stats__():
