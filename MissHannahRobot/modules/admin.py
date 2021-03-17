@@ -142,7 +142,7 @@ def demote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_id == bot.id:
-        message.reply_text("I can't demote myself! Get an admin to do it for me.")
+        message.reply_text("എനിക്ക് എന്നെത്തന്നെ അഡ്മിൻ സ്ഥാനത്ത് നിന്ന് മാറ്റാൻ കഴിയില്ല!  എനിക്കായി ഇത് ചെയ്യാൻ ഒരു അഡ്മിന്റെ സഹായം തേടുക...")
         return
 
     try:
