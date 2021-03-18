@@ -83,7 +83,7 @@ def import_data(update, context):
         try:
             if str(context.bot.id) != str(data[str(chat.id)]["bot"]):
                 return msg.reply_text(
-                    "Backup from another bot that is not suggested might cause the problem, documents, photos, videos, audios, records might not work as it should be."
+                    "നിർദ്ദേശിച്ചിട്ടില്ലാത്ത മറ്റൊരു ബോട്ടിൽ നിന്നുള്ള ബാക്കപ്പ് പ്രശ്‌നമുണ്ടാക്കാം, പ്രമാണങ്ങൾ, ഫോട്ടോകൾ, വീഡിയോകൾ, ഓഡിയോകൾ, റെക്കോർഡുകൾ പ്രവർത്തിക്കാനിടയില്ല."
                 )
         except Exception:
             pass
@@ -98,7 +98,7 @@ def import_data(update, context):
                 mod.__import_data__(str(chat.id), data)
         except Exception:
             msg.reply_text(
-                f"An error occurred while recovering your data. The process failed. If you experience a problem with this, please take it to @{SUPPORT_CHAT}"
+                f"നിങ്ങളുടെ ഡാറ്റ വീണ്ടെടുക്കുമ്പോൾ ഒരു പിശക് സംഭവിച്ചു.  പ്രക്രിയ പരാജയപ്പെട്ടു.  നിങ്ങൾ‌ക്ക് ഇതിൽ‌ ഒരു പ്രശ്‌നം നേരിടുന്നുണ്ടെങ്കിൽ‌, ദയവായി സപ്പോർട്ട് ഗ്രൂപ്പുമായി ബന്ധപ്പെടുക.. @{SUPPORT_CHAT}"
             )
 
             LOGGER.exception(
@@ -112,9 +112,9 @@ def import_data(update, context):
         # NOTE: consider default permissions stuff?
         if conn:
 
-            text = "Backup fully restored on *{}*.".format(chat_name)
+            text = "ബാക്കപ്പ് പൂർണ്ണമായും പുനസ്ഥാപിച്ചു *{}*.".format(chat_name)
         else:
-            text = "Backup fully restored"
+            text = "ബാക്കപ്പ് പൂർണ്ണമായും പുനസ്ഥാപിച്ചു"
         msg.reply_text(text, parse_mode="markdown")
 
 
@@ -149,7 +149,7 @@ def export_data(update, context):
                 "%H:%M:%S %d/%m/%Y", time.localtime(checkchat.get("value"))
             )
             update.effective_message.reply_text(
-                "You can only backup once a day!\nYou can backup again in about `{}`".format(
+                "നിങ്ങൾക്ക് ഒരു ദിവസത്തിൽ ഒരിക്കൽ മാത്രമേ ബാക്കപ്പ് ചെയ്യാൻ കഴിയൂ!\nനിങ്ങൾക്ക് വീണ്ടും ബാക്കപ്പ് ചെയ്യാൻ കഴിയും `{}`".format(
                     timeformatt
                 ),
                 parse_mode=ParseMode.MARKDOWN,
