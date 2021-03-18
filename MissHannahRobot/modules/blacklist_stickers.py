@@ -35,7 +35,7 @@ def blackliststicker(update: Update, context: CallbackContext):
         chat_id = update.effective_chat.id
         chat_name = chat.title
 
-    sticker_list = "<b>List blacklisted stickers currently in {}:</b>\n".format(
+    sticker_list = "<b>{}:ഗ്രൂപ്പിൽ ഇപ്പോൾ ഉള്ള ബ്ലക്ക്ലിസ്റ്റ് സ്റ്റിറ്റക്കറുകൾ</b>\n".format(
         chat_name
     )
 
@@ -50,12 +50,12 @@ def blackliststicker(update: Update, context: CallbackContext):
 
     split_text = split_message(sticker_list)
     for text in split_text:
-        if sticker_list == "<b>List blacklisted stickers currently in {}:</b>\n".format(
+        if sticker_list == "<b>{}:ഗ്രൂപ്പിൽ ഇപ്പോൾ ഉള്ള ബ്ലാക്ക്ലിസ്റ്റ് സ്റ്റിറ്റിക്കറുകൾ </b>\n".format(
             chat_name
         ).format(html.escape(chat_name)):
             send_message(
                 update.effective_message,
-                "There are no blacklist stickers in <b>{}</b>!".format(
+                "<b>{}</b>! ഗ്രൂപ്പിൽ സ്റ്റിറ്റിക്കറുകൾ ബ്ലാക്ക്ലിസ്റ്ററ്റിൽ ഉൾപ്പെടിത്തില്ല".format(
                     html.escape(chat_name)
                 ),
                 parse_mode=ParseMode.HTML,
