@@ -117,7 +117,7 @@ def add_blacklist(update, context):
     else:
         send_message(
             update.effective_message,
-            "ബ്ലാക്ക്ലിസ്റ്റ് ചേർക്കേണ്ട പദങ്ങൾ അയ്ക്കു.",
+            "ബ്ലാക്ക്ലിസ്റ്റ് ചേർക്കേണ്ട പദങ്ങൾ കൂടി അയക്കു /addblacklist angry ഇതുപോലെ.",
         )
 
 
@@ -245,7 +245,7 @@ def blacklist_mode(update, context):
             sql.set_blacklist_strength(chat_id, 5, "0")
         elif args[0].lower() == "tban":
             if len(args) == 1:
-                teks = """ നിങ്ങൾ തന്ന ബ്ലാക്ക്ലിസ്റ്റ് മോഡ് തന്നിരിക്കുന്ന രീതിയിൽ സെറ്റ് ചെയു ;Try, `/blacklistmode tban <timevalue>`.
+                teks = """ നിങ്ങൾ അയച്ച ഫോർമാക്റ്റ് തെറ്റ് ആണ്. ബ്ലാക്ക്ലിസ്റ്റ് മോഡ് തന്നിരിക്കുന്ന രീതിയിൽ സെറ്റ് ചെയു ;Try, `/blacklistmode tban <timevalue>`.
 				
 Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks."""
                 send_message(update.effective_message, teks, parse_mode="markdown")
@@ -260,7 +260,7 @@ Example of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks."
             sql.set_blacklist_strength(chat_id, 6, str(args[1]))
         elif args[0].lower() == "tmute":
             if len(args) == 1:
-                teks = """നിങ്ങൾ തന്ന ബ്ലാക്ക്ലിസ്റ്റ് മോഡ് തന്നിരിക്കുന്ന രീതിയിൽ സെറ്റ് ചെയു ;try, `/blacklistmode tmute <timevalue>`.
+                teks = """ബ്ലാക്ക്ലിസ്റ്റ് മോഡ് തന്നിരിക്കുന്ന രീതിയിൽ സെറ്റ് ചെയു ;try, `/blacklistmode tmute <timevalue>`.
 
 Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks."""
                 send_message(update.effective_message, teks, parse_mode="markdown")
