@@ -99,7 +99,7 @@ def add_blackliststicker(update: Update, context: CallbackContext):
             except BadRequest:
                 send_message(
                     update.effective_message,
-                    "Sticker `{}` can not be found!".format(trigger),
+                    "`{}`ചാറ്റിൽ സ്റ്റിറ്റക്കറുകൾ കണ്ടെത്താൻ കഴിയുന്നില്ല!".format(trigger),
                     parse_mode="markdown",
                 )
 
@@ -109,7 +109,7 @@ def add_blackliststicker(update: Update, context: CallbackContext):
         if len(to_blacklist) == 1:
             send_message(
                 update.effective_message,
-                "Sticker <code>{}</code> added to blacklist stickers in <b>{}</b>!".format(
+                "<code>{}</code> ഈ സ്റ്റിറ്റക്കർ <b>{}</b> ചാറ്റില്ലെ ബ്ലാക്ക്ലിസ്റ്റ് സ്റ്റിക്കർ ആയി ചേർത്തിരിക്കുന്നു!".format(
                     html.escape(to_blacklist[0]), html.escape(chat_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -117,7 +117,7 @@ def add_blackliststicker(update: Update, context: CallbackContext):
         else:
             send_message(
                 update.effective_message,
-                "<code>{}</code> stickers added to blacklist sticker in <b>{}</b>!".format(
+                "<code>{}</code> ഈ സ്റ്റിറ്റക്കർ <b>{}</b> ചാറ്റില്ലെ ബ്ലാക്ക്ലിസ്റ്റ് സ്റ്റിക്കർ ആയി ചേർത്തിരിക്കുന്നു!".format(
                     added, html.escape(chat_name)
                 ),
                 parse_mode=ParseMode.HTML,
