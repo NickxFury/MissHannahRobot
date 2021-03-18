@@ -342,7 +342,7 @@ def export_data(update, context):
     context.bot.sendDocument(
         current_chat_id,
         document=open("MissHannahRobot{}.backup".format(chat_id), "rb"),
-        caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `MissHannahRobot-Backup` was specially made for notes.".format(
+        caption="*വിജയകരമായി ബാക്കപ്പ് ഫയൽ എക്സ്പോർട്ട് ചെയ്തു.:*\n🔰ഗ്രൂപ്പ്‌: `{}`\n☑️ഐഡി: `{}`\n⏲️സമയം: `{}`\n\n⚠️അറിയിപ്പ്: This `MissHannahRobot-Backup` was specially made for notes.".format(
             chat.title, chat_id, tgl
         ),
         timeout=360,
