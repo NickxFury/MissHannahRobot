@@ -31,7 +31,7 @@ def afk(update: Update, context: CallbackContext):
         reason = args[1]
         if len(reason) > 100:
             reason = reason[:100]
-            notice = "\nYour afk reason was shortened to 100 characters."
+            notice = "നിങ്ങളുടെ ഇപ്പോൾ ഗ്രൂപ്പിൽ നിന്ന് ഏ എഫ് കെ പോകാനുള്ള കാരണം എന്താണോ അത് 100 അക്ഷരത്തിൽ കവിയാതെ എഴുതുക."
     else:
         reason = ""
 
@@ -58,14 +58,14 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "{} is here!",
-                "{} is back!",
-                "{} is now in the chat!",
-                "{} is awake!",
-                "{} is back online!",
-                "{} is finally here!",
-                "Welcome back! {}",
-                "Where is {}?\nIn the chat!",
+                "{} ഇപ്പോൾ ഇവിടെ ഉണ്ട്!",
+                "{} തിരികെ വന്നു!",
+                "{} ഇപ്പോൾ ഈ ഗ്രൂപ്പിലേക്ക് വന്നു!",
+                "{} ഉണർന്നു!",
+                "{} ഇപ്പോൾ ഓൺ-ലൈനിൽ തിരികെ വന്നു!",
+                "{} അവസാനം എങ്ങനെ ഒക്കെയോ ഇവിടെ തിരിച്ച് എത്തി!",
+                "വീണ്ടു തിരികെ വന്നല്ലോ! {}",
+                "{}ഇപ്പോൾ എവിടെ ആണ്? ഇതാ നമ്മുടെ ഗ്രൂപ്പിൽ!!",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
@@ -129,10 +129,10 @@ def check_afk(update, context, user_id, fst_name, userc_id):
         if int(userc_id) == int(user_id):
             return
         if not user.reason:
-            res = "{} is afk".format(fst_name)
+            res = "{} പോയി".format(fst_name)
             update.effective_message.reply_text(res)
         else:
-            res = "{} is afk.\nReason: <code>{}</code>".format(
+            res = "{} പോയി.ഓഫ്ലൈൻ പോകാൻ ഉള്ള കാരണം: <code>{}</code>".format(
                 html.escape(fst_name), html.escape(user.reason)
             )
             update.effective_message.reply_text(res, parse_mode="html")
