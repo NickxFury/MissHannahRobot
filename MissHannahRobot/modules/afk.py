@@ -31,14 +31,14 @@ def afk(update: Update, context: CallbackContext):
         reason = args[1]
         if len(reason) > 100:
             reason = reason[:100]
-            notice = "നിങ്ങളുടെ ഇപ്പോൾ ഗ്രൂപ്പിൽ നിന്ന് ഏ എഫ് കെ പോകാനുള്ള കാരണം എന്താണോ അത് 100 അക്ഷരത്തിൽ കവിയാതെ എഴുതുക."
+            notice = "\nഇത്രയും വലിയ മെസ്സേജ് കാരണമായി സെറ്റ് ചെയ്യാൻ കഴിയില്ല..."
     else:
         reason = ""
 
     sql.set_afk(update.effective_user.id, reason)
     fname = update.effective_user.first_name
     try:
-        update.effective_message.reply_text("{} is now away!{}".format(fname, notice))
+        update.effective_message.reply_text("{} ഇപ്പോൾ ഓൺലൈനിൽ ഇല്ല..!{}".format(fname, notice))
     except BadRequest:
         pass
 
@@ -58,14 +58,14 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "{} ഇപ്പോൾ ഇവിടെ ഉണ്ട്!",
-                "{} തിരികെ വന്നു!",
-                "{} ഇപ്പോൾ ഈ ഗ്രൂപ്പിലേക്ക് വന്നു!",
-                "{} ഉണർന്നു!",
-                "{} ഇപ്പോൾ ഓൺ-ലൈനിൽ തിരികെ വന്നു!",
-                "{} അവസാനം എങ്ങനെ ഒക്കെയോ ഇവിടെ തിരിച്ച് എത്തി!",
-                "വീണ്ടു തിരികെ വന്നല്ലോ! {}",
-                "{}ഇപ്പോൾ എവിടെ ആണ്? ഇതാ നമ്മുടെ ഗ്രൂപ്പിൽ!!",
+                "{} ഗ്രൂപ്പിൽ തിരിച്ചു വന്നു..!",
+                "{} വന്നു അവൻ വന്നു..!",
+                "{} ഇപ്പോൾ ഗ്രൂപ്പിൽ ഉണ്ട്..!",
+                "{} ഹും..വന്നോ..!",
+                "{} ഇപ്പോൾ ഓൺലൈനിൽ ഉണ്ട്!",
+                "{} ചാടി ചാടി വന്നു..!",
+                "തിരികെ സ്വാഗതം! {}",
+                "എവിടെയാണ് {}?\nഈ ചാറ്റിൽ!",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
@@ -129,19 +129,19 @@ def check_afk(update, context, user_id, fst_name, userc_id):
         if int(userc_id) == int(user_id):
             return
         if not user.reason:
-            res = "{} പോയി".format(fst_name)
+            res = "{} ഇപ്പോൾ ഓൺലൈനിൽ ഇല്ലാ..".format(fst_name)
             update.effective_message.reply_text(res)
         else:
-            res = "{} പോയി.ഓഫ്ലൈൻ പോകാൻ ഉള്ള കാരണം: <code>{}</code>".format(
+            res = "{} ഇപ്പോൾ ഓൺലൈനിൽ ഇല്ലാ...\nകാരണം: <code>{}</code>".format(
                 html.escape(fst_name), html.escape(user.reason)
             )
             update.effective_message.reply_text(res, parse_mode="html")
 
 
 __help__ = """
- • `/afk <reason>`*:* mark yourself as AFK(away from keyboard).
- • `brb <reason>`*:* same as the afk command - but not a command.
-When marked as AFK, any mentions will be replied to with a message to say you're not available!
+➩ /afk <കാരണം>*:* _നിങ്ങൾ ഗ്രൂപ്പിൽ ഇല്ല എന്ന് മാർക്ക്‌ ചെയ്യുന്നു._
+➩ brb <കാരണം>*:* _afk കമാൻഡിനു സാമാനം._ 
+_afk മാർക്ക്‌ ചെയ്തു കഴിഞ്ഞാൽ, നിങ്ങളെ ഗ്രൂപ്പിൽ ആരെങ്കിലും മെൻഷൻ ചെയ്യുകയാണെങ്കിൽ നിങ്ങൾ അവൈലബിൾ അല്ല എന്ന് ബോട്ട് മറുപടി നൽകും!_
 """
 
 AFK_HANDLER = DisableAbleCommandHandler("afk", afk)
