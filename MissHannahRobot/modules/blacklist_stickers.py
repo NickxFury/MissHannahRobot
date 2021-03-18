@@ -318,18 +318,18 @@ def blacklist_mode(update: Update, context: CallbackContext):
             )
             return
         if conn:
-            text = "Blacklist sticker mode changed, users will be `{}` at *{}*!".format(
+            text = "ബ്ലാക്ക്ലിസ്റ്റ് മോഡ് മാറ്റി.,ഇനി മുതൽ ബ്ലക്ക്ലിസ്റ്റ് സ്റ്റിക്കർ ഉപയോക്കുന്നവർ`{}`ആകും *{}* ഗ്രൂപ്പിൽ!".format(
                 settypeblacklist, chat_name
             )
         else:
-            text = "Blacklist sticker mode changed, users will be `{}`!".format(
+            text = "ബ്ലാക്ക്ലിസ്റ്റ് മോഡ് മാറ്റി, ഇനി മുതൽ ബ്ലക്ക്ലിസ്റ്റ് സ്റ്റിക്കർ ഉപയോക്കുന്നവർ`{}`!".format(
                 settypeblacklist
             )
         send_message(update.effective_message, text, parse_mode="markdown")
         return (
             "<b>{}:</b>\n"
-            "<b>Admin:</b> {}\n"
-            "Changed sticker blacklist mode. users will be {}.".format(
+            "<b>അഡ്മിൻ:</b> {}\n"
+            "ബ്ലാക്ക്ലിസ്റ്റ് സ്റ്ററ്റ്ക്കർ മോഡ്മാറ്റി. ഇനി മുതൽ ബ്ലാക്ക്ലിസ്റ്റിൽ ഉൾപ്പെടുത്തിയ സ്റ്ററ്റിക്കർ ഉപയോഗിക്കുന്നവർ {} ആകും.".format(
                 html.escape(chat.title),
                 mention_html(user.id, html.escape(user.first_name)),
                 settypeblacklist,
@@ -350,9 +350,9 @@ def blacklist_mode(update: Update, context: CallbackContext):
         elif getmode == 5:
             settypeblacklist = "ban"
         elif getmode == 6:
-            settypeblacklist = "temporarily banned for {}".format(getvalue)
+            settypeblacklist = "{} വരെ താല്ക്കാക്കാലികമായി ബാൻ ചെയ്തു".format(getvalue)
         elif getmode == 7:
-            settypeblacklist = "temporarily muted for {}".format(getvalue)
+            settypeblacklist = "{} വരെ താല്ക്കാലികമായി നിശബദമാക്കി".format(getvalue)
         if conn:
             text = "Blacklist sticker mode is currently set to *{}* in *{}*.".format(
                 settypeblacklist, chat_name
