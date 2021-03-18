@@ -391,7 +391,7 @@ def del_blackliststicker(update: Update, context: CallbackContext):
                     warn(
                         update.effective_user,
                         chat,
-                        "Using sticker '{}' which in blacklist stickers".format(
+                        "ഉപയോഗിക്കുന്ന ഈ '{}' സ്റ്ററ്റിക്കർ ബ്ലാക്ക്ലിസ്റ്റിൽ ഉൾപ്പെടുത്തിയതാണ്".format(
                             trigger
                         ),
                         message,
@@ -408,7 +408,7 @@ def del_blackliststicker(update: Update, context: CallbackContext):
                     )
                     bot.sendMessage(
                         chat.id,
-                        "{} muted because using '{}' which in blacklist stickers".format(
+                        "{} നെ നിശബ്ദമാക്കി കാരണം ഉപയോഗിച്ച ഈ '{}' സ്റ്റിക്കർ ബ്ലാക്ക്ലിസ്റ്റിൽ ഉൾപ്പെട്ടുത്തിയതാണ്".format(
                             mention_markdown(user.id, user.first_name), trigger
                         ),
                         parse_mode="markdown",
@@ -420,7 +420,7 @@ def del_blackliststicker(update: Update, context: CallbackContext):
                     if res:
                         bot.sendMessage(
                             chat.id,
-                            "{} kicked because using '{}' which in blacklist stickers".format(
+                            "{} നെ കിക്ക് ചെയ്തു കാരണം ഉപയോഗിച്ച ഈ '{}'സ്റ്റിക്കർ ബ്ലാക്ക്ലിസ്റ്റിൽ ഉൾപ്പെട്ടുത്തിയതാണ് ".format(
                                 mention_markdown(user.id, user.first_name), trigger
                             ),
                             parse_mode="markdown",
@@ -431,7 +431,7 @@ def del_blackliststicker(update: Update, context: CallbackContext):
                     chat.kick_member(user.id)
                     bot.sendMessage(
                         chat.id,
-                        "{} banned because using '{}' which in blacklist stickers".format(
+                        "{} നെ നിരോധിച്ചിരിക്കുന്നു കാരണം ഉപയോഗിച്ച ഈ '{}' സ്റ്റിക്കർ ബ്ലാക്ക്ലിസ്റ്റിൽ ഉൾപ്പെട്ടുത്തിയതാണ്".format(
                             mention_markdown(user.id, user.first_name), trigger
                         ),
                         parse_mode="markdown",
