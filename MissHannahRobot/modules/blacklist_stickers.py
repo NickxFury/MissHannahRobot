@@ -126,7 +126,7 @@ def add_blackliststicker(update: Update, context: CallbackContext):
         added = 0
         trigger = msg.reply_to_message.sticker.set_name
         if trigger is None:
-            send_message(update.effective_message, "Sticker is invalid!")
+            send_message(update.effective_message, "തെറ്റായ സ്റ്റിറ്റക്കർ!")
             return
         try:
             get = bot.getStickerSet(trigger)
@@ -135,7 +135,7 @@ def add_blackliststicker(update: Update, context: CallbackContext):
         except BadRequest:
             send_message(
                 update.effective_message,
-                "Sticker `{}` can not be found!".format(trigger),
+                "ഈ`{}` സ്റ്ററ്റിക്കർ കണ്ടെത്താൻ കഴിയുന്നില്ല!".format(trigger),
                 parse_mode="markdown",
             )
 
@@ -144,7 +144,7 @@ def add_blackliststicker(update: Update, context: CallbackContext):
 
         send_message(
             update.effective_message,
-            "Sticker <code>{}</code> added to blacklist stickers in <b>{}</b>!".format(
+            "ഈ<code>{}</code> സ്റ്റിറ്റക്കർ ചാറ്റില്ലെ <b>{}</b> ബ്ലാക്ക്ലിസ്റ്റ് സ്റ്റിക്കർ ആയി ചോർത്തിരിക്കുന്നു!".format(
                 trigger, html.escape(chat_name)
             ),
             parse_mode=ParseMode.HTML,
@@ -152,7 +152,7 @@ def add_blackliststicker(update: Update, context: CallbackContext):
     else:
         send_message(
             update.effective_message,
-            "Tell me what stickers you want to add to the blacklist.",
+            "ഏത് സ്റ്റിക്കർ ആണ് ബ്ലാക്ക്ലിസ്റ്റ് സ്റ്റിക്കർ ആയി ഉൾപ്പെടുതേണ്ടത് എന്ന് പറയു.",
         )
 
 
@@ -192,20 +192,20 @@ def unblackliststicker(update: Update, context: CallbackContext):
             if successful:
                 send_message(
                     update.effective_message,
-                    "Sticker <code>{}</code> deleted from blacklist in <b>{}</b>!".format(
+                    "ഈ സ്റ്റിക്കർ <code>{}</code> ചാറ്റില്ലെ<b>{}</b> ബ്ലാക്ക് ലിസ്റ്റ്റ്റിൽ നിന്നും ഒഴിവാക്കി!".format(
                         html.escape(to_unblacklist[0]), html.escape(chat_name)
                     ),
                     parse_mode=ParseMode.HTML,
                 )
             else:
                 send_message(
-                    update.effective_message, "This sticker is not on the blacklist...!"
+                    update.effective_message, "ഈസ്റ്റിക്കർ ഇതുവരെ ബ്ലാക്ക്ലിസ്റ്റ് ആയി ഉൾപ്പെടുത്തിട്ടില്ല...!"
                 )
 
         elif successful == len(to_unblacklist):
             send_message(
                 update.effective_message,
-                "Sticker <code>{}</code> deleted from blacklist in <b>{}</b>!".format(
+                "ഈ സ്റ്റിക്കർ <code>{}</code> ചാറ്റില്ലെ <b>{}</b> ബ്ലാക്ക് ലിസ്റ്റ്റ്റിൽ നിന്നും ഒഴിവാക്കി!".format(
                     successful, html.escape(chat_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -214,14 +214,14 @@ def unblackliststicker(update: Update, context: CallbackContext):
         elif not successful:
             send_message(
                 update.effective_message,
-                "None of these stickers exist, so they cannot be removed.",
+                "ഈ സ്റ്റിക്കുകൾ ഇതുവരെ ഈ ചാറ്റിൽ ബ്ലാക്ക്ലിസ്റ്റിൽ ഉൾപ്പെടുത്തിട്ടില്ല.",
                 parse_mode=ParseMode.HTML,
             )
 
         else:
             send_message(
                 update.effective_message,
-                "Sticker <code>{}</code> deleted from blacklist. {} did not exist, so it's not deleted.".format(
+                "ഈ സ്റ്റിക്കർ <code>{}</code> ഇതുവരെ {} ചാറ്റിൽ ഉൾപ്പെടുത്തിട്ടില്ല, അതുകൊണ്ട് ഞാൻ എങ്ങനെ ഡിലിറ്റ് ആക്കും.".format(
                     successful, len(to_unblacklist) - successful
                 ),
                 parse_mode=ParseMode.HTML,
@@ -229,7 +229,7 @@ def unblackliststicker(update: Update, context: CallbackContext):
     elif msg.reply_to_message:
         trigger = msg.reply_to_message.sticker.set_name
         if trigger is None:
-            send_message(update.effective_message, "Sticker is invalid!")
+            send_message(update.effective_message, "സ്റ്റിക്കർ കണ്ടെത്തുവാൻ കഴിയുന്നില്ല!")
             return
         success = sql.rm_from_stickers(chat_id, trigger.lower())
 
