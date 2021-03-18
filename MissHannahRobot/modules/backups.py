@@ -63,7 +63,7 @@ def import_data(update, context):
         # only import one group
         if len(data) > 1 and str(chat.id) not in data:
             msg.reply_text(
-                "There are more than one group in this file and the chat.id is not same! How am i supposed to import it?"
+                "ഈ ഫയലിൽ ഒന്നിൽ കൂടുതൽ ഗ്രൂപ്പുകളുണ്ട്, ചാറ്റ് ഐഡി സമാനമല്ല!  ഞാൻ എങ്ങനെ import ചെയ്യും??"
             )
             return
 
