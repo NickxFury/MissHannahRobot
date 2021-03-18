@@ -236,7 +236,7 @@ def unblackliststicker(update: Update, context: CallbackContext):
         if success:
             send_message(
                 update.effective_message,
-                "Sticker <code>{}</code> deleted from blacklist in <b>{}</b>!".format(
+                "സ്റ്റിക്കർ <code>{}</code> ഈ ചാറ്റില്ല<b>{}</b> ബ്ലാക്ക്ലിസ്റ്റ് നിന്ന് ഒഴിവാക്കി!".format(
                     trigger, chat_name
                 ),
                 parse_mode=ParseMode.HTML,
@@ -244,12 +244,12 @@ def unblackliststicker(update: Update, context: CallbackContext):
         else:
             send_message(
                 update.effective_message,
-                "{} not found on blacklisted stickers...!".format(trigger),
+                "{} ഈ സ്റ്റിക്കർ ബ്ലാക്ക്ലിസ്റ്റ് ഉൾപ്പെടുത്തിയടുതിൽ കാണുന്നില്ല!".format(trigger),
             )
     else:
         send_message(
             update.effective_message,
-            "Tell me what stickers you want to add to the blacklist.",
+            "ഏത് സ്റ്റിക്കർ ആണ് ബ്ലാക്ക്ലിസ്റ്റ്റ്റിൽ ചേർക്കേണ്ടത് എന്നു പറയു.",
         )
 
 
@@ -297,24 +297,24 @@ def blacklist_mode(update: Update, context: CallbackContext):
             sql.set_blacklist_strength(chat_id, 5, "0")
         elif args[0].lower() == "tban":
             if len(args) == 1:
-                teks = """It looks like you are trying to set a temporary value to blacklist, but has not determined the time; use `/blstickermode tban <timevalue>`.
+                teks = """നിങ്ങൾ ഈ ട്രിഗറിന് വേണ്ടി തന്ന ഫോർമാക്റ്റ് തെറ്റാണ്; use `/blstickermode tban <timevalue>`.
                                           Examples of time values: 4m = 4 minute, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks."""
                 send_message(update.effective_message, teks, parse_mode="markdown")
                 return
-            settypeblacklist = "temporary banned for {}".format(args[1])
+            settypeblacklist = "താല്കാകാലിമായി ബാൻ ചെയ്തു {}".format(args[1])
             sql.set_blacklist_strength(chat_id, 6, str(args[1]))
         elif args[0].lower() == "tmute":
             if len(args) == 1:
-                teks = """It looks like you are trying to set a temporary value to blacklist, but has not determined the time; use `/blstickermode tmute <timevalue>`.
+                teks = """നിങ്ങൾ ഈ ട്രിഗറിന് വേണ്ടി തന്ന ഫോർമാക്റ്റ് തെറ്റാണ്; use `/blstickermode tmute <timevalue>`.
                                           Examples of time values: 4m = 4 minute, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks."""
                 send_message(update.effective_message, teks, parse_mode="markdown")
                 return
-            settypeblacklist = "temporary muted for {}".format(args[1])
+            settypeblacklist = "താല്കാകാലിമായി മ്യൂട്ട് ചെയ്തു{}".format(args[1])
             sql.set_blacklist_strength(chat_id, 7, str(args[1]))
         else:
             send_message(
                 update.effective_message,
-                "I only understand off/del/warn/ban/kick/mute/tban/tmute!",
+                "off/del/warn/ban/kick/mute/tban/tmute ഇതിൽ ഏതാണ് ഞാൻ ചെയ്യണ്ടത് എന്ന് പറയു!",
             )
             return
         if conn:
