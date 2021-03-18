@@ -77,25 +77,25 @@ def set_blue_text_must_click(update: Update, context: CallbackContext):
         val = args[0].lower()
         if val in ("off", "no"):
             sql.set_cleanbt(chat.id, False)
-            reply = "Bluetext cleaning has been disabled for <b>{}</b>".format(
+            reply = "<b>{}</b> ഈ ചാറ്റിൽ ബ്യൂ-ടെക്സറ്റ് ക്ലിനിങ്ങ്‌ നിർജ്ജീവമാക്കി".format(
                 html.escape(chat.title)
             )
             message.reply_text(reply, parse_mode=ParseMode.HTML)
 
         elif val in ("yes", "on"):
             sql.set_cleanbt(chat.id, True)
-            reply = "Bluetext cleaning has been enabled for <b>{}</b>".format(
+            reply = "<b>{}</b> ഈ ചാറ്റിൽ ബ്യൂ-ടെക്സറ്റ് ക്ലിനിങ്ങ്‌ സജീവമാക്കി".format(
                 html.escape(chat.title)
             )
             message.reply_text(reply, parse_mode=ParseMode.HTML)
 
         else:
-            reply = "Invalid argument.Accepted values are 'yes', 'on', 'no', 'off'"
+            reply = "അസാധുവായ ആർഗ്യുമെന്റ് സ്വീകരിക്കുന്ന മൂല്യങ്ങൾ 'yes', 'on', 'no', 'off'"
             message.reply_text(reply)
     else:
         clean_status = sql.is_enabled(chat.id)
         clean_status = "Enabled" if clean_status else "Disabled"
-        reply = "Bluetext cleaning for <b>{}</b> : <b>{}</b>".format(
+        reply = "<b>{}</b> ഇതിനായി ബുള്ളെടെക്സ്റ്റ് ക്ലീനിംഗ് : <b>{}</b>".format(
             html.escape(chat.title), clean_status
         )
         message.reply_text(reply, parse_mode=ParseMode.HTML)
@@ -111,15 +111,15 @@ def add_bluetext_ignore(update: Update, context: CallbackContext):
         val = args[0].lower()
         added = sql.chat_ignore_command(chat.id, val)
         if added:
-            reply = "<b>{}</b> has been added to bluetext cleaner ignore list.".format(
+            reply = "ബ്ലൂടെക്സ്റ്റ് ക്ലീനർ അവഗണിക്കൽ പട്ടികയിലേക്ക് ചേർത്തു <b>{}</b>".format(
                 args[0]
             )
         else:
-            reply = "Command is already ignored."
+            reply = "കമാൻഡ് ഇതിനകം അവഗണിച്ചു."
         message.reply_text(reply, parse_mode=ParseMode.HTML)
 
     else:
-        reply = "No command supplied to be ignored."
+        reply = "അവഗണിക്കാൻ ഒരു കമാൻഡും നൽകിയിട്ടില്ല."
         message.reply_text(reply)
 
 
@@ -134,16 +134,16 @@ def remove_bluetext_ignore(update: Update, context: CallbackContext):
         removed = sql.chat_unignore_command(chat.id, val)
         if removed:
             reply = (
-                "<b>{}</b> has been removed from bluetext cleaner ignore list.".format(
+                "<b>{}</b> നെ ബ്ലൂടെക്സ്റ്റ് ക്ലീനർ അവഗണിക്കൽ പട്ടികയിൽ നിന്ന് നീക്കംചെയ്തു".format(
                     args[0]
                 )
             )
         else:
-            reply = "Command isn't ignored currently."
+            reply = "കമാൻഡ് നിലവിൽ അവഗണിച്ചിട്ടില്ല"
         message.reply_text(reply, parse_mode=ParseMode.HTML)
 
     else:
-        reply = "No command supplied to be unignored."
+        reply = "ഒപ്പിടാൻ ഒരു കമാൻഡും നൽകിയിട്ടില്ല."
         message.reply_text(reply)
 
 
@@ -156,15 +156,15 @@ def add_bluetext_ignore_global(update: Update, context: CallbackContext):
         val = args[0].lower()
         added = sql.global_ignore_command(val)
         if added:
-            reply = "<b>{}</b> has been added to global bluetext cleaner ignore list.".format(
+            reply = "<b>{}</b> നെ ആഗോള ബ്ലൂടെക്സ്റ്റ് ക്ലീനർ അവഗണിച്ച പട്ടികയിൽ ചേർത്തു".format(
                 args[0]
             )
         else:
-            reply = "Command is already ignored."
+            reply = "കമാൻഡ് ഇതിനകം അവഗണിച്ചു."
         message.reply_text(reply, parse_mode=ParseMode.HTML)
 
     else:
-        reply = "No command supplied to be ignored."
+        reply = "അവഗണിക്കാൻ ഒരു കമാൻഡും നൽകിയിട്ടില്ല."
         message.reply_text(reply)
 
 
