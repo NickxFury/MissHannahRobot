@@ -71,14 +71,14 @@ def import_data(update, context):
         try:
             if data.get(str(chat.id)) is None:
                 if conn:
-                    text = "Backup comes from another chat, I can't return another chat to chat *{}*".format(
+                    text = "ഈ ബാക്കപ്പ് മറ്റൊരു ഗ്രൂപ്പിന്റെയാണ്.. *{}*".format(
                         chat_name
                     )
                 else:
-                    text = "Backup comes from another chat, I can't return another chat to this chat"
+                    text = "ഈ ബാക്കപ്പ് മറ്റൊരു ഗ്രൂപ്പിന്റെയാണ്.."
                 return msg.reply_text(text, parse_mode="markdown")
         except Exception:
-            return msg.reply_text("There was a problem while importing the data!")
+            return msg.reply_text("Importing ചെയ്യുന്നതിൽ പിശക് സംഭവിച്ചു..!")
         # Check if backup is from self
         try:
             if str(context.bot.id) != str(data[str(chat.id)]["bot"]):
