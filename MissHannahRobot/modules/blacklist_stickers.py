@@ -443,7 +443,7 @@ def del_blackliststicker(update: Update, context: CallbackContext):
                     chat.kick_member(user.id, until_date=bantime)
                     bot.sendMessage(
                         chat.id,
-                        "{} banned for {} because using '{}' which in blacklist stickers".format(
+                        "{} നെ ബാൻ ചെയ്തു കാരണം {} ബ്ലാക്ക്ലിസ്റ്റ്-ൽ ഉൾപ്പെടുത്തിയ സ്റ്ററ്റിക്കർ ഉപയോഗിച്ചു '{}' ഏതൊക്കെയാണ് ബ്ലാക്ക്ലിസ്റ്റിൽ🤪".format(
                             mention_markdown(user.id, user.first_name), value, trigger
                         ),
                         parse_mode="markdown",
@@ -460,7 +460,7 @@ def del_blackliststicker(update: Update, context: CallbackContext):
                     )
                     bot.sendMessage(
                         chat.id,
-                        "{} muted for {} because using '{}' which in blacklist stickers".format(
+                        "{} നെ നിശബ്ദമാക്കി കാരണം {} ബ്ലാക്ക്ലിസ്റ്റ്-ൽ ഉൾപ്പെടുത്തിയ സ്റ്ററ്റിക്കർ ഉപയോഗിച്ചു '{}' ഏതൊക്കെയാണ് ബ്ലാക്ക്ലിസ്റ്റിൽ🤪".format(
                             mention_markdown(user.id, user.first_name), value, trigger
                         ),
                         parse_mode="markdown",
