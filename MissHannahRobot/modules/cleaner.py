@@ -177,15 +177,15 @@ def remove_bluetext_ignore_global(update: Update, context: CallbackContext):
         val = args[0].lower()
         removed = sql.global_unignore_command(val)
         if removed:
-            reply = "<b>{}</b> has been removed from global bluetext cleaner ignore list.".format(
+            reply = "ഈ കമാൻഡ്<b>{}</b> ആഗോള അവഗണന പട്ടികയിൽ നിന്ന് ബ്ലൂടെക്സ്റ്റിൽ നിന്ന് നീക്കംചെയ്തു.".format(
                 args[0]
             )
         else:
-            reply = "Command isn't ignored currently."
+            reply = "കമാൻഡ് നിലവിൽ അവഗണിച്ചിട്ടില്ല."
         message.reply_text(reply, parse_mode=ParseMode.HTML)
 
     else:
-        reply = "No command supplied to be unignored."
+        reply = "അജ്ഞാതമാക്കാൻ ഒരു കമാൻഡും നൽകിയിട്ടില്ല."
         message.reply_text(reply)
 
 
@@ -200,19 +200,19 @@ def bluetext_ignore_list(update: Update, context: CallbackContext):
     text = ""
 
     if global_ignored_list:
-        text = "The following commands are currently ignored globally from bluetext cleaning :\n"
+        text = "ഇനിപ്പറയുന്ന കമാൻഡുകൾ നിലവിൽ ആഗോളതലത്തിൽ ബ്ലൂടെക്സ്റ്റ് ക്ലീനിംഗിൽ നിന്ന് അവഗണിക്കപ്പെടുന്നു :\n"
 
         for x in global_ignored_list:
             text += f" - <code>{x}</code>\n"
 
     if local_ignore_list:
-        text += "\nThe following commands are currently ignored locally from bluetext cleaning :\n"
+        text += "ഇനിപ്പറയുന്ന കമാൻഡുകൾ നിലവിൽ ബ്ലൂടെക്സ്റ്റ് ക്ലീൻ‌ജനിൽ നിന്ന് പ്രാദേശികമായി അവഗണിക്കപ്പെടുന്നു :\n"
 
         for x in local_ignore_list:
             text += f" - <code>{x}</code>\n"
 
     if text == "":
-        text = "No commands are currently ignored from bluetext cleaning."
+        text = " ബ്ലൂ ടെക്സ്റ്റ് ക്ലീനിംഗിൽ നിന്ന് കമാൻഡുകളൊന്നും അവഗണിക്കുന്നില്ല."
         message.reply_text(text)
         return
 
