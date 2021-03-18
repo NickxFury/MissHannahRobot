@@ -35,35 +35,35 @@ def bl_user(update: Update, context: CallbackContext) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("I doubt that's a user.")
+        message.reply_text("നിങ്ങൾ പറഞ്ഞ ആളെ എന്നിക്ക് സംശയം ഉണ്ട്!.")
         return ""
 
     if user_id == bot.id:
-        message.reply_text("How am I supposed to do my work if I am ignoring myself?")
+        message.reply_text("നീ എന്ത് തേങ്ങയ ഈ പറയണത്?")
         return ""
 
     if user_id in BLACKLISTWHITELIST:
-        message.reply_text("No!\nNoticing Disasters is my job.")
+        message.reply_text("ഇദ്ദേഹം പാവം ആണ്.")
         return ""
 
     try:
         target_user = bot.get_chat(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            message.reply_text("I can't seem to find this user.")
+            message.reply_text("നീ പറഞ്ഞ ആളെ ഞാൻ കണ്ടിട്ടുപോലും ഇല്ല!.")
             return ""
         else:
             raise
 
     sql.blacklist_user(user_id, reason)
-    message.reply_text("I shall ignore the existence of this user!")
+    message.reply_text("ഈ ഉപയോക്താവിന്റെ നിലനിൽപ്പിനെ ഞാൻ അവഗണിക്കും!")
     log_message = (
         f"#BLACKLIST\n"
-        f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-        f"<b>User:</b> {mention_html(target_user.id, html.escape(target_user.first_name))}"
+        f"<b>അഡ്മിൻ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
+        f"<b>യൂസർ:</b> {mention_html(target_user.id, html.escape(target_user.first_name))}"
     )
     if reason:
-        log_message += f"\n<b>Reason:</b> {reason}"
+        log_message += f"\n<b>കാരണം:</b> {reason}"
 
     return log_message
 
@@ -78,18 +78,18 @@ def unbl_user(update: Update, context: CallbackContext) -> str:
     user_id = extract_user(message, args)
 
     if not user_id:
-        message.reply_text("I doubt that's a user.")
+        message.reply_text("നിങ്ങൾ പറഞ്ഞ ആളെ എന്നിക്ക് സംശയം ഉണ്ട്.")
         return ""
 
     if user_id == bot.id:
-        message.reply_text("I always notice myself.")
+        message.reply_text("ഞാൻ എപ്പോഴും എന്നെ സ്വയം ശ്രദ്ധിക്കുന്നു.")
         return ""
 
     try:
         target_user = bot.get_chat(user_id)
     except BadRequest as excp:
-        if excp.message == "User not found":
-            message.reply_text("I can't seem to find this user.")
+        if excp.message == "ഉപയോക്താവിനെ കണ്ടെത്തിയില്ല":
+            message.reply_text("എനിക്ക് ഈ ഉപയോക്താവിനെ കണ്ടെത്താൻ കഴിയില്ല.")
             return ""
         else:
             raise
@@ -97,17 +97,17 @@ def unbl_user(update: Update, context: CallbackContext) -> str:
     if sql.is_user_blacklisted(user_id):
 
         sql.unblacklist_user(user_id)
-        message.reply_text("*notices user*")
+        message.reply_text("*ഉപയോക്താവിനെ ശ്രദ്ധിക്കുന്നു*")
         log_message = (
             f"#UNBLACKLIST\n"
-            f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-            f"<b>User:</b> {mention_html(target_user.id, html.escape(target_user.first_name))}"
+            f"<b>അഡ്മിൻ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
+            f"<b>യൂസർ:</b> {mention_html(target_user.id, html.escape(target_user.first_name))}"
         )
 
         return log_message
 
     else:
-        message.reply_text("I am not ignoring them at all though!")
+        message.reply_text("ഞാൻ അവരെ അവഗണിക്കുന്നില്ല!")
         return ""
 
 
@@ -127,9 +127,9 @@ def bl_users(update: Update, context: CallbackContext):
         else:
             users.append(f"• {mention_html(user.id, html.escape(user.first_name))}")
 
-    message = "<b>Blacklisted Users</b>\n"
+    message = "<b>ബ്ലാക്ക്ലിസ്റ്ററ്റിൽ ഉൾപ്പെട്ടവർ</b>\n"
     if not users:
-        message += "Noone is being ignored as of yet."
+        message += "ഇതുവരെ ആരും അവഗണിക്കുന്നില്ല"
     else:
         message += "\n".join(users)
 
@@ -150,7 +150,7 @@ def __user_info__(user_id):
         text = text.format("Yes")
         reason = sql.get_reason(user_id)
         if reason:
-            text += f"\nReason: <code>{reason}</code>"
+            text += f"\n കാരണം: <code>{reason}</code>"
     else:
         text = text.format("No")
 
