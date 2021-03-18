@@ -40,7 +40,7 @@ def import_data(update, context):
         chat_name = dispatcher.bot.getChat(conn).title
     else:
         if update.effective_message.chat.type == "private":
-            update.effective_message.reply_text("This is a group only command!")
+            update.effective_message.reply_text("ഈ കമാൻഡ് ഗ്രൂപ്പിൽ മാത്രമേ വർക്ക്‌ ചെയ്യുകയുള്ളൂ..")
             return ""
 
         chat = update.effective_chat
@@ -134,7 +134,7 @@ def export_data(update, context):
         # chat_name = dispatcher.bot.getChat(conn).title
     else:
         if update.effective_message.chat.type == "private":
-            update.effective_message.reply_text("This is a group only command!")
+            update.effective_message.reply_text("ഈ കമാൻഡ് ഗ്രൂപ്പിൽ മാത്രമേ വർക്ക്‌ ചെയ്യുകയുള്ളൂ..")
             return ""
         chat = update.effective_chat
         chat_id = update.effective_chat.id
