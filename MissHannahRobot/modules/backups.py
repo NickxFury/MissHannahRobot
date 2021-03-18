@@ -51,7 +51,7 @@ def import_data(update, context):
             file_info = context.bot.get_file(msg.reply_to_message.document.file_id)
         except BadRequest:
             msg.reply_text(
-                "Try downloading and uploading the file yourself again, This one seem broken to me!"
+                "ഫയൽ വീണ്ടും ഡൌൺലോഡ് ചെയ്ത് അപ്‌ലോഡ് ചെയ്യാൻ ശ്രമിക്കുക, ഇത് എനിക്ക് തകർന്നതായി തോന്നുന്നു!"
             )
             return
 
