@@ -28,18 +28,18 @@ def allow_connections(update, context) -> str:
                 sql.set_allow_connect_to_chat(chat.id, False)
                 send_message(
                     update.effective_message,
-                    "Connection has been disabled for this chat",
+                    "ഈ ചാറ്റിനായി കണക്ഷനുകൾ അപ്രാപ്തമാക്കി",
                 )
             elif var == "yes":
                 sql.set_allow_connect_to_chat(chat.id, True)
                 send_message(
                     update.effective_message,
-                    "Connection has been enabled for this chat",
+                    "ഈ ചാറ്റിനായി കണക്ഷനുകൾ പ്രാപ്തമാക്കി",
                 )
             else:
                 send_message(
                     update.effective_message,
-                    "Please enter `yes` or `no`!",
+                    "ദയവായി നൽകുക `yes` അഥവാ `no`!",
                     parse_mode=ParseMode.MARKDOWN,
                 )
         else:
